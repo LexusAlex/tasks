@@ -1,4 +1,5 @@
 <?php
+namespace php\Tree;
 
 $arr = [
     ['id'=>1, 'parentid'=>0, 'name'=>'programming languages'],
@@ -11,12 +12,23 @@ $arr = [
         ['id'=>5, 'parentid'=>1, 'name'=>'ruby'],
         ['id'=>6, 'parentid'=>1, 'name'=>'sql'],
     ['id'=>2, 'parentid'=>0, 'name'=>'athors'],
+    ['id'=>22, 'parentid'=>0, 'name'=>'number'],
+        ['id'=>23, 'parentid'=>22, 'name'=>'positive number'],
+            ['id'=>25, 'parentid'=>23, 'name'=>'one'],
+                ['id'=>26, 'parentid'=>23, 'name'=>'first'],
+                ['id'=>27, 'parentid'=>23, 'name'=>'ten'],
+        ['id'=>24, 'parentid'=>22, 'name'=>'negative number'],
 
 ];
 // return levels
 // 0 - root 1 - languages ... 4
-function levelsTree($array){
+/**
+ * @param array $array
+ * @return array
+ */
+function levelsTree(array $array){
     $levels = [];
+    //if(!is_array($array)){throw new Exception('It is not array');}
     foreach ($array as $a){
         // $a['parentid'] - give all parent id
         $levels[$a['parentid']][] = $a;
@@ -24,7 +36,12 @@ function levelsTree($array){
     return $levels;
 }
 /* $list - parentRoot $parent - firstElement */
-function createTree($list, $parent){
+/**
+ * @param $list
+ * @param $parent
+ * @return array
+ */
+function createTree(array $list, array $parent){
     $tree = [];
     foreach ($parent as $k=>$l){
         if(isset($list[$l['id']])){
@@ -35,7 +52,10 @@ function createTree($list, $parent){
     return $tree;
 }
 // output recursive tree
-function outputTree($list){
+/**
+ * @param $list
+ */
+function outputTree(array $list){
     foreach($list as $t){
         echo '<ul>';
         echo '<li>'.$t['name'].'</li>';

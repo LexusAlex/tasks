@@ -58,8 +58,9 @@ $connection = new \PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 
 
 // Добавить внешний ключ
 //ALTER TABLE test.`employee` ADD FOREIGN KEY fk_dep (department) REFERENCES test.`department`(id) ON DELETE CASCADE ON UPDATE CASCADE
+
 /*
- * insert
+ * insert вставка
  * return int or false
  * */
 
@@ -83,19 +84,56 @@ foreach ($v as $k){
     $dep = (int)$k[2];
     $connection->exec("INSERT INTO test.employee (id, name, department) VALUES ('".$id."','".$name."','".$dep."')");
 }*/
+// но лучше поступим так еще 500 записей
+
+/*for ($i = 1; $i < 500; $i++) {
+    $name = 'employer ' . $i;
+    $dep = 1;
+    $v[] = [$i, $name ,$dep];
+}
+$name = null;
+$dep = null;
+$stn = $connection->prepare('INSERT INTO test.employee (name, department) VALUES (:name , :dep)');
+foreach ($v as $k){
+    $name = (string)$k[1];
+    $dep = (int)$k[2];
+    $r = $stn->execute([':name' => $name, ':dep' => $dep]);
+}
+var_dump($r);*/
+
 
 //$res = $connection->exec('INSERT INTO test (id, text) VALUES(2016,"sometext")');
 //$res = $connection->exec('INSERT INTO test (id, text) VALUES(2017,"sometext"),(2018,"sometext"),(2019,"sometext")');
     //int $res
+
 /*
- * delete
+ * delete удаление
  * return int or false
  * */
 //$res = $connection->exec('DELETE FROM test WHERE id = 2016');
 //$res = $connection->exec('DELETE FROM test WHERE id >= 990 AND id <= 999');
  // int $res
 
+
+// обновление записей
+//$res = $connection->exec('UPDATE test.employee SET name = "новая строка" WHERE id = 5507'); // одна запись
+//var_dump($res);
+
+// выборка
+/*$stn = $connection->query('SELECT * FROM test.employee',PDO::FETCH_ASSOC);
+var_dump($stn);
+var_dump($stn->fetchAll());*/
 /*$res = $connection->query('DESCRIBE test');
 var_dump($res->fetchAll());*/
+
+
+// Оператор in
+$names = '2,55,123,4999';
+$names = explode(',', $names);
+$placeholder = implode(',', array_fill(0, count($names), '?'));
+
+$statement = $connection->prepare("SELECT * FROM test.employee WHERE id IN ($placeholder)");
+$statement->execute($names);
+var_dump($statement->fetchAll());
 
 

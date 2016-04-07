@@ -10,6 +10,7 @@
 <h2>Theory</h2>
 <ul>
     <li><a href="php/db/pdo.php">PDO</a></li>
+    <li><a href="php/enum/array.php">enum array</a></li>
 </ul>
 
 <h1>JS</h1>

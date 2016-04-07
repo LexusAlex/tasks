@@ -86,9 +86,9 @@ foreach ($v as $k){
 }*/
 // но лучше поступим так еще 500 записей
 
-/*for ($i = 1; $i < 500; $i++) {
-    $name = 'employer ' . $i;
-    $dep = 1;
+/*for ($i = 1; $i < 100; $i++) {
+    $name = 'new employer ' . $i;
+    $dep = 2;
     $v[] = [$i, $name ,$dep];
 }
 $name = null;
@@ -128,12 +128,33 @@ var_dump($res->fetchAll());*/
 
 
 // Оператор in
-$names = '2,55,123,4999';
+/*$names = '2,55,123,4999';
 $names = explode(',', $names);
 $placeholder = implode(',', array_fill(0, count($names), '?'));
 
 $statement = $connection->prepare("SELECT * FROM test.employee WHERE id IN ($placeholder)");
 $statement->execute($names);
-var_dump($statement->fetchAll());
+var_dump($statement->fetchAll());*/
+
+// Соединения Join
+
+/*$stn = $connection->query('SELECT employee.name AS en , department.name  AS dn  FROM employee INNER JOIN department ON employee.department = department.id WHERE department.id = 2',PDO::FETCH_ASSOC);
+var_dump($stn->fetchAll());*/
+
+//SELECT employee.name AS en , department.name  AS dn  FROM employee RIGHT JOIN department ON employee.department = department.id WHERE department.id != 1
+
+// Запрос на обьединение тестовых таблиц
+/*
+ * SELECT html_elements.name,html_attributes.name
+FROM html_elements_attributes
+  LEFT JOIN html_attributes ON html_attributes.id = html_elements_attributes.id_attribute
+  LEFT JOIN html_elements ON html_elements.id = html_elements_attributes.id_element
+WHERE html_attributes.name = 'id'
+*/
+//удаление одного элемента привлечет за собой удаления всех связей
+$del = $connection->exec('DELETE FROM test.html_attributes WHERE id = 2');
+var_dump($del);
+
+
 
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Jquery example</title>
+    <script src="../jquery-2.2.3.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url:'index.php',
+            type:'POST',
+            data:{'data':JSON.stringify(["Яблоко", "Апельсин", "Слива"])}
+        });
+    });
+</script>
+</body>
+</html>

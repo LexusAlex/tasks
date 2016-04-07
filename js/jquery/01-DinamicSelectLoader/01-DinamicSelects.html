@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DinamicSelectLoader</title>
+    <script src="../jquery-2.2.3.js"></script>
+    <script>
+        function selectRegion(){
+            var id_country = $('select[name="country"]').val();
+            if(!id_country){
+                $('div[name="selectDataRegion"]').html('');
+                $('div[name="selectDataCity"]').html('');
+            }else{
+                $.ajax({
+                    type: "POST",
+                    url: "loader.php",
+                    data: { action: 'showRegionForInsert', id_country: id_country },
+                    cache: false,
+                    success: function(responce){ $('div[name="selectDataRegion"]').html(responce); }
+                });
+            };
+        };
+
+        function selectCity(){
+            var id_region = $('select[name="region"]').val();
+            $.ajax({
+                type: "POST",
+                url: "loader.php",
+                data: { action: 'showCityForInsert', id_region: id_region },
+                cache: false,
+                success: function(responce){ $('div[name="selectDataCity"]').html(responce); }
+            });
+        };
+
+    </script>
+    <style>
+        .wrap{
+            margin-left: 30%;
+        }
+        select{
+            height: 38px;
+            padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+            background-color: #fff;
+            border: 1px solid #D1D1D1;
+            border-radius: 4px;
+            width: 200px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <select size="1" name="country" onchange="javascript:selectRegion();" style="float:left;">
+        <option value="">Все страны</option>
+        <option value="3">Белоруссия</option>
+        <option value="4">Израиль</option>
+        <option value="2">Россия</option>
+        <option value="1">Украина</option>
+    </select>
+
+    <div name="selectDataRegion" style="float:left;"></div>
+    <div name="selectDataCity" style="float:left;"></div>
+</div>
+</body>
+</html>

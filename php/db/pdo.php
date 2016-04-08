@@ -152,8 +152,12 @@ FROM html_elements_attributes
 WHERE html_attributes.name = 'id'
 */
 //удаление одного элемента привлечет за собой удаления всех связей
-$del = $connection->exec('DELETE FROM test.html_attributes WHERE id = 2');
-var_dump($del);
+/*$del = $connection->exec('DELETE FROM test.html_attributes WHERE id = 2');
+var_dump($del);*/
+
+
+// Про записи
+//http://xandeadx.ru/blog/mysql/592
 
 
 

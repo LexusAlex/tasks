@@ -6,6 +6,7 @@
     <li><a href="php/03-AddDigits.php">03-AddDigits.php</a></li>
     <li><a href="php/04-Paginations.php">04-Paginations.php</a></li>
     <li><a href="php/05-RandomRecords.php">05-RandomRecords.php</a></li>
+    <li><a href="php/06-PrevNextRecord.php">06-PrevNextRecord.php</a></li>
 </ul>
 <h2>Theory</h2>
 <ul>

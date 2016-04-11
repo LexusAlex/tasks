@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+    <style>
+        #accordion{
+            text-align: center;
+        }
+        .content{
+            background-color: orange;
+            margin: 0 auto;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="accordion">
+    <h1 class="accordion-header"><a href="#">Заголовок Аккордеона</a></h1>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor fugiat, quod. A accusamus architecto atque beatae cumque cupiditate debitis doloribus ducimus ea eaque eos, expedita fugit inventore iure iusto labore magnam nemo, neque nihil nostrum obcaecati recusandae reiciendis repellendus reprehenderit sequi ullam vel veritatis! Assumenda atque culpa, cupiditate deleniti dolore doloremque enim error ex facilis id illo itaque, iure minus mollitia non pariatur porro quia, quidem recusandae rem sit suscipit temporibus? Cupiditate explicabo id iure nesciunt nihil numquam recusandae similique suscipit vero voluptate. Excepturi illo iure labore, mollitia nisi placeat sit voluptatem. Accusantium neque nulla odio recusandae repellat saepe voluptatem!</div>
+</div>
+<script src="../jquery-2.2.3.js"></script>
+<script>
+    // Close all panels
+    $('#accordion').find('.content').hide();
+
+    // Accordion
+    $('#accordion').find('.accordion-header').click(function () {
+        var next = $(this).next();
+        next.slideToggle('fast');
+        $('.content').not(next).slideUp('fast');
+        return false;
+    });
+</script>
+</body>
+</html>

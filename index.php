@@ -19,6 +19,8 @@
 <h3>Tasks</h3>
 <ul>
     <li><a href="js/jquery/01-DinamicSelectLoader/01-DinamicSelects.html">01-DinamicSelects.html</a></li>
+    <li><a href="js/jquery/02-BackToTop/BackToTop.html">02-BackToTop-button</a></li>
+    <li><a href="js/jquery/03-Accordion/Accordion.html">03-Accordion</a></li>
 </ul>
 <h3>Theory</h3>
 <ul>

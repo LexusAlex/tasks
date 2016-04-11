@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BackToTop</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            height: 1000px;
+        }
+        .top{
+            position: fixed;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<button class="top">Back to top</button>
+
+<script src="../jquery-2.2.3.js"></script>
+<script>
+
+    if (typeof jQuery == 'undefined') {
+        console.log('jQuery hasn\'t loaded');
+    } else {
+        console.log('jQuery has loaded');
+    }
+</script>
+<script>
+    $(function() {
+        // Back to top
+        $('.top').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 800);
+
+        });
+    });
+</script>
+</body>
+</html>

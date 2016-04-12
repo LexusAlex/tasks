@@ -33,3 +33,4 @@ phpunit.phar
 
 # ignore sub directory for dev installed apps and extensions
 phpunit-4.8.23.phar
+phpunit-4.8.24.phar

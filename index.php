@@ -11,7 +11,8 @@
 <h3>Theory</h3>
 <ul>
     <li><a href="php/db/pdo.php">PDO</a></li>
-    <li><a href="php/enum/array.php">enum array</a></li>
+    <li><a href="php/enum/array.php">Enum array</a></li>
+    <li><a href="php/oop/oop.php">OOP</a></li>
 </ul>
 
 <h1>JS</h1>

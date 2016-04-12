@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="../bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            color: #333;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.6;
+            min-width: 320px;
+            overflow-x: hidden;
+        }
+        .wrapper{
+
+        }
+        .header{
+            background-image: url("bg.jpg");
+            background-position: center top;
+            background-size: cover;
+            color: #fff;
+            min-height: 300px;
+            padding-bottom: 40px;
+            padding-top: 32px;
+            position: relative;
+        }
+        .main-text{
+            padding: 40px 15px;
+            text-align: center;
+        }
+        .tizers{
+            background-color: #c6d8ee;
+            background-image: linear-gradient(#c6d8ee, #e8eff7);
+            color: #003469;
+            padding: 35px 0 35px;
+            text-transform: uppercase;
+        }
+        .footer{
+            bottom: 0;
+            height: 60px;
+            width: 100%;
+            background-image: url("bg.jpg");
+            background-position: center top;
+            background-size: cover;
+            color: #fff;
+            min-height: 100px;
+            padding-bottom: 40px;
+            padding-top: 32px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="logo">
+                        <img src="logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 main-text">
+                    <h1>Технический блог</h1>
+                    <h2>Статьи и заметки</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tizers">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6">
+                    <h2>Text</h2>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Text</h2>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Text</h2>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Text</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="article">
+                        <h2>Основы администрирования MySQL при помощи командной строки</h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <img src="mysql.jpg" alt="">
+                            </div>
+                            <div class="col-md-10 text-justify">
+                                Популярная система управления базами данных MySQL широко применяется для различных нужд, в первую очередь как стандарт де-факто в области интернет хостинга. Не менее широко распространен пакет для управления данной СУБД - phpMyAdmin. Без сомнения, это хороший, удобный продукт, но очень часто случается так, что навыки работы с этим продуктом полностью заменяют навыки работы с самой СУБД. Поэтому в данном материале мы решили познакомить наших читателей с тем, как выполнять основные задачи администрирования MySQL из командной строки.
+                                <div class="bg-warning text-center">Читать далее</div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="article">
+                        <h2>Linux - начинающим. Часть 4. Работаем с файловой системой. Практика</h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <img src="mysql.jpg" alt="">
+                            </div>
+                            <div class="col-md-10 text-justify">
+                                В прошлой части нашего материала мы разобрали как устроена и какие особенности имеет файловая система Linux. Пора переходить от теории к практике. Так как основным инструментом администратора является консоль, то основное внимание мы уделим работе с утилитами командной строки, тем более, как вы уже должны были заметить, графические оболочки предоставляют весьма ограниченные возможности по работе с файловой системой. Да и многие вещи в Linux до сих пор проще, удобнее и быстрее сделать именно из командной строки.
+                                <div class="bg-warning text-center">Читать далее</div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <h2>О чем эти статьи</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="logo">
+                        <img src="logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery/jquery-2.2.3.js"></script>
+<script src="../bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

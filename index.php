@@ -7,6 +7,7 @@
     <li><a href="php/04-Paginations.php">04-Paginations.php</a></li>
     <li><a href="php/05-RandomRecords.php">05-RandomRecords.php</a></li>
     <li><a href="php/06-PrevNextRecord.php">06-PrevNextRecord.php</a></li>
+    <li><a href="php/07-Organization.php">07-Organization.php</a></li>
 </ul>
 <h3>Theory</h3>
 <ul>

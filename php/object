@@ -1,0 +1,25 @@
+obj_object 3
+    id
+    name
+    towns_id -> id obj_towns
+    type_id -> id obj_type
+
+obj_towns 1
+    id
+    name
+
+obj_type 2
+    id
+    name
+    parent_id -> obj_type -> id
+
+obj_type_prorerty 4
+    id
+    name
+    type_id - > obj_type
+    towns_id -> obj_towns
+
+
+1. Создать таблички obj_towns , obj_type , obj_object ,obj_type_prorerty
+2. Добавить индексы на поля obj_object.towns_id, obj_object.type_id, obj_type_prorerty.towns_id, obj_type_prorerty.type_id  внешние ключи на эти поля
+3.

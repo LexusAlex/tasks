@@ -45,18 +45,29 @@ if(isset($_GET['createOrg'])){
 
         </select> <br>
         <label for="OpropType">Специфика организации</label>
-        <select id="OpropType" size="1" name="org[oproptype]">
+        <select id="OpropType" multiple name="org[oproptype][]">
 
         </select> <br>
         <input type="submit" value="Создать" name="org[submit]">
+        <input type="reset" value="Сбросить" name="org[reset]">
     </form>
 <?php }
     if(isset($_GET['org'])){
         $name = $_GET['org']['oname'];
         $town = $_GET['org']['otown'];
         $type = $_GET['org']['otype'];
+        //$typeprop = $_GET['org']['oproptype'];//arr
+        $check = connection()->prepare('SELECT name,towns_id FROM obj_object WHERE name = :checkname AND towns_id = :checktown');
+        $check->execute([':checkname' => $name,':checktown' => $town]);
+        $row = $check->fetch();
+        if($row !== false){
+            echo "Организация $name уже существует";
+            die();
+        }
         $stn = connection()->prepare('INSERT INTO obj_object (name, towns_id, type_id) VALUES (:name , :town, :type)');
         $r = $stn->execute([':name' => $name, ':town' => $town, ':type' => $type]);
+        
+        
         if($r){
             echo 'Организация '.$name .' успешно создана';
         }
@@ -85,11 +96,13 @@ if(isset($_GET['createOrg'])){
 
         $('#Otype').on('change',function () {
             var id_type = $('select[name="org[otype]"]').val();
+            
+            var id_town = $('select[name="org[otown]"]').val();
 
             $.ajax({
                 type: "POST",
                 url: "07-Response.php",
-                data: { action: 'showPropType', id_type: id_type },
+                data: { action: 'showPropType', id_type: id_type , id_town:id_town },
                 cache: false,
                 success: function(responce){
                     $('#OpropType').html(responce);

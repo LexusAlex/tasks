@@ -8,6 +8,7 @@
     <li><a href="php/05-RandomRecords.php">05-RandomRecords.php</a></li>
     <li><a href="php/06-PrevNextRecord.php">06-PrevNextRecord.php</a></li>
     <li><a href="php/07-Organization.php">07-Organization.php</a></li>
+    <li><a href="php/08-VarDump.php">08-VarDump.php</a></li>
 </ul>
 <h3>Theory</h3>
 <ul>

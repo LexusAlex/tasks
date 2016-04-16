@@ -15,6 +15,13 @@
     <li><a href="php/db/pdo.php">PDO</a></li>
     <li><a href="php/enum/array.php">Enum array</a></li>
     <li><a href="php/oop/oop.php">OOP</a></li>
+    <li>
+        <ul>Design Patterns
+            <li><a href="php/designpattern/01-singleton-1.php">01-singleton-1.php</a></li>
+            <li><a href="php/designpattern/01-singleton-2.php">01-singleton-2.php</a></li>
+            <li><a href="php/designpattern/01-singleton-3.php">01-singleton-3.php</a></li>
+        </ul>
+    </li>
 </ul>
 
 <h1>JS</h1>

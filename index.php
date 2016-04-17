@@ -20,6 +20,8 @@
             <li><a href="php/designpattern/01-singleton-1.php">01-singleton-1.php</a></li>
             <li><a href="php/designpattern/01-singleton-2.php">01-singleton-2.php</a></li>
             <li><a href="php/designpattern/01-singleton-3.php">01-singleton-3.php</a></li>
+            <li><a href="php/designpattern/02-registry-1.php">02-registry-1.php</a></li>
+            <li><a href="php/designpattern/03-factory-1.php">03-factory-1.php</a></li>
         </ul>
     </li>
 </ul>

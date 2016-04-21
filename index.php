@@ -9,7 +9,7 @@
     <li><a href="php/06-PrevNextRecord.php">06-PrevNextRecord.php</a></li>
     <li><a href="php/07-Organization.php">07-Organization.php</a></li>
     <li><a href="php/08-VarDump.php">08-VarDump.php</a></li>
-    <li><a href="php/09-UnlimitedNesting.php">09-UnlimitedNesting.php</a></li>
+    <li><a href="php/09-UnlimitedNestingRecursion.php">09-UnlimitedNestingRecursion.php</a></li>
 </ul>
 <h3>Theory</h3>
 <ul>
@@ -21,8 +21,8 @@
     <li><a href="php/spl/spl.php">Spl + Closure</a></li>
     <li>
         <ul>Iterators
-            <li><a href="php/spl/01-Iterator-1.php">01-iterator-1.php</a></li>
-            <li><a href="php/spl/02-RecursiveArrayIterator-1.php">RecursiveArrayIterator-1.php</a></li>
+            <li><a href="php/spl/01-Iterator-1.php">01-Iterator-1.php</a></li>
+            <li><a href="php/spl/02-RecursiveArrayIterator-1.php">02-RecursiveArrayIterator-1.php</a></li>
         </ul>
     </li>
     <li>

@@ -10,6 +10,7 @@
     <li><a href="php/07-Organization.php">07-Organization.php</a></li>
     <li><a href="php/08-VarDump.php">08-VarDump.php</a></li>
     <li><a href="php/09-UnlimitedNestingRecursion.php">09-UnlimitedNestingRecursion.php</a></li>
+    <li><a href="php/10-RecursionSearchArray.php">10-RecursionSearchArray.php</a></li>
 </ul>
 <h3>Theory</h3>
 <ul>

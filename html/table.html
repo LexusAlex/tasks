@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<style>
+    table{
+        border: 1px solid green;
+        font-size: 3em;
+        width: 100%;
+        height: 500px;
+        border-spacing: 14px;/*расстояние между ячейками*/
+        empty-cells: hide; /*Не показывать пустые ячейки*/
+        border-collapse: collapse; /*схлопнуть таблицу без зазаров*/
+    }
+    table thead tr th, table tfoot tr th{border: 1px solid blue; padding: 10px}
+    table tbody tr td {border: 1px solid red;padding: 10px}
+
+    caption{
+        caption-side: top;
+    }
+</style>
+<body>
+Строка а в ней ячейки
+tr строка td в ней ячейка
+
+любое содержимое писать только в td
+
+<table>
+    <caption>Заголовок таблицы</caption>
+    <thead>
+        <tr>
+            <th>Заголовок 1</th>
+            <th>Заголовок 2</th>
+            <th>Заголовок 3</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Заголовок 1</th>
+            <th>Заголовок 2</th>
+            <th>Заголовок 3</th>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td colspan="3">10 - 11 - 12</td>
+        </tr>
+        <tr>
+            <td rowspan="2">13 - 16</td>
+            <td rowspan="2">14 - 17</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>18</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

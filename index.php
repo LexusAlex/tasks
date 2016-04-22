@@ -39,6 +39,7 @@
 </ul>
 
 <h1>JS</h1>
+
 <h1>Jquery</h1>
 <h3>Tasks</h3>
 <ul>
@@ -52,8 +53,15 @@
         <a href="js/jquery/ajax/ajax.html">AJAX Jquery</a>
     </li>
 </ul>
+
 <h1>CSS</h1>
 <h3>Theory</h3>
 <ul>
     <li><a href="css/01-bootstrap-default/bootstrap.html">bootstrap.html</a></li>
+</ul>
+
+<h1>HTML</h1>
+<h3>Theory</h3>
+<ul>
+    <li><a href="html/table.html">Table.html</a></li>
 </ul>

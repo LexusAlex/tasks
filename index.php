@@ -39,6 +39,10 @@
 </ul>
 
 <h1>JS</h1>
+<h3>Tasks</h3>
+<ul>
+    <li><a href="js/js/01-SearchSymbolInString.html">SearchSymbolInString</a></li>
+</ul>
 <h3>Theory</h3>
 <ul>
     <li><a href="js/optimate/js.html">Optimate JS</a></li>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SearchSymsolInString</title>
+</head>
+<body>
+<script>
+    function isNumber(str, ch) {
+        var i = 0 ;
+        for (i; i < str.length ; i++){
+            if (str[i] === ch){
+                return str + ' => ['+ ch +'] ' + '=> ['+i+']' ;
+            }
+        }
+        return 'Symbol not found';
+    }
+
+    console.log(isNumber('big str','t'));
+</script>
+</body>
+</html>

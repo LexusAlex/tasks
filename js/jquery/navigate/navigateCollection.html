@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigate The Collection</title>
+</head>
+<style>
+    .blue{
+        background-color: blue;
+    }
+    .orange{
+        background-color: orange;
+    }
+    .color{
+        color: gray;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .border{
+        border: 1px dashed red;
+    }
+    .curr{
+        font-style: italic;
+    }
+    .font{
+        font-size: 0.5em;
+    }
+    .bigfont{
+        font-size: 1.5em;
+    }
+</style>
+<body>
+<ul class="onelist">
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+    <li>item-6</li>
+    <li>item-7</li>
+    <li>item-8</li>
+    <li>item-9</li>
+    <li>item-10</li>
+    <li>item-11</li>
+    <li>item-12</li>
+    <li>item-13</li>
+    <li>item-14</li>
+    <li class="is">item-15</li>
+    <li>item-16</li>
+    <li>item-17</li>
+    <li>item-18</li>
+    <li>item-19</li>
+    <li>item-20
+        <div>test div</div>
+    </li>
+
+    <div><div><div id="d">div</div></div></div>
+</ul>
+
+<span class="span">span</span>
+
+<script src="../jquery-1.12.3.js"></script>
+<script>
+    let lists = $('.onelist li');
+    var ul = $('.onelist');
+    // текущая выборка
+    /*
+    eq() по индексу
+    end() - на уровень выше
+    last() first() - последний первый ребенок
+    filter() - фильтрует по выборке
+    not() - того что нет в этой выборке
+    is() - проверка на условие что в выборке есть селектор
+    slice() - дипазон элементов
+    has() - проверяем счто в потомках есть элемент
+    map() - пройтись по кллекции и вернуть новый набор
+    add() - добавть элемент в выборку
+    */
+    lists.eq(1).addClass('blue')
+            .end().eq(-1).addClass('orange')
+            .end().first().css('font-size', '2em') // наверх опять в ту выборку первый эл
+            .end().last().width('200px') // последний эл установить ширину
+            .end().filter(':even').addClass('color')
+            .end().not(':even').addClass('color')
+            .end().slice(1,3).offset({ left: 20})
+            .end().has('div').addClass('border')
+            .end().map(function(index, elem){ return elem}).addClass('curr')
+            .end().add('.span');
+            if(lists.is('.is')){
+                lists.filter('.is').addClass('yellow');
+            }
+    /*
+    Потомки
+        find() - найти среди потомков детей
+        children() - пробежаться по детям
+        contents() - вернуть также тектовые ноды помимо детей
+    * */
+
+    ul.find('#d').css('color','black');
+
+    console.log(ul.contents());
+
+    ul.children().each(function(index, elem) {
+        console.log("Дочерний элемент: " + elem.tagName + " " + elem.className);
+    }).length;
+
+    /*Родители */
+
+    ul.parent().addClass('border');
+
+    /*Сестры*/
+
+    lists.siblings('.is').css("border", "thick solid blue");
+
+    $(lists[8]).next().css("border", "thick solid green")
+            .end().prev().css("border", "thick solid black")
+            .end().prevAll().addClass('font')
+            .end().nextAll().addClass('bigfont')
+</script>
+</body>
+</html>

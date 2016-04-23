@@ -61,6 +61,9 @@
     <li>
         <a href="js/jquery/ajax/ajax.html">AJAX Jquery</a>
     </li>
+    <li>
+        <a href="js/jquery/navigate/navigateCollection.html">NavigateCollection Jquery</a>
+    </li>
 </ul>
 
 <h1>CSS</h1>

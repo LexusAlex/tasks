@@ -69,7 +69,7 @@ function searchArrayRecursive($needle, $haystack){
 
 }
 
-function viewResult($n,$h){
+function viewResult($n, array $h){
     $result = searchArrayRecursive($n, $h);
 
     if($result != false) {
@@ -78,14 +78,15 @@ function viewResult($n,$h){
         foreach($result as $element) {
             echo ' ['.$element.'] ';
         }
+        return true;
 
     }
     else{
-        echo 'Not Found';
+        return false;
     }
 
 }
 
-viewResult(3,[[1],[2],[3]]);
+//var_dump(viewResult(1,[[1],[2],[3]]));
 
 ?>

@@ -44,6 +44,11 @@
     <li><a href="js/optimate/js.html">Optimate JS</a></li>
 </ul>
 
+<h3>Tests</h3>
+<ul>
+    <li><a href="tests/js/qtest.html">qtest</a></li>
+</ul>
+
 <h1>Jquery</h1>
 <h3>Tasks</h3>
 <ul>

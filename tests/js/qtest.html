@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.23.1.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
+<script>
+    function trim(text) {
+        return (text || "").replace(/^\s+|\s+$/g, "");
+    }
+QUnit.test('trim()', function ( assert ) {
+        assert.ok(trim('   ') === '', 'Строка из пробельных символов');
+        assert.strictEqual(trim(), '', 'Без параметра');
+        assert.equal(trim(' x'), 'x', 'Начальные пробелы');
+        assert.equal(trim('x '), 'x', 'Концевые пробелы');
+        assert.equal(trim(' x '), 'x', 'Пробелы с обоих концов');
+        assert.equal(trim('    x  '), 'x', 'Табы');
+        assert.equal(trim('    x   y  '), 'x   y', 'Табы и пробелы внутри строки не трогаем');
+    });
+
+    QUnit.test( "ok test", function( assert ) {
+        assert.ok( true, "true succeeds" );
+        assert.ok( "non-empty", "non-empty string succeeds" );
+
+        assert.ok( false, "false fails" );
+        assert.ok( 0, "0 fails" );
+        assert.ok( NaN, "NaN fails" );
+        assert.ok( "", "empty string fails" );
+        assert.ok( null, "null fails" );
+        assert.ok( undefined, "undefined fails" );
+    });
+
+    QUnit.test('eq' ,function (assert) {
+        assert.equal(0,0,'Zero');
+        assert.equal(1+2,3,'nums');
+        assert.equal(2 || 3, 2,'or');
+        assert.equal(2 && 3, 3,'and');
+        assert.equal(2 && -1, -1,'negative');
+        assert.equal(2 && -1 && -6 && -22, -22,'negative');
+        assert.equal([1,2,3,4,5].length,5,'arr');
+    });
+</script>
+</body>
+</html>

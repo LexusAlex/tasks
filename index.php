@@ -47,6 +47,7 @@
 <h3>Theory</h3>
 <ul>
     <li><a href="js/optimate/js.html">Optimate JS</a></li>
+    <li><a href="js/js/navigate/navigateCollection.html">NavigateCollection JS</a></li>
 </ul>
 
 <h3>Tests</h3>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NavigateCollectionJS</title>
+</head>
+<body>
+<ul id = 'list' class="onelist">
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+    <li>item-6</li>
+    <li>item-7</li>
+    <li>item-8</li>
+    <li>item-9</li>
+    <li>item-10</li>
+    <li>item-11</li>
+    <li>item-12</li>
+    <li>item-13</li>
+    <li>item-14</li>
+    <li class="is">item-15</li>
+    <li>item-16</li>
+    <li>item-17</li>
+    <li>item-18</li>
+    <li>item-19</li>
+    <li>item-20</li>
+</ul>
+<!-- комментарий -->
+<script>
+    var d = document.documentElement;
+    var b = document.body;
+    var h = document.head;
+
+    // коллекция детей
+    var c = b.childNodes;
+    var ch = b.children;
+    // выведем всех детей body этого документа
+    for (var i = 0; i < c.length; i++) {
+        //console.log(c[i]);
+    }
+
+    // список вместе с тектовыми узлами
+    var ul = c[1].childNodes;
+    // только узлы элементы
+    var ulOnlyLi = c[1].children;
+
+    // предыдущий узел от этого любой
+    var prev = c[1].previousSibling; // previousElementSibling
+    // предыдущий элемент только элемент
+    // следующий узел от этого
+    var next = c[1].nextSibling; // nextElementSibling
+    // родительский узел любой
+    var p = c[1].parentNode;
+    // родительский узел элемент
+    var pe = c[1].parentElement;
+    // первый li и первый ребенок li это текст
+    var f = c[1].firstElementChild.firstChild;
+    // последний li
+    var l = c[1].lastElementChild;
+    // последний текстовый узел в ul
+    var lt = c[1].lastChild;
+
+    // пробежимся только по элементам
+    for (var i = 0; i < ch.length; i++) {
+        console.log(ch[i]);
+    }
+    // по id
+    var id = document.getElementById('list');
+    // по тегу
+    var elemli = document.getElementsByTagName('li');
+    // по классу
+    var elemclass = document.getElementsByClassName('onelist');
+    // по селектору все элементы
+    var selectorAll = document.querySelectorAll('li');
+    // по селектору один элемент
+    var selector = document.querySelector('li');
+    // проверить есть ли элемент в дереве
+    // найти элемент по селектору то есть отфильтровать
+    for (var i = 0; i < elemli.length; i++) {
+        if (elemli[i].matches('.is')) {
+            console.log(elemli[i]);
+        }
+    }
+    //console.log(math);
+
+    // иерархия элементов
+    /*
+    * Node -> Text
+    * Node -> Comment
+    * Node -> Element -> HTMLElement -> HTMLBodyElement
+    *
+    * */
+    var n1 = document.nodeType; // 9 document
+    var n2 = document.body.nodeType // 1 ElementNode
+    var n3 = document.body.firstChild.nodeType // 3 TextNode
+    var n4 = document.doctype.nodeType // 10 doctypeNode
+    var n5 = document.body.childNodes[3].nodeType; // 8 Comment Node
+
+    var name1 = document.body.childNodes[1].nodeName; // UL
+    var name2 = document.body.childNodes[1].tagName; // UL
+    var name3 = document.body.childNodes[0].nodeName; // #text
+    var name4 = document.nodeName; //#document
+    var name5 = document.body.childNodes[3].nodeName // #comment
+
+    // получить содержимое элемента в html
+    var i = document.body.innerHTML;
+    // записать в элемент
+    //var i1 = document.body.innerHTML = 'text';
+
+    // получить содержисое элемнта целиком вместе с элементом нельзя писать в элемент
+    var i2 =document.body.outerHTML;
+
+    // содержимое текстового узла
+    var val1 = document.body.childNodes[1].children[0].firstChild.data; //
+    // запись в узел
+    var val2 = document.body.childNodes[1].children[0].firstChild.data = 'new str'; //
+    // то же самое
+    var val3 = document.body.childNodes[1].children[0].firstChild.nodeValue;
+    // суммарный текст внутри всего body за вычетом тегов .конкатенация
+    var val4 = document.body.textContent;
+
+</script>
+</body>
+</html>

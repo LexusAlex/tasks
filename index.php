@@ -49,6 +49,7 @@
     <li><a href="js/optimate/js.html">Optimate JS</a></li>
     <li><a href="js/js/navigate/navigateCollection.html">NavigateCollection JS</a></li>
     <li><a href="js/js/navigate/attributes.html">Attributes JS</a></li>
+    <li><a href="js/js/navigate/createdeleteElement.html">CreateDeleteElement JS</a></li>
 </ul>
 
 <h3>Tests</h3>

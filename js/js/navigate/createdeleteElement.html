@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CreateDeleteElement</title>
+</head>
+<body>
+<script>
+    // создать элемент
+    var div = document.createElement('div');
+    // создать текстовый узел
+    var text = document.createTextNode('text div');
+
+    // добавить класс и текст и создать элемент со всем этим
+    var d = document.createElement('div');
+    d.className = "alert alert-success";
+    d.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
+
+    // создадим атрибут
+    var at = document.createAttribute('id');
+    // создать коммент
+    var com = document.createComment('comment');
+
+    /// но эти все элементы в воздухе теперь их нужно вставить в документ
+
+    // вставка в родителя в конец
+    var b = document.body;
+    b.appendChild(d);
+
+    // создать динамический список из 100 элементов при этом не написав ни строчки html
+    var ul = document.createElement('ul');
+
+    for (var i = 0; i < 100; i++){
+        var li = document.createElement('li');
+        li.innerHTML = '<strong>li - ' + i + '</strong>';
+        ul.appendChild(li);
+    }
+    b.appendChild(ul);
+
+    // вставить перед определенным элементом
+    // например в начало body
+
+    b.insertBefore(document.createElement('span'),b.firstChild);
+    // в конец body
+    b.insertBefore(document.createElement('span'),null);
+
+    //!!! все методы возвращают вставленнй узел
+
+    // копия узла получили два списка
+    var origUL = document.getElementsByTagName('ul');
+    var copyUL = origUL[0].cloneNode(true);
+
+    b.appendChild(copyUL);
+
+    // удалить узел body
+    //document.documentElement.removeChild(b);
+
+    // замена
+
+    var e1 = document.createElement('div');
+    var e2 = document.createElement('div');
+    e1.innerHTML = 'div red';
+    e2.innerHTML = 'div yellow';
+    e1.setAttribute('style','background:red;font-size:3em;');
+    e2.setAttribute('style','background:yellow;font-size:3em;');
+    b.appendChild(e1);
+    b.appendChild(e2);
+
+    //b.replaceChild(e2, e1);
+    // поменять местами
+    b.insertBefore(e2,e1);
+
+    // убрать желтый элемент через 2 секунды
+    setTimeout(function() {
+        b.removeChild(e2);
+    }, 2000);
+
+    console.log(copyUL);
+
+</script>
+</body>
+</html>

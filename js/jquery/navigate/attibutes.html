@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attributes</title>
+</head>
+<body>
+<ul id = 'list' class="onelist">
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+    <li>item-6</li>
+    <li>item-7</li>
+    <li>item-8</li>
+    <li>item-9</li>
+    <li>item-10</li>
+    <li>item-11</li>
+    <li>item-12</li>
+    <li>item-13</li>
+    <li>item-14</li>
+    <li id='my' class="is" accesskey="m" title="new" lang="ru" data-about="test">item-15</li>
+    <li>item-16</li>
+    <li>item-17</li>
+    <li>item-18</li>
+    <li>item-19</li>
+    <li>item-20</li>
+</ul>
+<script src="../jquery-1.12.3.js"></script>
+<script>
+    var e = $('#my');
+
+    // получить атрибут
+    var a = e.attr('title');
+    // установить атрибут
+    var setA  = e.attr('title','mytitle');
+    // удалить атрибут
+    var removeA = e.removeAttr('title');
+
+    // свойства htmlElement prop
+    var p1 = e.prop('');
+    var p2 = e.removeProp('');
+
+    // работа с классами проверка
+    if(e.hasClass('is')){
+        console.log('ok');
+    }
+    e.addClass('newmyClass');
+    e.addClass('newmyClass2');
+
+    e.removeClass('newmyClass2');
+
+    e.toggleClass('v');
+    e.toggleClass('v');
+    // работа с html
+    var h = e.html();
+    var hs = e.html('<b>new item</b>>');
+
+    console.log(h);
+</script>
+</body>
+</html>

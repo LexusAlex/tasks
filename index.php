@@ -48,6 +48,7 @@
 <ul>
     <li><a href="js/optimate/js.html">Optimate JS</a></li>
     <li><a href="js/js/navigate/navigateCollection.html">NavigateCollection JS</a></li>
+    <li><a href="js/js/navigate/attributes.html">Attributes JS</a></li>
 </ul>
 
 <h3>Tests</h3>
@@ -70,6 +71,7 @@
     <li>
         <a href="js/jquery/navigate/navigateCollection.html">NavigateCollection Jquery</a>
     </li>
+    <li><a href="js/jquery/navigate/attibutes.html">Attributes Jquery</a></li>
 </ul>
 
 <h1>CSS</h1>

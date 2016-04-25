@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute</title>
+</head>
+<body>
+<ul id = 'list' class="onelist">
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+    <li>item-6</li>
+    <li>item-7</li>
+    <li>item-8</li>
+    <li>item-9</li>
+    <li>item-10</li>
+    <li>item-11</li>
+    <li>item-12</li>
+    <li>item-13</li>
+    <li>item-14</li>
+    <li id='my' class="is" accesskey="m" title="new" lang="ru" data-about="test">item-15</li>
+    <li>item-16</li>
+    <li>item-17</li>
+    <li>item-18</li>
+    <li>item-19</li>
+    <li>item-20</li>
+</ul>
+<script>
+    // добавить свой атрибут в body видны только в js
+    document.body.my = {m:'new', k:'key'};
+
+
+    var e = document.getElementById('my');
+    // получить массив атрибутов элемента
+    var a = e.attributes;
+    // gпроверим что есть атрибут у элемента
+    if(e.hasAttribute('accesskey')){
+        console.log('ok');
+    }
+    // получить значение
+    var value = e.getAttribute('lang');
+
+    // установить занчение атрибута
+    var setValue = e.setAttribute('lang','kz');
+    // удалить атрибут
+    var removeAttr = e.removeAttribute('title');
+
+    // пробежаться по всем атрибутам элемента и вывести в консоль
+    var i = 0;
+    for (i; i < a.length; i++) {
+        console.log( a[i].name + " = " + a[i].value );
+    }
+
+    //получить класс элемента в виде строки
+    var cl = e.className;
+    // обьект для работы с классами
+    var classList = e.classList;
+        // проверить наличие класса у элемента
+        var r = classList.contains('is');
+        // добавить класс
+        classList.add('newclass');
+        classList.add('newclass2');
+        // удалить класс
+        classList.remove('newclass2');
+        // переключить
+        classList.toggle('new');
+        classList.toggle('new');
+        //перебрать классы в цикле
+        for (var i = 0; i < classList.length; i++) { // перечислить классы
+            console.log( classList[i] );
+        }
+    // получить data атрибут
+    var d = e.dataset.about;
+    console.log(d);
+</script>
+</body>
+</html>

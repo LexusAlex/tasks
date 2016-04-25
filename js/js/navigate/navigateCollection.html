@@ -97,12 +97,16 @@
     var n3 = document.body.firstChild.nodeType // 3 TextNode
     var n4 = document.doctype.nodeType // 10 doctypeNode
     var n5 = document.body.childNodes[3].nodeType; // 8 Comment Node
+    var n6 = document.querySelector('.is').getAttribute('class'); // или ниже
+    var n61 = document.getElementsByClassName('is')[0].getAttribute('class');
+    var n62 = document.getElementsByClassName('is')[0].attributes[0].nodeType; // 2 Attribute
 
     var name1 = document.body.childNodes[1].nodeName; // UL
     var name2 = document.body.childNodes[1].tagName; // UL
     var name3 = document.body.childNodes[0].nodeName; // #text
     var name4 = document.nodeName; //#document
     var name5 = document.body.childNodes[3].nodeName // #comment
+    var name6 = document.getElementsByClassName('is')[0].attributes[0].nodeName; // class название атрибута
 
     // получить содержимое элемента в html
     var i = document.body.innerHTML;

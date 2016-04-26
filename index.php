@@ -73,6 +73,7 @@
         <a href="js/jquery/navigate/navigateCollection.html">NavigateCollection Jquery</a>
     </li>
     <li><a href="js/jquery/navigate/attibutes.html">Attributes Jquery</a></li>
+    <li><a href="js/jquery/navigate/createdeleteElement.html">CreatedeleteElement Jquery</a></li>
 </ul>
 
 <h1>CSS</h1>
@@ -85,4 +86,8 @@
 <h3>Theory</h3>
 <ul>
     <li><a href="html/table.html">Table.html</a></li>
+</ul>
+<h1>GIT</h1>
+<ul>
+    <li><a href="git/git.txt">GIT</a></li>
 </ul>

@@ -1,0 +1,93 @@
+GIT
+Установить данные для коммитов
+git config --global user.email 'alexsey_89@bk.ru'
+git config --global user.name 'alexseyU'
+
+Клонирование в каталог
+git clone https://github.com/LexusAlex/tasks.git test-site.loc или
+git clone git@github.com:devlabuser/sharp.git ./
+
+Добавить в индекс
+git add index.php
+
+Удалить из индекса
+git reset HEAD index.php
+
+Закомиттить
+git commit -m 'comment'
+
+Но прежде нужно забрать измения с сервера
+git pull
+
+Потом можно отправлять на сервер в указанную ветку
+git push origin master
+
+Откат файла к коммиту
+git checkout README.md
+
+Откат к указанному коммиту
+git reset --hard 9a452d955bdb57e7e4f2b09f8ce2fbb6cd56377a
+
+Откат до последней версии удаленной ветки
+git reset --hard origin/master
+
+Изменить комментари к последнему коммиту
+git commit --amend
+
+Удалить коммит последний
+git reset --hard HEAD~
+
+Удалить последние 7 коммитов
+git reset --hard HEAD~6
+
+Склеивание коммитов последние 7
+
+$ git rebase -i HEAD~6
+
+#  p, pick = Использовать коммит
+#  r, reword = Использовать коммит , но редактировать сообщение коммита
+#  e, edit = Использовать коммит , но остановить для внесения изменений
+#  s, squash = Использовать коммит, но слить комментарии в предыдущий коммит
+#  f, fixup = использует "squash", но используется только один комментарий то в который вливатеся
+
+Убрать коммит с удаленного репозитория
+Откат к предыдущему коммиту
+git reset --hard b81b701
+Удалить коммит с удаленного репа
+git push -f origin master или git push origin +master
+
+
+
+Создать ветку
+git branch oop
+
+Перейти в ветку
+git checkout oop
+
+Создать и перейти в ветку
+git checkout -b oop
+
+Слить в ветку master(Перейти в master git checkout master)
+git merge oop
+
+Удаление ветки в удаленном репозитории!!!
+git branch -d oop(У себя)
+git push origin --delete branch-name(В удаленном репе)
+
+Удалить ветку в любом случае
+git branch -D new_branch
+
+Переимновать ветку
+git branch -m new_name_branch
+
+Последний коммит
+git branch -v
+
+Информация об удаленном репозитории
+git remote show origin
+
+Создать ветку на удаленном репозитории
+git push origin newfeature
+
+Либо сразу отправить свои измения на удаленку и сразу отслеживать
+git push -u origin new_f

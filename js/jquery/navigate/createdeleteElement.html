@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createdeleteElement Jquery</title>
+</head>
+<body>
+<ul class="ul">
+    <li>1</li>
+    <li>2</li>
+</ul>
+<script src="../jquery-1.12.3.js"></script>
+<script>
+    //создать элемент
+    var div = $('<div>one</div>');
+    var div2 = $('<div>two</div>');
+    // вставить в body в начало и в конец
+    var b = $('body');
+    b.append(div);
+    b.append(div2);
+    b.append('<div>tree</div>');
+
+    b.prepend('<div>-tree</div>');
+    b.prepend('<div>-two</div>');
+
+    //вставка во внутрь в конец и в начало
+    var newElems = $("<div>div</div>");
+    var span = $('<span>span</span>');
+    var span2 = $('<span>span2</span>');
+
+    span.appendTo(newElems);
+    span2.prependTo(newElems);
+
+    b.append(newElems);
+
+    // замена элементов
+    let newE = $('<li>new li</li>');
+
+   // $('.ul').first().replaceWith(newE);
+
+    $('.ul').children().first().replaceWith(newE);
+
+    // удаление элементов
+
+    //$('body').remove();
+
+    // если нужно вставить элемент в другое место
+    //$('.ul').detach();
+
+    // очистить содержимое элемента , но сам элемент остается в дереве
+
+    $('.ul').children().eq(0).empty().css("border", "thick solid red");
+
+
+
+
+</script>
+</body>
+</html>

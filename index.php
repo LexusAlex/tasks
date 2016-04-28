@@ -15,7 +15,8 @@
 </ul>
 <h3>Theory</h3>
 <ul>
-    <li><a href="php/db/pdo.php">PDO</a></li>
+    <li><a href="php/db/pdo.php">PDO MySql</a></li>
+    <li><a href="php/db/psql.php">PDO postgreSql</a></li>
     <li><a href="php/enum/array.php">Enum array</a></li>
     <li><a href="php/enum/arrayMap.php">ArrayMap</a></li>
     <li><a href="php/oop/oop.php">OOP</a></li>

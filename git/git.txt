@@ -91,3 +91,15 @@ git push origin newfeature
 
 Либо сразу отправить свои измения на удаленку и сразу отслеживать
 git push -u origin new_f
+
+Слить все коммиты в один
+git checkout master
+git merge --squash feature
+git commit -m 'first + second + third commits'
+
+Примение измений из одной ветки в другую
+
+git checkout feature1
+git rebase master
+git checkout master
+git merge feature1

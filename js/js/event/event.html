@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <style>
+        button#five {
+            transition: width 1s;
+            width: 500px;
+        }
+
+        #div1,#div2,#div3,#div4,#div5{
+            border: 1px solid blue;
+            margin: 10px;
+        }
+        .h{
+            background-color: #1b6d85;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<input value="1.Событие в html" onclick="alert('Клик alert!')" type="button">
+
+<input value="2. Функция" onclick="count()" type="button">
+
+<input id="three" value="3. Свойства DOM обьекта" type="button">
+
+<input id="four" value="4. Уже существующая функция" type="button">
+
+<input id="five" value="5. AddEventListener" type="button">
+
+<textarea rows="8" cols="40" id="area">События мыши</textarea>
+
+<div id="div1" onclick="alert(this.id)"> div1
+    <div id="div2" onclick="alert(this.id)"> div2
+        <div id="div3" onclick="alert(this.id)"> div3
+            <div id="div4" onclick="alert(this.id)"> div4
+                <div id="div5" onclick="alert(this.id)">div5</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="ul">
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+    <li>item-6</li>
+    <li>item-7</li>
+    <li>item-8</li>
+    <li>item-9</li>
+    <li>item-10</li>
+    <li>item-11</li>
+    <li>item-12</li>
+    <li>item-13</li>
+    <li>item-14</li>
+    <li>item-15</li>
+    <li>item-16</li>
+    <li>item-17</li>
+    <li>item-18</li>
+    <li>item-19</li>
+    <li>item-20</li>
+</ul>
+Счётчик:
+<button data-counter>1</button>
+
+<a id="noAction" href="http://ya.ru">Отмена действия перехода по ссылке</a>
+<script>
+
+    function count() {
+        for(var i=1; i<=3; i++) {
+            console.log(i);
+        }
+    }
+
+    document.getElementById('three').onclick = function () {
+         console.log('Событие как свойство DOM обьекта');
+    };
+
+    function say() {
+        console.log('Уже существующая функция');
+    }
+
+    document.getElementById('four').onclick = say;
+
+    function handler() {
+        console.log('AddEventListener');
+    }
+    // добавить и убрать обработчик
+    document.getElementById('five').addEventListener('click', handler);
+    //document.getElementById('five').removeEventListener('click', handler);
+
+    // еще один обработчик
+    document.getElementById('five').addEventListener('focus', handler);
+
+    // события мыши
+    //mousedown → mouseup → click.
+    var a = document.getElementById('area');
+    a.onmousedown = function () {console.log('onmousedown');}
+    a.onmouseup = function () {console.log('onmouseup');}
+    a.onclick = function () {console.log('onclick');}
+    a.onmousemove = function () {console.log('mousemove');} // при движении
+    a.onmouseover = function () {console.log('mouseover');} // при наведении
+    a.onfocus = function () {console.log('focus');} // при фокусировании
+
+    //обьект события
+    var e = document.createElement('div');
+    e.innerHTML = 'div';
+    document.body.appendChild(e);
+
+    e.onclick = function(event) {
+        // вывести тип события, элемент и координаты клика
+        console.log('тип события : ' + event.type + " на элементе " + event.currentTarget);
+        console.log('координаты :' + event.clientX + ":" + event.clientY);
+        console.log(event);
+    }
+
+    // всплытие элементов
+    /*document.getElementById('div1').addEventListener('click', function (event) {
+        console.log(event.target);
+    });*/
+
+    // смотри пример
+    //прекратить всплытие
+    //event.stopPropagation()
+
+    //делегирование событий
+    var selectedTd;
+    document.querySelector('.ul').onclick = function (event) {
+        if(event.target.tagName != 'LI'){ return;}
+
+        if (selectedTd) {
+            selectedTd.classList.remove('h');
+        }
+        selectedTd = event.target;
+        selectedTd.classList.add('h');
+    };
+
+    document.onclick = function(event) {
+        if (!event.target.hasAttribute('data-counter')) return;
+
+        var counter = event.target;
+
+        counter.innerHTML++;
+        console.log(event.target);
+    };
+
+    // отмена действие браузера
+    document.getElementById('noAction').onclick = function (event) {
+        //return false;
+        // или
+        event.preventDefault();
+    };
+</script>
+</body>
+</html>

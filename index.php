@@ -52,6 +52,7 @@
     <li><a href="js/js/navigate/navigateCollection.html">NavigateCollection JS</a></li>
     <li><a href="js/js/navigate/attributes.html">Attributes JS</a></li>
     <li><a href="js/js/navigate/createdeleteElement.html">CreateDeleteElement JS</a></li>
+    <li><a href="js/js/event/event.html">Event JS</a></li>
 </ul>
 
 <h3>Tests</h3>

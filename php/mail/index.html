@@ -8,18 +8,12 @@
 <body>
 <link rel="stylesheet" href="style.css">
 <div class="ekey-form_box modal_case">
-    <div class="modal_overflow">
-    </div>
+    <div class="modal_overflow"></div>
     <div class="modal_block3 wide">
-        <div class="top">
-        </div>
+        <div class="top"></div>
         <div class="head">
-            <div class="head_text">
-                Получить ЭП
-            </div>
-            <div class="modal_close">
-                &nbsp;
-            </div>
+            <div class="head_text">Получить ЭП</div>
+            <div class="modal_close">&nbsp;</div>
         </div>
         <div class="body" style="height:auto;padding: 10px; box-sizing: border-box;">
             <form class="centers ekey-form" name="applications" action="" method="GET" enctype="multipart/form-data" accept-charset="utf-8" style="background-color:inherit;box-shadow: none;">
@@ -30,21 +24,18 @@
                 <input type="tel" name="form_text_869" value="" placeholder="Телефон">
                 <input type="email" name="form_text_873" value="" placeholder="Электронная почта"">
                 <div class="row">
-
-    <span class="glass_button submit" style="margin-top:10px;">
-        <span>
-            <span style="width: 370px;text-align: center;">
-               Оставить заявку
-            </span>
-        </span>
-    </span>
+                    <span class="glass_button submit" style="margin-top:10px;">
+                        <span>
+                            <span style="width: 370px;text-align: center;">
+                               Оставить заявку
+                            </span>
+                        </span>
+                    </span>
                 </div>
                 <input type="submit" name="web_form_submit" value="Оставить заявку"  style="visibility:hidden;position: absolute;">
-
             </form>
         </div>
-        <div class="bottom">
-        </div>
+        <div class="bottom"></div>
     </div>
 </div>
 <script src="../../js/jquery/jquery-1.12.3.js"></script>
@@ -55,10 +46,11 @@
                     Cases: '.modal_case',
                     Overflow: '.modal_overflow',
                     Close: '.modal_close'
-                },
-                Objects = {},
+                };
+
+        var Objects = {},
                 Show = function(event){
-                    event.preventDefault();
+                    event.preventDefault();//убрать действие по умолчаннию
                     Objects.Cases.filter('.' + this.href.slice(this.href.indexOf('#') + 1) + '_box').fadeIn();
                 },
                 Close = function(){
@@ -73,7 +65,6 @@
                         Objects.Close.add(Objects.Overflow).bind('click', Close);
                     });
                 };
-
         Init();
         $('form.ekey-form span.submit>span>span').bind('click', function(event) {
             event.preventDefault();

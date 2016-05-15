@@ -32,7 +32,7 @@
                         </span>
                     </span>
                 </div>
-                <input type="submit" name="web_form_submit" value="Оставить заявку"  style="visibility:hidden;position: absolute;">
+                <input type="submit" name="web_form_submit" value="Оставить заявку"  style="">
             </form>
         </div>
         <div class="bottom"></div>
@@ -49,28 +49,34 @@
                 };
 
         var Objects = {},
+                // показываем сейчас у нас display: none; отображение всего блока скрыто
                 Show = function(event){
                     event.preventDefault();//убрать действие по умолчаннию
                     Objects.Cases.filter('.' + this.href.slice(this.href.indexOf('#') + 1) + '_box').fadeIn();
+                    // modal_case.filter(.ekey-form_box) установим display block
                 },
+
                 Close = function(){
                     $(this).parents(GETTER.Cases + ':first').fadeOut();
+                    //modal_overflow родителя с .modal_case:first и не показываем
                 },
                 Init = function(){
                     $(function(){
-                        for(var name in GETTER)
+                        var name;
+                        for(name in GETTER)
                             Objects[name] = $(GETTER[name]);
 
-                        Objects.Button.bind('click', Show);
+                        Objects.Button.bind('click', Show); // вешаем обработчик открытия на ссылку
                         Objects.Close.add(Objects.Overflow).bind('click', Close);
                     });
                 };
         Init();
+        // работаем с кнопкой формы
         $('form.ekey-form span.submit>span>span').bind('click', function(event) {
             event.preventDefault();
             $(this).parents('form').find('input[type="submit"]').trigger('click');
-        });
 
+        });
         return Objects;
     })()
 </script>

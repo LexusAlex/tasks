@@ -94,6 +94,7 @@
     <li><a href="html/table.html">Table.html</a></li>
 </ul>
 <h1>GIT</h1>
+newstr
 <ul>
     <li><a href="git/git.txt">GIT</a></li>
 </ul>

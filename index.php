@@ -78,6 +78,8 @@
     </li>
     <li><a href="js/jquery/navigate/attibutes.html">Attributes Jquery</a></li>
     <li><a href="js/jquery/navigate/createdeleteElement.html">CreatedeleteElement Jquery</a></li>
+    <li><a href="js/jquery/events/event.html">Events Jquery</a></li>
+    <li><a href="js/jquery/animation/animation.html">Animation Jquery</a></li>
 </ul>
 
 <h1>CSS</h1>

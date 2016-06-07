@@ -13,11 +13,13 @@ $dbParams = array(
     'driver'   => 'pdo_pgsql',
     'user'     => 'postgres',
     'password' => 'root',
-    'dbname'   => 'etpv2pp.etpgpb.ru',
+    'dbname'   => 'test',
     'host' => 'localhost',
     'port'=> 5432
 );
 
 $conn = \Doctrine\DBAL\DriverManager::getConnection($dbParams, $configdb);
 $entityManager = EntityManager::create($dbParams, $config);
-return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
+//return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
+
+//vendor/bin/doctrine orm:info инфо

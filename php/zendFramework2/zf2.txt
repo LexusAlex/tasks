@@ -1,0 +1,140 @@
+Кеширование ZF2
+
+        /** @var \Zend\Cache\Storage\StorageInterface $cacheAdapter */
+        $cacheAdapter = $sm->get('Cache\CommonAdapter');
+        //var_dump(time());
+        if (!$check = $cacheAdapter->hasItem("test")) {
+            $cacheAdapter->getOptions()->setTtl("60");
+            $cacheAdapter->setItem("test", time());
+        }
+        $item = $cacheAdapter->getItem("test");
+        //Debug::dump($check);
+        //Debug::dump($item);
+
+Rss ZF2
+        $this->getResponse()->getHeaders()->addHeaderLine(
+            'Content-Type', 'text/xml'
+        );
+echo '<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Яндекс.Новости: Авто</title>
+    <link>https://news.yandex.ru/auto.html</link>
+    <description>
+      Первая в России служба автоматической обработки и систематизации новостей. Сообщения ведущих российских и мировых СМИ. Обновление в режиме реального времени 24 часа в сутки.
+    </description>
+    <image>
+      <url>https://company.yandex.ru/i/50x23.gif</url>
+      <link>https://news.yandex.ru/auto.html</link>
+      <title>Яндекс.Новости: Авто</title>
+    </image>
+    <lastBuildDate>15 Jun 2016 00:01:19 +0300</lastBuildDate>
+    <item>
+      <title>КАМАЗ в июне планирует продать в России 1,8 тыс. автомобилей</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=www.business-gazeta.ru%2Fnews%2F313817</link>
+      <description>Автоконцерн КАМАЗ планирует в июне текущего года продать 1,8 тыс. автомобилей на российском рынке. На экспорт планируется поставить 450 грузовиков.</description>
+      <pubDate>14 Jun 2016 23:42:00 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=www.business-gazeta.ru%2Fnews%2F313817</guid>
+    </item>
+    <item>
+      <title>Mercedes-Benz завершает создание кроссовера с электродвигателем</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=evo-rus.ru%2Fauto-news%2Fmercedes-benz-zavershaet-sozdanie-krossovera-s-elektrodvigatelem.html</link>
+      <description>Как стало известно evo-rus.ru, в парижском салоне осенью будет представлен новый кроссовер с электродвигателем. Новый автомобиль относится к линейке моделей под объединенным названием E-Class. Известно, что кроссовер будет называться All-Terrain.</description>
+      <pubDate>14 Jun 2016 21:46:12 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=evo-rus.ru%2Fauto-news%2Fmercedes-benz-zavershaet-sozdanie-krossovera-s-elektrodvigatelem.html</guid>
+    </item>
+    <item>
+      <title>Российские продажи Toyota в мае сократились на 9 процентов</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=www.motorpage.ru%2FToyota%2Fnews%2Frossijskie_prodazhi_toyota_v_mae_sokratilis_na_9_procentov.html</link>
+      <description>За отчетный период доля Toyota на российском рынке выросла на 0,4 процентных пункта и составила 6,4%. В период с января по май совокупный объем реализации автомобилей компании составил 37 152 экземпляра.</description>
+      <pubDate>14 Jun 2016 21:31:18 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=www.motorpage.ru%2FToyota%2Fnews%2Frossijskie_prodazhi_toyota_v_mae_sokratilis_na_9_procentov.html</guid>
+    </item>
+    <item>
+      <title>Новый Citroen C3 Picasso был замечен во время тестов</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=svopi.ru%2Fautomedia%2F108644</link>
+      <description>Фотошпионы засекли обновлённый Citroen C3 Picasso во время тестовых заездов. Официальная презентация автомобиля запланирована лишь осенью этого года, однако благодаря свежим снимкам можно судить об изменениях во внешнем виде новинки.</description>
+      <pubDate>14 Jun 2016 22:11:35 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=svopi.ru%2Fautomedia%2F108644</guid>
+    </item>
+    <item>
+      <title>В Париже дебютируют новой генерации электромобили Smart</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=dni24.com%2Fauto%2F80259-v-parizhe-debyutiruyut-novoy-generacii-elektromobili-smart.html</link>
+      <description>В сентябре текущего года на Парижском автосалоне состоится официальная премьера одновременно трех электромобилей Smart. Теперь к розетке подключаться будет кроме двухдверной модификации ForTwo также четырехдверная версия ForFour и открытая автомодель Smart Cabrio, обладающая складным верхом.</description>
+      <pubDate>14 Jun 2016 19:19:05 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=dni24.com%2Fauto%2F80259-v-parizhe-debyutiruyut-novoy-generacii-elektromobili-smart.html</guid>
+    </item>
+    <item>
+      <title>Geely рассекретила «наследника» Emgrand EC7</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=www.vladtime.ru%2Fautomedia%2F493654</link>
+      <description>Geely прекратила скрывать «наследника» модели Emgrand EC7. Китайская автокомпания раскрыла дизайн Emgrand GL. Старт реализации новых разработок состоится уже в этом году.</description>
+      <pubDate>14 Jun 2016 18:25:07 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=www.vladtime.ru%2Fautomedia%2F493654</guid>
+    </item>
+    <item>
+      <title>Hyundai и Kia отзывают в Южной Корее и США 370 тысяч автомобилей</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=www.vladtime.ru%2Fautomedia%2F493699</link>
+      <description>Южнокорейские производители Hyundai и Kia заявили об отзыве порядка 370 тысяч автомобилей, которые были проданы на домашнем рынке и в США. Об этом сообщают американские СМИ. В качестве причины массового отзыва выступает найденный дефект в замке крыше капота.</description>
+      <pubDate>14 Jun 2016 19:48:59 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=www.vladtime.ru%2Fautomedia%2F493699</guid>
+    </item>
+    <item>
+      <title>Продажи автомобилей в Китае выросли за май на 9,8%</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=rsute.ru%2F126294-prodazhi-avtomobiley-v-kitae-vyirosli-za-may-na-9-8.html</link>
+      <description>На китайском автомобильном рынке отмечается значительный рост продаж в сегменте легковых автомобилей. По данным аналитиков, в прошлом месяце продажи автомобилей на рынке КНР увеличились на 11,3%. В годовом эквиваленте данный показатель составляет 1,8 млн машин.</description>
+      <pubDate>14 Jun 2016 19:37:22 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=rsute.ru%2F126294-prodazhi-avtomobiley-v-kitae-vyirosli-za-may-na-9-8.html</guid>
+    </item>
+    <item>
+      <title>Аналитики Ford объяснили увеличение спроса на автомобили SUV в России</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=actualnews.org%2Favto%2F103768-analitiki-ford-obyasnili-uvelichenie-sprosa-na-avtomobili-suv-v-rossii.html</link>
+      <description>Аналитики Ford Sollers объяснили, почему за последние 10 лет сегмент SUV в России стал пользоваться большей популярность. Это связано с тем, что покупатели считают кроссоверы идеальным вариантом как и для молодых людей, так и для стариков.</description>
+      <pubDate>14 Jun 2016 19:13:12 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=actualnews.org%2Favto%2F103768-analitiki-ford-obyasnili-uvelichenie-sprosa-na-avtomobili-suv-v-rossii.html</guid>
+    </item>
+    <item>
+      <title>SsangYong показали дизайн нового поколения кроссовера Rexton</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=rukavkaz.ru%2Fssangyong-pokazali-dizajn-novogo-pokoleniya-krossovera-rexton%2F</link>
+      <description>Издание Auto Express опубликовало скетчи нового поколения SsangYong Rexton. Судя по изображениям, дизайн нового кроссовера будет выполнен в стиле концепта LIV-1, показанного в 2013 году.</description>
+      <pubDate>14 Jun 2016 21:09:46 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=rukavkaz.ru%2Fssangyong-pokazali-dizajn-novogo-pokoleniya-krossovera-rexton%2F</guid>
+    </item>
+    <item>
+      <title>Hyundai выводит с российского рынка модель Veloster</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=www.vesti.ru%2Fdoc.html%3Fid%3D2765030</link>
+      <description>Как стало известно «Дейли-Мотор», российский автомобильный рынок покинул хэтчбек компании Hyundai под названием Veloster. Данная модель исчезла с сайта концерна, как и ее официальный прайс-лист.</description>
+      <pubDate>14 Jun 2016 18:58:00 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=www.vesti.ru%2Fdoc.html%3Fid%3D2765030</guid>
+    </item>
+    <item>
+      <title>Продажи коммерческих автомобилей в России сократились за год на 4,9%</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=regnum.ru%2Fnews%2Feconomy%2F2144528.html</link>
+      <description>По итогам пяти месяцев текущего года российский рынок новых коммерческих автомобилей показал сокращение на 4,9% по сравнению с тем же периодом 2015 года, сообщает «АВТОСТАТ». За пять месяцев 2016 года в России было продано 32,5 тыс. коммерческих автомобилей.</description>
+      <pubDate>14 Jun 2016 14:43:33 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=regnum.ru%2Fnews%2Feconomy%2F2144528.html</guid>
+    </item>
+    <item>
+      <title>Toyota рассекретила цену Corolla 2016 c гибридным двигателем</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=informvest.net%2Fother%2Ftoyota-rassekretila-cenu-corolla-2016-c-gibridnym-dvigatelem.html</link>
+      <description>Недавно представители компании рассекретили цену и комплектацию Corolla 2016 c гибридным двигателем. Известно, что его бензиновый мотор объемом 1,8 л будет работать в дуэте с электродвигателем, благодаря чему машина сможет выжать мощность в 134 «лошадки».</description>
+      <pubDate>14 Jun 2016 20:48:41 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=informvest.net%2Fother%2Ftoyota-rassekretila-cenu-corolla-2016-c-gibridnym-dvigatelem.html</guid>
+    </item>
+    <item>
+      <title>Mercedes-Benz рассекретил водородный кроссовер</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=auto.mail.ru%2Farticle%2F61037-mercedes-benz_rassekretil_vodorodnyi_krossover%2F</link>
+      <description>Ещё в 2009 году Daimler AG представил водородный хэтчбек Mercedes-Benz B-класса F-Cell, который, правда, в продажу не поступил, а сдавался исключительно в аренду. В отличие от него, новый GLC F-Cell будет доступен для покупки уже в следующем году в Германии, США и Японии.</description>
+      <pubDate>14 Jun 2016 16:29:34 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=auto.mail.ru%2Farticle%2F61037-mercedes-benz_rassekretil_vodorodnyi_krossover%2F</guid>
+    </item>
+    <item>
+      <title>В мае продажи грузовиков в России выросли на 8,2%</title>
+      <link>https://news.yandex.ru/yandsearch?cl4url=spbvoditel.ru%2F2016%2F06%2F14%2F029%2F</link>
+      <description>В мае 2016 года в России было продано 3300 грузовиков – это на 8,2% больше, чем год назад. Таким образом, российский рынок грузовых автомобилей показывает рост второй месяц подряд, сообщает аналитическое агентство «АВТОСТАТ». Лидерство с 40% от общего объема продаж сохранил КАМАЗ.</description>
+      <pubDate>14 Jun 2016 14:21:00 +0300</pubDate>
+      <guid>https://news.yandex.ru/yandsearch?cl4url=spbvoditel.ru%2F2016%2F06%2F14%2F029%2F</guid>
+    </item>
+  </channel>
+</rss>';
+
+        return $this->getResponse();

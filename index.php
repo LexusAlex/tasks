@@ -28,6 +28,7 @@
     <li><a href="php/doctrine/index.php">Doctrine</a></li>
     <li><a href="php/zendFramework2/zf2.txt">Zend Framework 2</a></li>
     <li><a href="php/memcached/memcached.php">Memcached</a></li>
+    <li><a href="php/xhprof/xhprof.php">Xhprof</a></li>
     <li>
         <ul>Iterators
             <li><a href="php/spl/01-Iterator-1.php">01-Iterator-1.php</a></li>

@@ -30,6 +30,13 @@
     <li><a href="php/memcached/memcached.php">Memcached</a></li>
     <li><a href="php/xhprof/xhprof.php">Xhprof</a></li>
     <li>
+        <ul>PSR
+            <li><a href="php/psr/psr-0.php">psr-0</a></li>
+            <li><a href="php/psr/psr-1.php">psr-1</a></li>
+            <li><a href="php/psr/psr-2.php">psr-2</a></li>
+        </ul>
+    </li>
+    <li>
         <ul>Iterators
             <li><a href="php/spl/01-Iterator-1.php">01-Iterator-1.php</a></li>
             <li><a href="php/spl/02-RecursiveArrayIterator-1.php">02-RecursiveArrayIterator-1.php</a></li>

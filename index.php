@@ -114,3 +114,8 @@
     <li><a href="sql/postgreSql/postgreSql.html">PostgreSql</a></li>
     <li><a href="sql/postgreSql/commands.html">PostgreSql commands</a></li>
 </ul>
+<h1>Linux</h1>
+<h3>Hardware</h3>
+<ul>
+    <li><a href="linux/hardware/1-hardware.html">Hardware</a></li>
+</ul>

@@ -118,5 +118,10 @@
 <h1>Linux</h1>
 <h3>Hardware</h3>
 <ul>
-    <li><a href="linux/hardware/1-hardware.html">Hardware</a></li>
+    <li><a href="linux/hardware/hardware.html">Hardware</a></li>
+    <li><a href="linux/hardware/disks.html">Hard Disks</a></li>
+</ul>
+<h3>Inizialization</h3>
+<ul>
+    <li><a href="linux/init/init.html">Init</a></li>
 </ul>

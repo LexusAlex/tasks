@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Init Linux</title>
+</head>
+<body>
+<h1>Инициализация системы</h1>
+<img src="../image/init-1.png" height="577" width="685"/>
+<pre>
+    BIOS/UEFI
+    MBR/GPT - загрузчик часть машинного кода
+    LILO/GRUB
+    Kernel
+    Init
+</pre>
+<h1>Загрузчики</h1>
+<ul>
+    <li>NTLDR - win</li>
+    <li>LILO - linux</li>
+    <li>GRUB - GNU ubuntu</li>
+    <img src="../image/init-2.png" height="577" width="685"/>
+    <li>BootX - MAC OS</li>
+    <li>Chameleon</li>
+</ul>
+<pre>
+    dmesg - вывод сообщении ядра
+    pstree - вывод процессов в виде дерева
+    /etc/init.d - директория инициализации, скрипты запускают службы
+        ./network stop - остановить службу
+        ./network start - запустить службу
+        либо так
+        service network restart
+</pre>
+<h1>SysV</h1>
+<img src="../image/init-3.png"/>
+<h1>Команды</h1>
+<img src="../image/init-4.png"/>
+
+<h3>Upstart</h3>
+<pre>
+    Служба - перезапускается
+    Задача - не перезапускается
+    /etc/init - файлы заданий
+    initctl - утилита управлением upstart
+</pre>
+</body>
+</html>

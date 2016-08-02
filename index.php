@@ -27,7 +27,13 @@
     <li><a href="php/mail/index.html">SmtpMail</a></li>
     <li><a href="php/doctrine/index.php">Doctrine</a></li>
     <li><a href="php/zendFramework2/zf2.txt">Zend Framework 2</a></li>
-    <li><a href="php/memcached/memcached.php">Memcached</a></li>
+    <li>
+        <ul>
+            <li><a href="php/memcached/memcached.php">Memcached</a></li>
+            <li><a href="php/memcached/theory.php">Memcached Theory</a></li>
+        </ul>
+
+    </li>
     <li><a href="php/xhprof/xhprof.php">Xhprof</a></li>
     <li><a href="php/newinphp/newinphp.php">New in php version 5.0 - 7.0</a></li>
     <li>

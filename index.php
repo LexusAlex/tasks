@@ -131,3 +131,12 @@
 <ul>
     <li><a href="linux/init/init.html">Init</a></li>
 </ul>
+<h3>Bash</h3>
+<ul>
+    <li><a href="linux/bash/bash.html">Bash</a></li>
+    <li><a href="linux/bash/variable.html">Variables</a></li>
+</ul>
+<h3>SSH</h3>
+<ul>
+    <li><a href="linux/ssh/ssh.html">SSH</a></li>
+</ul>

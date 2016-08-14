@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bash</title>
+</head>
+<body>
+<h1>Профили</h1>
+
+<img src="../image/bash-1.png" height="561" width="1010"/> <br>
+etc/profile - настройки для всех пользователей <br>
+$HOME/.bashrc - настройки для локального пользователя, текущего
+
+<h1>Псевдонимы и функции</h1>
+
+<img src="../image/bash-2.png"/>
+
+<pre>
+    Примеры
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+
+    При создании своего псевдонима необходимо выйти из оболочки чтобы изменения применились
+
+    Функции, пишем скрипт для отработки нескольких команд
+    Так же можно передать в функцию аргументы $1 - первый аргумент
+
+</pre>
+
+<img src="../image/bash-3.png" height="181" width="372"/>
+
+<h1>Создание bash скрипта</h1>
+
+<img src="../image/bash-4.png"/>
+<pre>
+    Скрипты знать очень полезно - можно автоматизировать работу при наборе больших команд
+    #!/bin/bash
+    date
+    uptime
+
+    Нужно прописать в переменной $PATH а там пути где система ищет исполняемые файлы
+    например это
+    bash: /home/alexey/
+    .phpbrew/bin:
+    /usr/local/sbin:
+    /usr/local/bin:
+    /usr/sbin:
+    /usr/bin:
+    /sbin:
+    /bin:
+    /usr/games:
+
+    Как прописать путь к скрипту
+    PATH = $PATH:/home/bin/code
+
+
+</pre>
+<h1>Условные выражения</h1>
+<img src="../image/bash-5.png" height="508" width="660"/>
+<pre>
+    Подстановка команд
+    x = $(ls -la)
+    или
+    x = `ls - la`
+</pre>
+<h1>Циклы</h1>
+
+<img src="../image/bash-6.png" height="559" width="976"/>
+</body>
+</html>

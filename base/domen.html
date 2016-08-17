@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domen</title>
+</head>
+<body>
+<h1>История URL . Domen</h1>
+<h2>Arpanet</h2>
+<div>В архитектуре ARPANET за хосты отвечал специальный фаил HOSTS.TXT - Хранение всех хостов Интернета в одном файле</div>
+<ul>
+    <li>адрес машины был таким - sw-hosts!digital-lobby!zack</li>
+    <li>DNS - dig - утилита для отпавки dns запроса</li>
+    <li>TLD - расположение имен иерархически и . - это корень иерархии hfnet.arpa. и корневые сервера</li>
+    <li>Корневая зона DNS состоит из тринадцати кластеров DNS-серверов</li>
+    <pre>
+        a.root-servers.net.	255063	IN	A	198.41.0.4
+        b.root-servers.net.	468028	IN	A	192.228.79.201
+        c.root-servers.net.	527271	IN	A	192.33.4.12
+        d.root-servers.net.	343083	IN	A	199.7.91.13
+        e.root-servers.net.	343083	IN	A	192.203.230.10
+        f.root-servers.net.	343083	IN	A	192.5.5.241
+        g.root-servers.net.	343083	IN	A	192.112.36.4
+        h.root-servers.net.	343083	IN	A	198.97.190.53
+        i.root-servers.net.	343083	IN	A	192.36.148.17
+        j.root-servers.net.	343083	IN	A	192.58.128.30
+        k.root-servers.net.	343083	IN	A	193.0.14.129
+        l.root-servers.net.	343083	IN	A	199.7.83.42
+        m.root-servers.net.	441860	IN	A	202.12.27.33
+    </pre>
+    <li>Корневые dns сервера находятся в сейфах</li>
+    <li>Почти все запросы к корневым серверам это запросы по ошибке и это стало проблемой</li>
+    <li>Далее были добавлены специальные локальные сервера</li>
+    <pre>
+        10.0.0.0/8
+        172.16.0.0/12
+        169.254.0.0/16
+        192.168.0.0/16
+    </pre>
+    <li>Сервера администрируются разными компаниями и правительствами например com администрует Verisign</li>
+    <li>Кодировние имент в ASCII</li>
+    <li>В 2007 году Юникод стал самым популярным стандартом кодирования в вебе</li>
+    <li>Если вводить символы юникода они будут кодироваться к xn--sales-r65lm0e.com. с помощью punycode</li>
+</ul>
+</body>
+</html>

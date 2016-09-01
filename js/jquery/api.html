@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Api Jquery и Js с примерами</title>
+    <style>
+        .focused {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Выборка элементов</h1>
+<div style="background: yellow;width: 80px;height: 80px;border: dashed 1px black" class="sample1-1"></div>
+<br>
+<div class="sample1-2" id="samp">prefix attr</div>
+<div class="sample1-3"><input type="button"></div>
+<div class="sample1-4">
+    <form action="">
+        <label for="im"><input id="im" type="checkbox"></label>
+        <label for="i"><input id="i" type="checkbox" name="newsletter" value="Hourly" checked="checked"></label>
+    </form>
+</div>
+<div class="sample1-5">
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+</div>
+<div class="sample1-6">
+    <div class="class">1</div>
+    <div class="class">2</div>
+    <div class="class">3</div>
+</div>
+<div class="sample1-7">text</div>
+<div class="sample1-7">no</div>
+<div class="sample1-7">text</div>
+<div class="sample1-8">
+    <label for="t1"><input id="t1" disabled="disabled" type="text"></label>
+    <label for="t2"><input id="t2" type="text"></label>
+    <label for="t6"><input id="t6" type="image"></label>
+</div>
+<table class="sample1-9" border="1">
+    <tr>
+        <td>TD #0</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TD #2</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>TD#5</td>
+    </tr>
+</table>
+<div class="sample1-10">
+    <span tabindex="1">span-1</span>
+    <span tabindex="2">span-2</span>
+    <span tabindex="3">span-3</span>
+    <span tabindex="4">span-4</span>
+    <span tabindex="5">span-5</span>
+    <span tabindex="6">span-6</span>
+    <span tabindex="7">span-7</span>
+    <span tabindex="8">span-8</span>
+    <span tabindex="9">span-9</span>
+    <span tabindex="10">span-10</span>
+</div>
+<div class="sample1-11">
+    <label for="t3"><input id="t3" type="file"></label>
+</div>
+<ul class='sample1-12'>
+    <li>
+        <b>1p</b>
+        <span>2</span>
+        <span>3</span>
+    </li>
+    <li>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </li>
+    <li>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </li>
+</ul>
+<div class="sample1-13" tabindex="1">
+    <h1>h-1</h1>
+    <h2>h-2</h2>
+    <h3>h-3</h3>
+    <h4>h-4</h4>
+    <h5>h-5</h5>
+    <h6>h-6</h6>
+    <p>p1</p>
+    <p>p2</p>
+</div>
+<div class="sample1-14">
+    <div style="display: none">div none</div>
+    <div>div block</div>
+    <form action="">
+        <label for="t5"><input id="t5" type="hidden"></label>
+    </form>
+</div>
+<div class="sample1-15">
+    <div id="it" title="test" lang="ru">sample1-15</div>
+</div>
+<div class="sample1-16">
+    <div class="c1">div</div>
+    <p class="c2">p</p>
+    <pre class="c3">pre</pre>
+    <b class="c4">b</b>
+</div>
+<div class="sample1-17">
+    <div id="test1">1</div>
+    <div id="test2">2</div>
+    <div id="test3">3</div>
+</div>
+<div class="sample1-18">
+    <ul>
+        <li>li-1</li>
+        <li>li-2</li>
+        <li>li-3</li>
+        <li>li-4</li>
+        <li>li-5</li>
+        <li>li-6</li>
+        <li>li-7</li>
+        <li>li-8</li>
+        <li>li-9</li>
+        <li>li-10</li>
+        <li>li-11</li>
+        <li>li-12</li>
+        <li>li-13</li>
+        <li>li-14</li>
+        <li>li-15</li>
+        <li>li-16</li>
+        <li>li-17</li>
+        <li>li-18</li>
+        <li>li-19</li>
+        <li>li-20</li>
+    </ul>
+</div>
+<div class="sample1-19">
+    <ul>
+        <li>li-1</li>
+        <li>li-2</li>
+    </ul>
+    <ul>
+        <li>li-1</li>
+        <li>li-2</li>
+        <li>li-3</li>
+    </ul>
+    <ul>
+        <li>li-1</li>
+    </ul>
+    <ul>
+        <li>li-1</li>
+        <li>li-2</li>
+    </ul>
+    <ul>
+        <li>li-1</li>
+    </ul>
+</div>
+<div class="sample1-20">
+    <ul id="list1">
+        <li>1-li</li>
+        <li>2-li</li>
+        <li>3-li</li>
+        <li>4-li</li>
+        <li>5-li</li>
+        <li>6-li</li>
+        <li>7-li</li>
+        <li>8-li</li>
+        <li>9-li</li>
+        <li>10-li</li>
+    </ul>
+
+    <ul id="list2">
+        <li>1-li</li>
+        <li>2-li</li>
+        <li>3-li</li>
+        <li>4-li</li>
+        <li>5-li</li>
+        <li>6-li</li>
+        <li>7-li</li>
+        <li>8-li</li>
+        <li>9-li</li>
+        <li>10-li</li>
+    </ul>
+</div>
+<script src="jquery-1.12.3.js"></script>
+<script>
+// Загрузка всего DOM потом выполнение всего кода внутри
+    $(function () {
+        //console.log('Dom is loaded');
+    });
+    $(document).ready(function () {
+        //console.log('Dom is loaded ready');
+    });
+    jQuery(function ($) {
+        //console.log('Dom is loaded JQuery');
+    });
+    $( window ).load( function () {
+        //console.log('Dom is loaded Jq window');
+    } );
+    //js
+    document.addEventListener("DOMContentLoaded", function () {
+        //console.log('Dom is loaded DOMContentLoaded');
+    });
+    window.onload = function () {
+        //console.log('Dom is loaded Native js');
+    };
+// Выборка элементов
+
+    // selector
+    $('*'); // все элементы
+    function animateIt() {
+        $('.sample1-1').slideToggle('slow', animateIt);
+        $( ".sample1-1:animated" ).css('background-color','green');// анимированные элементы в данный момент
+    }
+    //animateIt();
+    //атрибуты
+    $( ".sample1-2[id|='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом который начинается на ...
+    $( ".sample1-2[id*='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом в любом месте которого имеется строка ...
+    $( ".sample1-2[id~='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом название которого идет после пробела ...
+    $( ".sample1-2[id$='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом название которого кончается на ...
+    $( ".sample1-2[id^='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом название которого начинается на ...
+    $( ".sample1-2[id='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом название эквивалентно следующему ...
+    $( ".sample1-2[id!='samp']" ).css( "border", "3px dotted green" );// элемент с атрибутом название не эквивалентно следующему ...
+    $( "div[id]").css('font-size','32px'); // элемент с указанным атрибутом
+    $(".sample1-15 div[id][title][lang]").css('color','green'); // множественные атрибуты у элемента
+
+    //формы
+    $(':button').css('background-color','red'); // элементы с типом button
+    $(':checkbox').css('height','79px'); // элементы с типом checkbox
+    $(':checked').css('height','79px'); // элементы с типом checkbox выбранные, то есть checked
+    $('.sample1-8 input:disabled').css('cursor','pointer');// отключенные элементы у которых disabled="disabled"
+    $('.sample1-8 input:enabled').val('enabled');// включенные элементы
+    $('.sample1-11 input:file').css({background: "yellow",border: "3px red solid"}); // элементы типа file
+    $( ".sample1-10" ).delegate( "*", "focus blur", function() { // делегирование события focus blur/ все элементы внутри
+        var elem = $( this ); // текущий элемент
+        setTimeout(function() {
+            elem.toggleClass( "focused", elem.is( ":focus" ) ); // ставим и меняем класс для элементов которые в фокусе
+        }, 0 );
+    });
+    $('.sample1-8 input:image').css('font-size','25px'); // поле с изображением
+    $(':input'); // выбрать все input на странице
+    $(':password'); // тип pasword
+    $(':radio'); // тип radio
+    $(':reset'); // тип reset
+    $(':selected');// выбранный элемент selected
+    $(':submit');// тип submit
+    $(':text'); // элементы ввода текста
+    //стандартные
+    $('.sample1-5 > .parent > .child').css('background-color','blue'); // родитель > ребенок только потомки
+    $('.class').css('background-color','black'); // элемент с классами
+    $( ".sample1-7:contains('text')" ).css( "text-decoration", "underline" ); // элементы которые содержат внутри себя указанный текст
+    $("form input .class");// Предок потомок
+    $('div').css('border','1');// элемент
+    $('#id').css('border','1'); // идентификатор
+    $('.sample1-16 .c1, .sample1-16 .c2, .sample1-16 .c3, .sample1-16 .c4').css('background-color','green');// обьединенные результаты всех селекторов в выборку
+    $('div + p');// следующий соседний элемент
+    $('div ~ p');// все элементы которые идут после текущего prev ~ siblings
+
+    $('.sample1-9 td:empty').text( "Was empty!" );// элемент предки которого не имеют детей
+    $('.sample1-9 td:parent').text( "No empty" );// элемент предки которого имеют детей так же текстовый узел
+    $('.sample1-10 span:eq(2)').text('eq(2)');// эквивалент порядковый номер элемента с начала в коллекции
+    $('.sample1-10 span:eq(-2)').text('eq(9)');// эквивалент порядковый номер элемента с конца в коллекции
+    $('.sample1-10 span:lt(3)').css('border','2px solid blue'); // все элементы чей порядковый меньше указанного с начала (3) 2 1 0
+    $('.sample1-10 span:lt(-8)').css('border','2px solid red'); // все элементы чей порядковый меньше указанного с конца (-8) 8 9
+    $('.sample1-10 span:gt(3)').css('border','2px solid black'); // все что больше указанного индекса c начала (3) 4 5 6 7 8 9
+    $('.sample1-10 span:gt(-2)').css('border','2px solid pink'); // все что больше указанного индекса с конца (-2) последний элемент
+    $('.sample1-10 span:even').css('background-color','green'); // 0 2 4 6 8 10 - четные
+    $('.sample1-10 span:odd').css('background-color','yellow'); // 1 3 5 7 9 - не четные
+    $('.sample1-12 li:has(b) > b').css('color','yellow'); // Элемент который имеет вутри себя другой элемент
+    $('.sample1-13 :header').css('background-color','gray'); // только заголовки
+    $('.sample1-14 :hidden'); // скрытые элементы у которых display none и type='hidden'
+    $(':visible');// не скрытые элементы
+    $( "div:lang(en-us)" );// элементы с определенным языком
+    $('.sample1-17 div:not(#test3)').css('color','red'); // все кроме указанного селектора
+    $(':root'); // корневой элемент html
+    $(':target');// целевой элемент <p id="foo"> http://example.com/#foo, $( "p:target" )
+
+
+    $('.sample1-12 li span:first-child').css('background-color','blue');// первые дети своих родителей
+    $('.sample1-12 li span:first-of-type').css('background-color','red');// первые дети своих родителей определенного типа
+    $('.sample1-12 li span:first').css('border','1px solid black');// первый ребенок
+    $('.sample1-12 li span:last-child').css('background-color','blue');// последние дети своих родителей
+    $('.sample1-12 li span:last-of-type').css('background-color','red');// последние дети своих родителей определенного типа
+    $('.sample1-12 li span:last').css('border','1px solid black');// последний ребенок
+
+    $('.sample1-18 ul li:nth-child(2)').css('border','red solid 1px');//2  n-дети своих родителей, можно выбрать порядок выборки index/even/odd/equation
+    $('.sample1-18 ul li:nth-child(2n)').css('border','red solid 1px');//2 4 6 8 начиная со второго через 1
+    $('.sample1-18 ul li:nth-child(even)').css('border','red solid 1px');//2 4 6 8
+    $('.sample1-18 ul li:nth-child(2n + 2)').css('border','red solid 1px');//2 4 6 8
+    $('.sample1-18 ul li:nth-child(2n + 1)').css('border','red solid 1px');//1 3 5 7 начиная с первого
+    $('.sample1-18 ul li:nth-child(odd)').css('border','red solid 1px');//1 3 5 7 начиная с первого
+    $('.sample1-18 ul li:nth-child(3n)').css('border','red solid 1px');//3 6 9 каждый третий
+    $('.sample1-18 ul li:nth-child(3n + 3)').css('border','red solid 1px');//3 6 9 каждый третий
+    $('.sample1-18 ul li:nth-child(4n)').css('border','red solid 1px');//4 8 12 каждый четвертый
+    $('.sample1-18 ul li:nth-child(4n + 4)').css('border','red solid 1px');//4 8 12 каждый четвертый
+    $('.sample1-18 ul li:nth-child(4n + 1)').css('border','red solid 1px');//шаг 4 но начинать с 1 го
+    $('.sample1-18 ul li:nth-child(7n + 1)').css('border','red solid 1px');// 7n - шаг . 1 - начинаем с первого элемента
+    $('.sample1-18 ul li:nth-child(10n)').css('border','red solid 1px');// каждый 10тый
+    $('.sample1-18 ul li:nth-last-child(2n)').css('color','blue');// 19 17 15  то же самое, но только с конца родителя
+    $('.sample1-18 ul li:nth-last-child(even)').css('color','blue');// 19 17 15  то же самое, но только с конца родителя
+    // остальное по аналогии c nth-child
+    $('.sample1-18 ul li:nth-of-type(even)').css('color','yellow');// 2 4 6 8 то же самое что и nth-child но при этом учитывается еще и тип элемента
+    $('.sample1-18 ul li:nth-last-of-type(even)').css('color','green');// 19 17 15 c конца родителя но при этом учитывается еще и тип элемента
+    $('.sample1-19 ul li:only-child').css('background-color','blue');// единственный потомок своего родителя
+    $('.sample1-19 ul li:only-of-type').css('background-color','blue');// единственный потомок своего родителя и еще того же типа
+    // -------------------
+    // Типы данных
+    /*
+        String - 'Строка' "Cтрока"
+        htmlString - "<b>hello</b>" "<b>hello</b>wait<b>bye</b>"
+        Number - 12 3.5
+        Boolean - true false
+        Object - {}
+        Array - []
+        PlainObject - {}
+        Null - null
+        Date - new Date( 2014, 0, 1, 8, 15 );
+        Function - function named() {} var handler = function() {}
+        Selector - $('');
+        Event - standart events
+        Element - DOM Element доступный через this
+        Text - текстовый узел DOM
+        jQuery - jq обьект который всегда вернется из $( "p" )
+        XMLHttpRequest - Ajax native object XMLHttpRequest (XHR)
+        jqXHR - возвращает $.ajax()
+        Deferred Object
+        Promise Object
+        Callbacks Object
+        XML Document
+        Assert
+    */
+    // Что можно передавать в jq обьект
+    $('li:even',$('ul#list2')).css('color','blue'); // выбор на основании 1 аргумента то есть элементы li в контексте второго списка
+    $('li:even',document.getElementById('list2')).css('color','blue'); // или так выбор на основании 1 аргумента то есть элементы li в контексте второго списка
+    $(document.getElementById('list1')).css('font-size','25px'); //DOM элемент
+    $([document.getElementById('list1'),document.getElementById('list2')]);// массив DOM элементов который будет преобразован в обьект Jq
+    $({key1: "value1", key2: "value2"}); //plainObj для использования различных операции с ним
+    $('<p>p</p>',window.document).appendTo("body");// создать html в window.document элемент на лету и добавить его в документ
+    $('<div></div>',{id:"myDiv", "class":"alert alert-warning"});// создать html элемент с арибутами
+    $(function () {}); // для вызова после загрузки DOM
+
+</script>
+</body>
+</html>

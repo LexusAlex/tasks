@@ -96,6 +96,9 @@
 <h3>Theory</h3>
 <ul>
     <li>
+        <a href="js/jquery/api.html">API JQUERY</a>
+    </li>
+    <li>
         <a href="js/jquery/ajax/ajax.html">AJAX Jquery</a>
     </li>
     <li>

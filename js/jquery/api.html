@@ -136,11 +136,13 @@
         <li>li-14</li>
         <li>li-15</li>
         <li>li-16</li>
-        <li>li-17</li>
+        <li id="seventeen">li-17</li>
         <li>li-18</li>
         <li>li-19</li>
-        <li>li-20</li>
+        <li id="twenty">li-20</li>
     </ul>
+    <p>p</p>
+    <p class="p">p</p>
 </div>
 <div class="sample1-19">
     <ul>
@@ -190,8 +192,78 @@
         <li>10-li</li>
     </ul>
 </div>
+<div class="sample2-1">
+    <ul>
+        <li>1</li>
+        <li>2
+            <ul>
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li>3</li>
+    </ul>
+</div>
+<div class="sample2-2">
+    <div class="div">div</div>
+    <ul>
+        <li id="i-1">1-li</li>
+        <li id="i-2">2-li</li>
+        <li id="i-3">3-li</li>
+        <li id="i-4">4-li</li>
+        <li id="i-5">5-li</li>
+        <li id="i-6">6-li</li>
+        <li id="i-7">7-li</li>
+        <li id="i-8">8-li</li>
+        <li id="i-9">9-li</li>
+        <li id="i-10">10-li</li>
+        <li id="i-11">11-li</li>
+        <li id="i-12">12-li</li>
+        <li id="i-13">13-li</li>
+        <li id="i-14">14-li</li>
+        <li id="i-15">15-li</li>
+        <li id="i-16">16-li</li>
+        <li id="i-17">17-li</li>
+        <li id="i-18">18-li</li>
+        <li id="i-19">19-li</li>
+        <li id="i-20">20-li</li>
+    </ul>
+</div>
+<div class="sample2-3">
+    <div class="level1">l1
+        <div style="position: relative" class="level2">l2
+            <p>p</p>
+            <div class="level3">l3</div>
+        </div>
+    </div>
+</div>
+<div class="sample2-4">
+    <p class="p1">p1
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3
+            <div class="div4">div4
+                <div class="div5">div5
+                    <div class="div6">div6
+                        <div class="div7">div7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</div>
 <script src="jquery-1.12.3.js"></script>
 <script>
+    /*
+    Загрузить скрипт -> Выбрать элементы из DOM -> Отфильтровать ->
+    * 1.Загрузка DOM
+    * 2.Выборка элементов(селекторы)
+    * 3.Типы данных
+    * 4.Jquery обьект
+    * 5.Фильтрация элементов текущего набора после выборки
+    * 6.Поиск и переход к другим элементов в DOM дереве исходя из текущего набора
+    * 7.Дополнительные действия с набором элементов
+    * */
 // Загрузка всего DOM потом выполнение всего кода внутри
     $(function () {
         //console.log('Dom is loaded');
@@ -283,7 +355,6 @@
     $(':root'); // корневой элемент html
     $(':target');// целевой элемент <p id="foo"> http://example.com/#foo, $( "p:target" )
 
-
     $('.sample1-12 li span:first-child').css('background-color','blue');// первые дети своих родителей
     $('.sample1-12 li span:first-of-type').css('background-color','red');// первые дети своих родителей определенного типа
     $('.sample1-12 li span:first').css('border','1px solid black');// первый ребенок
@@ -337,7 +408,7 @@
         XML Document
         Assert
     */
-    // Что можно передавать в jq обьект
+    // что можно передавать в jq обьект
     $('li:even',$('ul#list2')).css('color','blue'); // выбор на основании 1 аргумента то есть элементы li в контексте второго списка
     $('li:even',document.getElementById('list2')).css('color','blue'); // или так выбор на основании 1 аргумента то есть элементы li в контексте второго списка
     $(document.getElementById('list1')).css('font-size','25px'); //DOM элемент
@@ -347,6 +418,92 @@
     $('<div></div>',{id:"myDiv", "class":"alert alert-warning"});// создать html элемент с арибутами
     $(function () {}); // для вызова после загрузки DOM
 
+    //работа с набором элементов после их выборки $('');
+
+    // фильтрация элементов текущего набора eq(), first(), last(), slice(), filter(), has(), is(), map(), not()
+    var sample = $('.sample1-18 ul li');// элементы li
+
+    sample.eq(2).css({'color':'red','font-size':'32px'}); // выбираем элемент из текущей выборки
+    sample.eq(-1).css({'color':'red','font-size':'32px'}); // выбираем элемент из текущей выборки c конца -1 - это 20 элемент
+
+    sample.first().css({'color':'blue'}); // первый элемент из ткущей выборки
+    sample.last().css({'color':'blue'}); // последний элемент из текущей выборки
+
+    sample.slice(5).css('background-color','yellow');// выбрать все элементы с 5 и до конца в выборке
+    sample.slice(5,7).css('background-color','red');// элементы 5 и 6
+    sample.slice(-2,19).css('background-color','red');// 2 элемента с конца но только 1 - 19-й
+    sample.slice(-2,-1).css('background-color','blue');// или так что тоже самое из предыдущего примера
+
+    sample.filter(':eq(2)').css('background-color','gray');//элемент с index = 2 выбор элементов на основе выражения указываем селектор из текущей выборки
+    sample.filter(function (index,element) { // index - индекс элемента element - Dom элемент
+        if (index === 4) //когда index = 4 что то делаем с элементом
+        return $(element).css('background-color','aqua');
+    });
+    sample.filter(document.getElementById('seventeen')).css('opacity','0.2'); // указав DOM элемент из текущего набора
+    sample.filter([document.getElementById('seventeen'),document.getElementById('twenty')]).css('opacity','0.2'); // коллекция DOM элементов из текущего набора
+    sample.filter($(':even')).css('color','red');// указав воричный jq обьект
+
+    $('.sample2-1 ul li').has('ul').css('background-color','green');// элемент который в качестве потомка имеет другой элемент
+    $('.sample2-1 ul li').has(document.getElementsByTagName('ul')).css('background-color','green');// или так указав Dom элемент
+
+    var m = sample.map(function (index, element) { // прогонем через функцию все наши элементы и что-то с ними делаем и возвращаем новый обьект
+        if($(element).attr('id') !== undefined) {
+            return $(element).text('elem with id = '+ index);
+        }
+    }).get();// вернем коллекцию отобранных элементов
+
+    $('.sample1-18 *').is('p'); // один элемент из текущей выборки содержит элемент
+    sample.is(function (index, element) { // проделаем что нибудь с элементами
+
+    });
+
+    sample.not('li');// вернет все кроме указаного селектора
+    sample.not(function (index, element) { // выбрать все кроме тех которые имеют что то
+
+    });
+
+    // поиск других элементов в DOM дереве children(), closest(), find(), next(), nextAll(), nextUntil(), offsetParent(), parent(), parents(), parentsUntil(), prev(), prevAll(), prevUntil(), siblings().
+    $('.sample1-18 ul').next();// следующий элемент за этим в DOM дереве это p
+    $('.sample1-18 p').next('.p').css('background-color','yellow');// уточнение по селектору следующий элемент за этим в DOM дереве это p.p
+    var sample1 = $('.sample2-2 ul li');
+    sample1.eq(5).nextAll().css('background-color','yellow'); // все следующие за этим элементом
+    sample1.eq(5).nextAll('#i-9').css('background-color','red'); // следующие за этим элементом уточняющий элемент который нужно выбрать
+    sample1.eq(6).nextUntil('#i-11').css('color','red');// поиск до определенного элемента до элемента с указанным id
+
+    $('.sample2-2 ul').prev().css('background-color','blue'); // предыдущий элемент
+    $('.sample2-2 ul').prev('.div').css('background-color','green');// предыдущий элемент с уточнением
+    sample1.eq(1).prevAll().css('background-color','red'); // все элементы перед этим
+    sample1.eq(5).prevAll().css('background-color','brown'); // все элементы перед этим
+    sample1.eq(5).prevUntil('#i-3').css('background-color','white'); // все элементы до определнного селекора
+
+    sample1.eq(6).siblings().css('font-size','32px'); // применение ко всем соседям сверху и снизу кроме самого элемента
+
+    $('.sample2-2').children(); //дети элемента но не вложенные;
+    $('.sample2-2').children('.div').css('color','yellow'); //дети элемента но не все а только с определенным классом но не вложенные;
+
+    $('.sample2-3 .level3').closest('div.level2').css('background-color','red');// поиск по родительскому элементу вверх по иерархии
+
+    $('.sample2-3').find('.level3');// поиск по внутренним элементам включая детей, то есть если внутри нужно найти определенный элемент
+
+    $('.sample2-3 .level3').offsetParent(); // найти ближайшего родителя который не расположен в нормальном потоке и вернуть его в обьекте jq
+
+    $('.sample2-4 .div7').parent().css('color','red'); // родитель элемента включаяя его самого
+    $('.sample2-4 .div7').parents('.div4').css('color','yellow'); // всех родителей данного элемента, нужно обязательно указать ограничение
+    $('.sample2-4 .div7').parentsUntil('.div4').css('color','yellow'); // всех родителей до указанного элемента включая сам элемент
+
+    // действия с набором элементов add(), addBack(), contents(), end(), not().
+    $('.sample1-20 #list1').add('.sample1-20 #list2').css('color','red');// добавить к текущему набору дополнительные элементы
+    $('.sample1-20 #list1').add('<li>11-li</li>'); // тут мы просто добавили в выборку элемент которого пока нет в DOM дереве
+    $('.sample1-20 #list1').add(document.getElementsByClassName('div')).css('background-color','blue'); // DOM элемент добавили в выборку
+
+    $('.sample1-20 ul li:eq(2)').nextAll().addBack().css('background-color','red'); // добавить элементы в текущую выборку из предыдущей
+    // опишем подробнее 1.выбрали 3 элемент, далее все элементы после него(но кроме него самого)
+    // добавим элемент 3 в выборку и покрасим все вместе
+
+    $('.sample1-20 ul li:eq(2)').contents(); // вернет текстовый узел
+
+    $('.sample1-20 ul li:eq(2)').next().next().end().css('color','white'); // вернуться назад по цепочке обьектов
+    /////
 </script>
 </body>
 </html>

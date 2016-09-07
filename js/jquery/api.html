@@ -252,6 +252,32 @@
         </div>
     </p>
 </div>
+<div class="sample3-1">
+    <p id="idproperty1" class="classproperty" title="title" lang="en">p1</p>
+    <p id="idproperty2" class="classproperty" title="title" lang="en">p2</p>
+    <p id="idproperty3" class="classproperty" title="title" lang="en">p3</p>
+    <p id="idproperty4" class="classproperty" title="title" lang="en">p4</p>
+</div>
+<div class="sample3-2">
+    <label for="s1">поле 1<input disabled id="s1" type="text"></label>
+    <label for="s2">поле 2<input id="s2" type="checkbox"></label>
+    <label for="s3">поле 3<input id="s3" type="radio"></label>
+</div>
+<div class="sample3-3">
+    <select id="mySelect">
+        <option>Пункт 1</option>
+        <option>Пункт 2</option>
+        <option>Пункт 3</option>
+    </select>
+</div>
+<div class="sample3-4">
+    <div>no class</div>
+    <p>p no class</p>
+</div>
+<div class="sample3-5">
+    <textarea>value 1</textarea>
+    <textarea>value 2</textarea>
+</div>
 <script src="jquery-1.12.3.js"></script>
 <script>
     /*
@@ -263,6 +289,7 @@
     * 5.Фильтрация элементов текущего набора после выборки
     * 6.Поиск и переход к другим элементов в DOM дереве исходя из текущего набора
     * 7.Дополнительные действия с набором элементов
+    * 8.Атрибуты, свойства, классы, value у форм
     * */
 // Загрузка всего DOM потом выполнение всего кода внутри
     $(function () {
@@ -504,6 +531,77 @@
 
     $('.sample1-20 ul li:eq(2)').next().next().end().css('color','white'); // вернуться назад по цепочке обьектов
     /////
+    //Атрибуты
+    $('.sample3-1 p').attr('id'); // получить атрибут у элемента в виде строки
+    $('.sample3-1 p').each(function(){ // получить одинаковые атрибуты нескольких элементов
+        //console.log($(this).attr('id'));
+    });
+    $('.sample3-1 p').eq(1).attr('title','p2title'); // изменить атрибут
+    $('.sample3-1 p').eq(1).attr('onclick','window'); // установить атрибут
+    $('.sample3-1 p').eq(2).attr({'onclick':'window','dbclick':'window'}); // установить несколько атрибутов
+    $('.sample3-1 p').attr('tabindex',function (index, attr) { //установить атрибут для всех элементов
+        return index;
+    });
+    $('.sample3-1 p').eq(0).attr('tabindex', null);//удалить атрибут
+    $('.sample3-1 p:eq(1)').removeAttr('tabindex');//или так
+
+    // Атрибуты(свойства - логические) disabled, checked, selected, hidden, readonly
+    // Если у элемента есть логический атрибут (disabled) - это означает что он установлен в true, при этом не важно какое он имеет значение
+    //<input type="text" disabled> - лучше указывать без значения
+    $('.sample3-2 input').prop('disabled'); // получить свойство - true так как свойство установлено DOM свойство
+    $('.sample3-2 input').prop('disabled',false); // убрать свойство
+    $('.sample3-2 input:gt(0)').prop({
+        'checked':true,
+        'disabled': true
+    });
+    $('.sample3-2 input').prop('disabled',function (index, prop) { // отключаем disable для трех input
+        // index - число, содержащее порядковый номер (индекс) элемента в наборе
+        // prop - строка, содержащая текущее значение свойства
+        // this - текущий элемент
+        return prop = false;
+    });
+    $('.sample3-2 input:eq(0)').prop('testval',123); // пользоваетльское свойство но его нет в html , оно только в DOM
+    $('.sample3-2 input:eq(0)').prop('testval'); // проверим что оно есть 123
+    $('.sample3-2 input:eq(0)').removeProp('testval'); // удалим собственное свойство на элементе для удаления тех свойств которые есть в html использовать prop
+    $('.sample3-2 input:eq(0)').prop('testval'); // теперь его нет
+    $('.sample3-3 select option:eq(2)').prop('selected',true);// установим выбранным последний элемент списка
+
+    //классы
+    $('.sample3-4 div').attr('class','class1');// 1 способ добавления класса
+    $('.sample3-4 div').prop('className','class2');// 2 способ добавления класса как свойство DOM то есть перезапись предыдущего или замена
+    $('.sample3-4 div').addClass('class3'); // 3 способ добавления класса к уже существующим
+    $('.sample3-4 div').addClass('class4 class5 class6 class7'); // 3 способ добавления класса к уже существующим несколько классов
+    $('.sample3-4 p').addClass(function (index,curClassName) {
+        //index – индекс позиции элемента в текущем наборе
+        // currentClassName – текущее имя или имена классов (значение атрибута class элемента)
+        // this – указатель, содержащий ссылку на текущий объект
+        // тело функции (в качестве результата функция должна вернуть строку, содержащую имя или имена классов (через пробел), которые будут добавлены к текущему элементу)
+        return 'newclass';
+    });
+    $('.sample3-4 p').click(function(){
+        //$(this).addClass('clicked');// установим класс по клику
+        $(this).toggleClass('clicked');// установим класс если его нет и наоборот по клику что более универсально
+        if ($('.sample3-4 p').hasClass('clicked')) { // проверка присутствия класса у элемента
+            $(this).text('класс установлен');
+        } else {
+            $(this).text('класс не установлен');
+        }
+    });
+    $('.sample3-4 p').removeClass('newclass');// удалим класс у элемента
+    // 1 параметр – функция (function)
+    // 2 параметр -  состояние (state). Он является необязательным и играет туже роль, что и при использовании в качестве 1 параметра строки
+    //$('.sample3-4').toggleClass(function(index, className, state){ // переключение классов через функцию
+        // index – индекс позиции элемента в текущем наборе
+        // className – текущее значение атрибута class элемента
+        // state – значение состояния, установленного с помощью второго параметра  (если второй параметр toggleClass не указан, то данный аргумент будет иметь значение undefined)
+        // this – указатель, содержащий ссылку на текущий объект
+        // тело функции (в качестве результата функция должна вернуть строку, содержащую имя или имена классов (через пробел), которые будут необходимо переключить у текущего элемента)
+    //});
+    $('.sample3-5 textarea').val(); // вернет значение атрибута value у форм
+    //$('.sample3-5 textarea').val('new'); // установим значение атрибута value у форм
+    $('.sample3-5 textarea').val(function (index,newval) {
+        //console.log(newval); // что то сделаем со значением атрибутов
+    })
 </script>
 </body>
 </html>

@@ -79,6 +79,7 @@
     <li><a href="js/js/navigate/attributes.html">Attributes JS</a></li>
     <li><a href="js/js/navigate/createdeleteElement.html">CreateDeleteElement JS</a></li>
     <li><a href="js/js/event/event.html">Event JS</a></li>
+    <li><a href="js/js/cookie/cookie.html">Cookie JS</a></li>
 </ul>
 
 <h3>Tests</h3>
@@ -99,15 +100,11 @@
         <a href="js/jquery/api.html">API JQUERY</a>
     </li>
     <li>
-        <a href="js/jquery/ajax/ajax.html">AJAX Jquery</a>
-    </li>
-    <li>
         <a href="js/jquery/navigate/navigateCollection.html">NavigateCollection Jquery</a>
     </li>
     <li><a href="js/jquery/navigate/attibutes.html">Attributes Jquery</a></li>
     <li><a href="js/jquery/navigate/createdeleteElement.html">CreatedeleteElement Jquery</a></li>
     <li><a href="js/jquery/events/event.html">Events Jquery</a></li>
-    <li><a href="js/jquery/animation/animation.html">Animation Jquery</a></li>
 </ul>
 
 <h1>CSS</h1>

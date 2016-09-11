@@ -1,0 +1,18 @@
+.page-header { /*блок заголовок*/
+    padding: 0 10px;
+    margin-bottom: 60px;
+    color: white;
+    background-color: black;
+}
+.page-header__logo {} /*элемент*/
+
+.main-nav {} /*блок навигации*/
+.main-nav--closed {} /*модификатор для скрытия меню*/
+.main-nav--nojs {} /*модификатор*/
+    .main-nav__toggle {}/*element*/
+    .main-nav__wrapper {}/*element обертка для меню*/
+    .main-nav__items {}/*element пункты меню*/
+        .main-nav__item a {} /*пункт меню*/
+        .main-nav__item--active {} /*модификатор пункта меню*/
+    .main-nav__user-items {} /*element еще одно меню*/
+    .main-nav__user-item {} /*element пункты этого меню*/

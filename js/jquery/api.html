@@ -278,6 +278,37 @@
     <textarea>value 1</textarea>
     <textarea>value 2</textarea>
 </div>
+<h1>Создание элементов</h1>
+<div class="sample4-1">
+    <strong>Hello world!!!</strong>
+    <div class="s-1">d-1 <p>p</p></div>
+    <div class="s-2">d-2</div>
+    <div class="s-3">d-3</div>
+    <div class="s-4">d-4</div>
+    <div class="s-5">d-5</div>
+    <div class="s-6">d-6</div>
+    <div class="s-7">d-7</div>
+    <div class="s-8">d-8</div>
+    <div class="s-9">d-9</div>
+    <div class="s-10">d-10</div>
+</div>
+<div class="sample4-4">
+    <p class="one">p1</p>
+    <p class="two">p2</p>
+</div>
+<div class="sample4-6">
+    <div class="inner">inner-1</div>
+    <div class="inner">inner-2</div>
+    <div class="inner">inner-3</div>
+    <div class="inner">inner-4</div>
+    <div class="inner">inner-5</div>
+    <div class="inner">inner-6</div>
+    <div class="inner">inner-7</div>
+    <div class="inner">inner-8</div>
+    <div class="inner">inner-9</div>
+    <div class="inner">inner-10</div>
+</div>
+<p class="nowrap">p</p>
 <script src="jquery-1.12.3.js"></script>
 <script>
     /*
@@ -290,6 +321,29 @@
     * 6.Поиск и переход к другим элементов в DOM дереве исходя из текущего набора
     * 7.Дополнительные действия с набором элементов
     * 8.Атрибуты, свойства, классы, value у форм
+    * 9.Создание($('div')),
+    *   клонирование(clone()),
+    *   вставка(append()- выбрать элемент и вставить в его конец
+    *           prepend()- выбрать элемент и вставить в его начало
+     *          appendTo() - выбрать элемент в который вставлять и выбрать вставляемый элемент в конец
+     *          prependTo() - выбрать элемент в который вставлять и вставить в начало
+     *          html() - получить/вставить html
+     *          text() - получить/вставить text
+     *          wrap() - оборачивание элемента другим элементом
+     *          wrapAll() - оборачивание элементов родительским элементом
+     *          wrapInner() - оборачивание других элементов кроме их самих
+     *          after() - вставка после выбранного элемента
+                before() - вставка перед выбранным элементом
+                insertAfter() - выбрать что вставлять и после какого элемента вставить
+                insertBefore() - выбрать что вставлять и перед каким элементом вставить
+    *   ),
+    *   замена(replaceWith(),replaceAll()),
+    *   удаление элементов(
+    *           remove()-навсегда,
+    *           detach()- с последующей вставкой
+    *           empty() - удвлим потомки, оставим только оберточный элемент
+    *           unwrap() - удаление родительского элемента, оставляем только детей
+    *         )
     * */
 // Загрузка всего DOM потом выполнение всего кода внутри
     $(function () {
@@ -601,7 +655,133 @@
     //$('.sample3-5 textarea').val('new'); // установим значение атрибута value у форм
     $('.sample3-5 textarea').val(function (index,newval) {
         //console.log(newval); // что то сделаем со значением атрибутов
-    })
+    });
+    // атрибут style
+    $('.sample3-5').css('background-color','blue'); // установить style
+    $('.sample3-5').css('background-color'); // получить свойство css у элемента
+    $('.sample3-5').css(["width", "height", "color", "background-color"]); // получить обьект с указанными css свойствами
+    $('.sample3-5').css( "width", function( index ) { // установить css свойство используя функцию
+        return 50 * 50;
+    });
+    $('.sample3-5').css({ // установить несколько свойств
+        "background-color": "yellow",
+        "font-weight": "bolder"
+    });
+    ////////////////
+
+    // Создание элементов
+    var newEl1 = $('<div>new div</div>'); // создали элемент
+    var newEl2 = $('<div><span>span1</span><span>span2</span><span>span2</span></div>'); // создали элементы
+    //!!! Создание элементов не означает их вставку в дом дерево
+    newEl2.each(function (index, elem) { // что можно сделать с не вставленными элементами
+        var children = $(elem).children(); // дети
+        var parent = children.parent(); // родитель , то есть текущий элемент
+        children.eq(1).addClass('span1'); // добавим класс к элементу
+        children.last().text('last child');// добавим текст к элементу
+        children.first().attr('tabindex',88); // атрибут к первому элементу
+        // заметим , что этих элементов пока нет в дом, но сформировав можно легко вставить , как будет расказно далее
+    });
+
+    // Клонирование и копирование элементов
+    newEl2.clone(); //клонируем все элементы включая потомков
+    $('.sample3-5').clone();// клонируем из уже существующих элементов
+    $('.sample3-5').clone(true);// клонируем из уже существующих элементов включая все обработчики событий на элементе и данные
+
+    // Вставка элементов в документ Порядок создали элемент вставили внутрь выбранного
+    // append внутрь в конец родительского
+    // Один и тот же набор новых элементов может быть вставлен в документ только один раз.
+    $('.sample4-1 div').append('<span>span</span>');//вставка в конец родителя во все элементы
+    $('.sample4-1').append(newEl2); // вставим элемент который мы создали на предыдущем разделе
+    // например дочерние элементы можно создвать и так
+    var newEl3 = $('<div class="sample4-2"></div>') // создали группу элементов
+            .append('<p>p1</p>')
+            .append('<p>p2</p>')
+            .append('<p>p3</p>')
+            .append('<p>p4</p>')
+            .css("border", "thick solid red");
+    $('.sample4-1').after(newEl3); //вставим после последнего примера
+    $('.sample4-2').append($('.sample4-1 strong')); // Перемесили элемент из другого места в наш div
+    var newEl4 = $('<span>newSpan</span>').css('background-color','yellow'); //Создали элемент
+
+    $('.sample4-2').append(function (index, html) { // Можно вставлять динамически
+        return newEl4;
+    });
+    // prepend вставка внутрь в начало родителя
+    var newEl5 = $("<div class='newEl5'/>")
+            .append('<span>s1<span>')
+            .append('<span>s2<span>')
+            .append('<span>s3<span>')
+            .css("border", "thick solid blue");
+    $('.sample4-1, .sample4-2').prepend(newEl5); // вставим элемент сразу в два места
+    var newEl6 = $('<span>newSpan 6</span><br>').css('background-color','gray');
+    // Главная особенность что при этом элементы перемещаются а не копируются
+    $('.sample4-2').on('click',function () { // например при клике добавляем элемент в конец и в начало клонируя его
+        $(this).append(newEl6.clone());
+        $(this).prepend(newEl6.clone());
+    });
+    // appendTo prependTo Обратный порядок Вставить в выбранный элемент
+    var newEl7 = $('<div class="sample4-3" />'); // создали элемент
+    var newEl8 = $('<div class="test">test</div>').appendTo(newEl7).css('background-color','green'); // вставим элемент в див
+    var newEl9 = $('<div class="test">test</div>').prependTo(newEl7).css('background-color','yellow'); // вставим элемент в див
+    $('.sample4-2').after(newEl7); // добвляем в дерево оберточный элемент
+
+    // html() text()
+    $('.sample4-4').html(); // получить html содержимое элемента
+    $('.sample4-4').html('<div>div my 1</div> <div>div my 2</div>'); //полнстью меняем html содержимое в этом элементе
+
+    $('.sample4-4').text(); // получили полностью текст во всех вложенных элементах
+    $('.sample4-4').text('new text'); // заменили полностью текст
+
+    // Оборачивание, вставка родительских элементов wrap wrapAll wrapInner
+    var par = $('<div class="sample4-5"></div>'); // создали родителя
+    var chil1 = $('<div class="chill">child1</div>'); // создали ребенка
+    //var html = par.append(chil1); // вариант с append
+    var html = chil1.wrap(par); // обернули но не вставили в дом дерево
+    $('p.nowrap').wrap('<div class="sample4-5"></div>');// обернули выбранный элемент в обертку
+
+    var newEl10 = $("<div/>").css("border", "thick solid red");
+    $('.sample4-5').append('<div>d1</div><div>d2</div><div>d3</div>');
+    ///Новый элемент добавляется как общий родительский элемент для всего набора выбранных элементов.
+    $('.sample4-5').wrapAll(newEl10); //обернуть сразу несколько элементов
+
+    // Окружение элементов другими элементами кроме их самих
+    var newEl11 = $("<div></div>").css("border", "thick solid yellow");
+    $('.sample4-6 .inner').wrapInner(newEl11);// обернули несколько других элементов желтым бордером
+
+    // Вставка перед и после уже существующими элементами after,before
+    var newEl12 = $('<div></div>')
+            .prepend('<span>1<span>')
+            .prepend('<span>2<span>')
+            .prepend('<span>3<span>');
+    var newEl13 = $('<div></div>')
+            .prepend('<span>1<span>')
+            .prepend('<span>2<span>')
+            .prepend('<span>3<span>');
+    $(newEl12).add(newEl13).css("border", "thick solid blue");
+    // теперь когда элементы созданы можно их вставить в документ
+    $('.sample4-6').after(newEl12);  // вставка после выбранного элемента
+    $('.sample4-6').before(newEl13); // вставка перед выбранным элементом
+
+    // insertAfter insertBefore то же самое что и предыдущие но меняем местами
+    //элемент который вставить. элемент куда вставлять
+    $('<span>after</span>').insertAfter('.sample4-6'); // сделали элемент и вставили его после выбранного
+    $('<span>before</span>').insertBefore('.sample4-6'); // сделали элемент и вставили его перед выбранным
+
+    // замена одних элементов другими replaceWith replaceAll
+    $('.sample4-5 div').replaceWith('<p>new p</p>'); // заменили один набор элементов другим
+    $( "<div class='inner'>new div</div>" ).replaceAll( ".sample4-6 div.inner" ); // обратный порядок, сначала на что будем менять, потом что именно менять
+
+    //удаление элементов
+    $('body').children().last().remove(); /// удалим последний элемент p навсегда
+    $( ".sample4-6 div" ).remove( ":contains('new div')" ); // удалили элементы с контентом отфитровав удаляемые элмененты
+
+    var savedoc = $( ".sample4-6" ).detach();// удалим с сохранением данных для последующей вставке в документ
+    savedoc.text('new value');
+    $('body').children().eq(-3).after(savedoc); // теперь тот удаленный элемент вставим обратно в дом дерево но в другое место
+
+    $('.sample4-5').empty().css("border", "thick solid yellow"); // удалим элементы потомки кроме оберточного элемента
+
+    $('.sample4-3 div').unwrap(); //удалим родительский элемент оставим только детей
 </script>
 </body>
 </html>

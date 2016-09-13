@@ -309,6 +309,18 @@
     <div class="inner">inner-10</div>
 </div>
 <p class="nowrap">p</p>
+<h1>Ajax</h1>
+<div class="sample5-1"></div>
+<button class="but">Получить данные</button>
+<div class="sample5-2">
+    <button class="but5-2">Получить данные из json файла</button>
+</div>
+<div class="sample5-3">
+    <button class="but5-3">Отправить данные на сервер</button>
+</div>
+<div class="sample5-4">
+    <button class="but5-4">Отправить данные на сервер php скрипт</button>
+</div>
 <script src="jquery-1.12.3.js"></script>
 <script>
     /*
@@ -344,6 +356,7 @@
     *           empty() - удвлим потомки, оставим только оберточный элемент
     *           unwrap() - удаление родительского элемента, оставляем только детей
     *         )
+    * 10.Ajax
     * */
 // Загрузка всего DOM потом выполнение всего кода внутри
     $(function () {
@@ -782,6 +795,61 @@
     $('.sample4-5').empty().css("border", "thick solid yellow"); // удалим элементы потомки кроме оберточного элемента
 
     $('.sample4-3 div').unwrap(); //удалим родительский элемент оставим только детей
+    $('.sample4-6').remove();
+    // Ajax
+    // Как правило Ajax используется для того, чтобы выполнить HTTP-запрос GET с целью загрузки HTML-фрагмента
+    // Получаем куски html методом get из файла по клику
+    // C сервера могут быть получены данные любой природы
+    // Получение данных html
+    $('button.but').click(function (e) {
+        $.get('ajax/data.html', function (data) { // данные которые пришли от сервера
+            $('.sample5-1').html(data); // вставим в документ то что получили ajax запросом
+        }).done(function () { // сработает если запрос успешно начал исполнятся
+            console.log('done');
+        }).fail(function() { // если произошла ошибка
+            console.log('error');
+        }).always(function() { // запрос окончен
+            $('button.but').prop('disabled',true).text('Данные получены');
+            console.log('finish');
+        });
+    });
+
+    // Получение данных json
+    $('button.but5-2').click(function (e) {
+        $.get('ajax/mydata.json', function (data) {
+            //data - придет массив обьектов с данными jquery автоматически преобразует это
+            // сделаем новые элементы из этих данных
+            var wrap = $("<ul></ul>");
+            for (var i in data)
+            {
+                var li = $('<li>'+ data[i].name +'</li>');
+                var res = wrap.append(li);
+            }
+            // вставляем данные которые пришли к нам из json файла по клику
+            $('.sample5-2').prepend(res);
+        });
+    });
+    // Отправить данные на сервер
+    $('button.but5-3').click(function (e) {
+        var requestData = { // ге параметры
+            country: "RU",
+            city: "Moscow"
+        };
+        $.get('ajax/mydata.json', requestData, function (data) {
+            console.log(data);
+        });
+    });
+
+    // Отправить данные на сервер
+    $('button.but5-4').click(function (e) {
+        var requestData = { // ге параметры
+            country: "RU",
+            city: "Moscow"
+        };
+        $.get('ajax/data1.php', requestData, function (data) {
+            console.log(data);
+        });
+    });
 </script>
 </body>
 </html>

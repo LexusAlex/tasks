@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NotesCss</title>
+    <style>
+        .elements > *{
+            background: #eee;
+            border: .125em solid;
+            margin-bottom: .5em;
+            padding: .5em;
+        }
+    </style>
+</head>
+<body>
+<h1>Заметки про css</h1>
+<ul>
+    <li>
+        Все является прямоугольником
+        <img src="images/blockModel.png" height="343" width="545"/>
+    </li>
+    <li>border-radius - cкругляет углы блока outline и box-shadow - не оказывают влияния на раскладку</li>
+    <li>
+        block, inline, inline-block
+        <img src="images/elem1.png" height="394" width="728"/>
+        <img src="images/elem2.png" height="393" width="707"/>
+    </li>
+    <li class="elements">
+        <div style="border: 1px solid red">block 1</div>
+        <div style="border: 1px solid red">block 2</div>
+        <div style="border: 1px solid red">block 3</div>
+        <span style="border: 1px solid red">inline 1</span>
+        <span style="border: 1px solid red">inline 2</span>
+        <span style="border: 1px solid red">inline 3</span>
+        <span style="border: 1px solid red">inline 4</span>
+        <span style="border: 1px solid red">inline 5</span>
+        <span style="border: 1px solid red">inline 6</span>
+        <span style="border: 1px solid red">inline 7</span>
+        <span style="border: 1px solid red">inline 8</span>
+        <span style="border: 1px solid red">inline 9</span>
+        <span style="border: 1px solid red">inline 10</span>
+        <span style="border: 1px solid red">inline 11</span>
+        <span style="border: 1px solid red">inline 12</span>
+        <span style="border: 1px solid red">inline 13</span>
+        <span style="border: 1px solid red">inline 14</span>
+        <div style="display: inline-block;border: 1px solid red">inline-block 1</div>
+        <div style="display: inline-block;border: 1px solid red">inline-block 2</div>
+        <div style="display: inline-block;border: 1px solid red">inline-block 3</div>
+    </li>
+    <li>
+        block
+        <ol>
+            <li>Ширина ограничена родителем</li>
+            <li>Влияют свойства width и height</li>
+            <li>Высота зависит от контента</li>
+            <li>Отобрают margin,padding со всех сторон</li>
+        </ol>
+    </li>
+    <li>
+        inline
+        <ol>
+            <li>Это просто слово в строке</li>
+            <li>Не влияют свойства width и height</li>
+            <li>Ширина и Высота зависит от контента</li>
+            <li>Отобржают margin,padding но только справа и слева</li>
+        </ol>
+    </li>
+    <li>
+        inline-block
+        <ol>
+            <li>Влияют свойства width и height</li>
+            <li>Ширина и Высота зависит от контента</li>
+            <li>Отображают margin,padding со всех сторон</li>
+        </ol>
+    </li>
+    <li>Цвет, факты
+        <ol>
+            <li>Цвета отображаются по разному в разных браузерах</li>
+            <li>На скриншоте не всегда будут те же цвета, что и на мониторе в момент снимка</li>
+            <li>Различное отображение цвета на различных устройствах</li>
+            <li>Расстояние и угол зрения</li>
+            <li>Качество дисплея</li>
+            <li>
+                Популяризация цветов
+                <img src="images/color.png" height="293" width="493"/>
+            </li>
+        </ol>
+    </li>
+    <li>Шрифт
+        <img src="images/font1.png" height="285" width="606"/>
+        <img src="images/font2.png" height="256" width="709"/>
+        <img src="images/font3.png" height="213" width="646"/>
+    </li>
+</ul>
+
+</body>
+</html>

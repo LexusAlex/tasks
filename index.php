@@ -112,6 +112,7 @@
 <ul>
     <li><a href="css/01-bootstrap-default/bootstrap.html">bootstrap.html</a></li>
     <li><a href="css/bem/index.html">BEM</a></li>
+    <li><a href="css/notes/notesCss.html">Notes for css</a></li>
 </ul>
 
 <h1>HTML</h1>

@@ -80,6 +80,7 @@
     <li><a href="js/js/navigate/createdeleteElement.html">CreateDeleteElement JS</a></li>
     <li><a href="js/js/event/event.html">Event JS</a></li>
     <li><a href="js/js/cookie/cookie.html">Cookie JS</a></li>
+    <li><a href="js/js/app.html">App</a></li>
 </ul>
 
 <h3>Tests</h3>

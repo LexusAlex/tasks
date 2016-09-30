@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App - api js для тренировок</title>
+</head>
+<body>
+<script src="app/array.js"></script>
+<script>
+var App = (function () {
+    var arr1 = [];
+    return {
+        init : function () {
+            Array.createArrayNum(1000);// создать массив с нужным кол-вом элементов
+            Array.pushUnshiftArray([1,2,3],'4'); // добавить элемент в конец
+            Array.pushUnshiftArray([1,2,3],'4','push');// добавим элемент в конец
+            Array.pushUnshiftArray([1,2,3],'4','unshift'); // добавить элемент в начало
+        },
+        l : function (v) {
+            console.log(v);
+        }
+    }
+})();
+
+App.init();
+</script>
+</body>
+</html>

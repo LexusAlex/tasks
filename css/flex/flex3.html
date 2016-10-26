@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex:align-items</title>
+    <style>
+        /* row */
+        .container {
+            display: flex;
+        }
+        .row {
+            flex-direction: row;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .a-f-s {
+            align-items: flex-start;
+        }
+        .a-f-e {
+            align-items: flex-end;
+        }
+        .a-c {
+            align-items: center;
+        }
+        .a-s {
+            align-items: stretch;
+        }
+        .a-b {
+            align-items: baseline;
+        }
+
+        .container > * {
+            background-color: skyblue;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container div:first-child {
+            background-color: green;
+        }
+        .container div:last-child {
+            background-color: red;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Поперечная ось согда row</h1>
+
+<h1 class="center">align-items: flex-streach(по умолчанию)</h1>
+<div class="container row a-s">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: flex-start</h1>
+<div class="container row a-f-s">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: flex-end</h1>
+<div class="container row a-f-e">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: center</h1>
+<div class="container row a-c">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: baseline</h1>
+<div class="container row a-b">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1> Поперечная ось когда column</h1>
+
+<h1 class="center">align-items: flex-streach(по умолчанию)</h1>
+<div class="container column a-s">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: flex-start</h1>
+<div class="container column a-f-s">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: flex-end</h1>
+<div class="container column a-f-e">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: center</h1>
+<div class="container column a-c">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+
+<h1 class="center">align-items: baseline</h1>
+<div class="container column a-b">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block"><img src="img/flex3.png" height="320" width="315"/></div>
+    <div class="my-flex-block">item3</div>
+    <div class="my-flex-block">item4</div>
+    <div class="my-flex-block">item5</div>
+    <div class="my-flex-block">item6</div>
+</div>
+</body>
+</html>

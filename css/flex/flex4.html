@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex wrap перенос блоков</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .row {
+            flex-direction: row;
+        }
+        .f-nw {
+            flex-wrap: nowrap;
+        }
+        .f-w {
+            flex-wrap: wrap;
+        }
+        .f-w-r {
+            flex-wrap: wrap-reverse;
+        }
+        .container > * {
+            background-color: skyblue;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container div:first-child {
+            background-color: green;
+        }
+        .container div:last-child {
+            background-color: red;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мнострочная организация блоков как переносить блоки если не вмещаются в страницу</h1>
+
+    <h1 class="center">flex-wrap не переносить все элменты в одну строку</h1>
+    <div class="container row f-nw">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+    </div>
+
+    <h1 class="center">flex-wrap: wrap переносить</h1>
+    <div class="container row f-w">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+    </div>
+
+    <h1 class="center">flex-wrap: wrap-reverse переносить обратный порядок</h1>
+    <div class="container row f-w-r">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block">item-1</div>
+        <div class="my-flex-block">item-2</div>
+        <div class="my-flex-block">item-3</div>
+        <div class="my-flex-block">item-4</div>
+        <div class="my-flex-block">item-5</div>
+        <div class="my-flex-block">item-6</div>
+        <div class="my-flex-block">item-7</div>
+        <div class="my-flex-block">item-8</div>
+        <div class="my-flex-block">item-9</div>
+        <div class="my-flex-block">item-10</div>
+        <div class="my-flex-block">item-11</div>
+        <div class="my-flex-block">item-12</div>
+        <div class="my-flex-block">item-13</div>
+        <div class="my-flex-block">item-14</div>
+        <div class="my-flex-block">item-15</div>
+        <div class="my-flex-block">item-16</div>
+        <div class="my-flex-block">item-17</div>
+        <div class="my-flex-block">item-18</div>
+        <div class="my-flex-block">item-19</div>
+        <div class="my-flex-block">item-20</div>
+    </div>
+</body>
+</html>

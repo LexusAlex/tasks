@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex: flex-basis flex-grow</title>
+    <style>
+        .container {
+            display: flex;
+            height: 600px;
+        }
+        .f-b {
+            flex-basis: 250px;
+        }
+        .f-g {
+            flex-grow: 1;
+        }
+        .f-s {
+            flex-shrink: 2;
+        }
+        .f-s-a {
+            flex-shrink: 3;
+        }
+        .container > * {
+            background-color: skyblue;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container div:first-child {
+            background-color: green;
+        }
+        .container div:last-child {
+            background-color: red;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>базовый размер flex блока при наличии свободного простарнства</h1>
+<div class="container">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block f-b">item-3</div>
+    <div class="my-flex-block">item-4</div>
+    <div class="my-flex-block">item-5</div>
+    <div class="my-flex-block">item-6</div>
+    <div class="my-flex-block">item-7</div>
+    <div class="my-flex-block">item-8</div>
+    <div class="my-flex-block">item-9</div>
+</div>
+
+<h1>растягивание блока жадность при наличии свободного пространства</h1>
+<div class="container">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block f-g">item-3</div>
+    <div class="my-flex-block">item-4</div>
+    <div class="my-flex-block">item-5</div>
+</div>
+
+<h1>растягивание блока уменьшение</h1>
+<div class="container">
+    <div class="my-flex-block f-s">item1</div>
+    <div class="my-flex-block f-s">item-1</div>
+    <div class="my-flex-block f-s" style="width: 200px">item-2</div>
+    <div class="my-flex-block f-s">item-3</div>
+    <div class="my-flex-block f-s">item-4</div>
+    <div class="my-flex-block f-s">item-5</div>
+</div>
+</body>
+</html>

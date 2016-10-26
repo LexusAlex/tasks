@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex1 flex-direction</title>
+    <style>
+        /* row */
+        .container {
+            display: flex;
+        }
+        .row {
+            flex-direction: row;
+        }
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .container > * {
+            background-color: skyblue;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container div:first-child {
+            background-color: green;
+        }
+        .container div:last-child {
+            background-color: red;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">flex-direction:row</h1>
+    <div class="container row">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex1.png" height="329" width="624"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">flex-direction:row-reverse</h1>
+    <div class="container row-reverse">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex1.png" height="329" width="624"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">flex-direction:column</h1>
+    <div class="container column">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex1.png" height="329" width="624"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">flex-direction:column-reverse</h1>
+    <div class="container column-reverse">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex1.png" height="329" width="624"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+</body>
+</html>

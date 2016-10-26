@@ -114,6 +114,24 @@
     <li><a href="css/01-bootstrap-default/bootstrap.html">bootstrap.html</a></li>
     <li><a href="css/bem/index.html">BEM</a></li>
     <li><a href="css/notes/notesCss.html">Notes for css</a></li>
+    <li><ul>
+            <li><a href="css/flex/flex1.html">flex-container - flex-direction</a></li>
+            <li><a href="css/flex/flex2.html">flex-container - justify-content</a></li>
+            <li><a href="css/flex/flex3.html">flex-container - align-items</a></li>
+            <li><a href="css/flex/flex4.html">flex-container - flex-wrap - multiline mode</a></li>
+            <li><a href="css/flex/flex5.html">flex-container - flex-flow (flex-direction || flex-wrap)</a></li>
+            <li><a href="css/flex/flex6.html">flex-container - align-content - multiline mode</a></li>
+            <li><a href="css/flex/flex7.html">flex-block - flex-basis</a></li>
+            <li><a href="css/flex/flex8.html">flex-block - align-self and order</a></li>
+            <li><a href="css/flex/flex9.html">flexbox - example 1</a></li>
+            <li><a href="css/flex/flex10.html">flexbox - example 2</a></li>
+            <li><a href="css/flex/flex11.html">flexbox - example 3</a></li>
+            <li><a href="css/flex/flex12.html">flexbox - example 4</a></li>
+            <li><a href="css/flex/flex13.html">flexbox - example 5</a></li>
+        </ul>
+        </ul>
+    </li>
+
 </ul>
 
 <h1>HTML</h1>

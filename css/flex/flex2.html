@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex: justify-content</title>
+    <style>
+        /* row */
+        .container {
+            display: flex;
+        }
+        .row {
+            flex-direction: row;
+        }
+        .j-content-f-s {
+            justify-content: flex-start;
+        }
+        .j-content-f-e {
+            justify-content: flex-end;
+        }
+        .j-content-c {
+            justify-content: center;
+        }
+        .j-content-s-b {
+            justify-content: space-between;
+        }
+        .j-content-s-a {
+            justify-content: space-around;
+        }
+
+        .container > * {
+            background-color: skyblue;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container div:first-child {
+            background-color: green;
+        }
+        .container div:last-child {
+            background-color: red;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Главная ось когда row</h1>
+    <h1 class="center">justify-content: flex-start(по умолчанию)</h1>
+    <div class="container row j-content-f-s">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex2.png" height="245" width="335"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">justify-content: flex-end</h1>
+    <div class="container row j-content-f-e">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex2.png" height="245" width="335"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">justify-content: center</h1>
+    <div class="container row j-content-c">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex2.png" height="245" width="335"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">justify-content: space-between</h1>
+    <div class="container row j-content-s-b">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex2.png" height="245" width="335"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+    <h1 class="center">justify-content: space-around</h1>
+    <div class="container row j-content-s-a">
+        <div class="my-flex-block">item1</div>
+        <div class="my-flex-block"><img src="img/flex2.png" height="245" width="335"/></div>
+        <div class="my-flex-block">item3</div>
+        <div class="my-flex-block">item4</div>
+        <div class="my-flex-block">item5</div>
+        <div class="my-flex-block">item6</div>
+    </div>
+
+</body>
+</html>

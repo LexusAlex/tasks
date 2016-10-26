@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex: align-content</title>
+    <style>
+        .container {
+            display: flex;
+            border: 1px solid black;
+            height: 550px;
+        }
+        .flow {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .f-st {
+            align-content: flex-start;
+        }
+        .f-e {
+            align-content: flex-end;
+        }
+        .f-c {
+            align-content: center;
+        }
+        .f-s-b {
+            align-content: space-between;
+        }
+        .f-s {
+            align-content: stretch;
+        }
+        .f-s-a {
+            align-content: space-around;
+        }
+        .container > * {
+            background-color: skyblue;
+            margin: 10px;
+            padding: 10px;
+            width: 70px;
+        }
+        .container div:first-child {
+            background-color: green;
+        }
+        .container div:last-child {
+            background-color: red;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Выравнивание по вертикали на поперечной оси в многострочном режиме</h1>
+<h1 class="center"></h1>
+<img src="img/flex4.png" height="468" width="318"/>
+<h1>strech - растянуты на все имеющееся пространство</h1>
+<div class="container flow f-s">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+</div>
+
+<h1>flex-start</h1>
+<div class="container flow f-st">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+</div>
+
+<h1>flex-end</h1>
+<div class="container flow f-e">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+</div>
+<h1>flex-center</h1>
+<div class="container flow f-c">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+</div>
+<h1>space-between</h1>
+<div class="container flow f-s-b">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+</div>
+<h1>space-around</h1>
+<div class="container flow f-s-a">
+    <div class="my-flex-block">item1</div>
+    <div class="my-flex-block">item-1</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+    <div class="my-flex-block">item-2</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example web page 2 my exam</title>
+    <meta name="description" content="annottation 150 charsets on this page">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header role="banner">
+        <h1>Название веб сайта</h1>
+        <p>Слоган сайта - заключать в p</p>
+            <nav role="navigation">
+                <!--
+                Навигация, скопления заголовков, можно использовать несколько
+                Структура навигации в списке
+                Групировка в списке, это важно для семантики
+                -->
+                <ul>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                    <li><a href="/">ссылка</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main role="main">
+        <header>
+            <h2>Главный заголовок названия веб-сайта</h2>
+            <p><a href="/">ссылка на что нибудь</a></p>
+            <p>Указатель контента</p>
+            <time datetime="2014-01-17">17 Января 2014</time>
+        </header>
+        <article role="article">
+            <header>
+                <h3>Название Поста 1</h3>
+                <p>Вводныый контент дата публикации</p>
+            </header>
+            <dl>
+                <dt>Подзаголовок относящийся к посту 1</dt>
+                    <dd>Контент</dd>
+                    <dd>Контент</dd>
+                    <dd>Контент</dd>
+                    <dd>Контент</dd>
+                <dt>Подзаголовок относящийся к посту 1</dt>
+                    <dd>Контент</dd>
+                    <dd>Контент</dd>
+                    <dd>Контент</dd>
+                <dt>Подзаголовок относящийся к посту 1</dt>
+                    <dd>Контент</dd>
+                    <dd>Контент</dd>
+                <dt>Подзаголовок относящийся к посту 1</dt>
+                    <dd>Контент</dd>
+                <dt>Подзаголовок относящийся к посту 1</dt>
+                    <dd>Контент</dd>
+            </dl>
+
+            <footer>
+                <p>Кто написал статью</p>
+                <p>Кто написал статью</p>
+            </footer>
+            <section><!--Групировка-->
+                <header>
+                    <!--комментарии-->
+                    <h3>Эти коменты относятся к главному заголовку</h3>
+                    <p>
+                        Вводный текст для коментария
+                    </p>
+                </header>
+                <article>
+                    <h4>Кто оставил комент</h4>
+                    <p>
+                        Комент
+                    </p>
+                </article>
+
+                <article>
+                    <h4>Кто оставил комент</h4>
+                    <p>
+                        Комент
+                    </p>
+                </article>
+
+                <article>
+                    <h4>Кто оставил комент</h4>
+                    <p>
+                        Комент
+                    </p>
+                </article>
+            </section>
+        </article>
+    </main>
+    <section>
+        <h2>Важный второй заголовок</h2>
+            <header>
+                <h3>Принадлежит ко второму заголовку</h3>
+                <p>Вводный контент</p>
+            </header>
+            <figure>
+                <figcaption style="text-transform: uppercase">Название картинки</figcaption>
+                <img src="../img/semantics1.png" height="432" width="632"/>
+            </figure>
+            <h3>Принадлежит ко второму заголовку</h3>
+            <h3>Принадлежит ко второму заголовку</h3>
+    </section>
+    <aside role="complementary">
+        <h3>Групировка такая</h3>
+    </aside>
+    <footer role="contentinfo">
+        <!--Стилизуем как нужно не сементично-->
+        <div>
+            <p>вверх</p>
+            <p>адрес</p>
+            <p>Копирайт</p>
+            <p><i>Что то еще</i></p>
+        </div>
+    </footer>
+</body>
+</html>

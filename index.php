@@ -138,6 +138,17 @@
 <h3>Theory</h3>
 <ul>
     <li><a href="html/table.html">Table.html</a></li>
+    <li> Semantics
+        <ul>
+            <li><a href="html/semantics/1.html">semantic</a></li>
+            <li><a href="html/semantics/2.html">section</a></li>
+            <li><a href="html/semantics/3.html">article</a></li>
+            <li><a href="html/semantics/4.html">aside</a></li>
+            <li><a href="html/semantics/5.html">nav</a></li>
+            <li><a href="html/semantics/6.html">example web page</a></li>
+            <li><a href="html/semantics/7.html">example web page 2 + IE + my structure</a></li>
+        </ul>
+    </li>
 </ul>
 <h1>GIT</h1>
 <ul>

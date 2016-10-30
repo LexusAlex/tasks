@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box-sizing:content-box</title>
+    <style>
+        .elem{
+            width: 100px;
+            height: 100px;
+            background-color: #a6e1ec;
+            padding: 10px;
+            border: 10px solid black;
+            margin: 10px;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Значение по умолчанию</h1>
+    <h1>Согласно спеки размеры склыдваются из width + padding + border + margin = размер элемента</h1>
+    <h1>В этом случае размеры элемента это то что находится внутри padding то есть width=100px height=100px</h1>
+    <div class="elem">элемент</div>
+</body>
+</html>

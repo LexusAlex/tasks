@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 6</title>
+    <style>
+        #page {
+            display: -webkit-flex;
+            display: flex;
+            max-width:1200px;
+            margin:0 auto;
+        }
+
+        #main {
+            -webkit-flex-grow:1;
+            flex-grow:1;
+        }
+
+        aside{
+            -webkit-flex-shrink:0;
+            flex-shrink:0;
+            width:280px;
+        }
+
+        #main {
+            background-color:#fff;
+            padding:40px 100px 40px 40px;
+            line-height: 1.5;
+            color:#565a5c;
+        }
+
+        #main h1{
+            margin-bottom: 28px;
+            font-size: 24px;
+        }
+
+        #main p{
+            margin-bottom: 24px;
+        }
+
+        #main .wireframe-box{
+            background-color:#e2e2e2;
+            padding:200px 0;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        aside{
+            background-color:#292c2f;
+            color:#fff;
+            padding:20px;
+        }
+
+        aside .wireframe-box{
+            background-color: #37393C;
+            margin-top:20px;
+            padding:50px;
+        }
+
+        aside .wireframe-box.double{
+            padding:100px;
+        }
+
+        @media all and (max-width: 800px) {
+
+            #page {
+                -webkit-flex-flow:column;
+                flex-flow:column;
+            }
+
+            aside{
+                width:auto;
+            }
+
+            #main{
+                padding-right:40px;
+            }
+        }
+    </style>
+</head>
+<body>
+<section id="page">
+    <div id="main">
+        <h1>An equal-height sidebar. Only with CSS.</h1>
+        <p>The sidebar and the main content of the page always have an equal height, no matter which has longer content. Try it out by making the content of this element longer by duplicating the following lorem ipsum paragraphs a few times over. You will see how the sidebar adapts to the height automatically. Did we mention this example is also responsive?</p>
+
+        <p>Morbi elementum massa faucibus ullamcorper posuere. Mauris lectus sem, scelerisque sit amet leo vitae, congue tincidunt ex. Nullam feugiat enim at massa ultricies pellentesque. Nam tempus turpis viverra, mattis diam ac, malesuada mi. Cras vitae lobortis enim, non vulputate libero. Donec sed eros sem. Vivamus nec erat ipsum. Nullam a placerat mauris, id tincidunt metus.</p>
+
+        <p>Pellentesque quis eros dignissim, volutpat augue in, lacinia lacus. Etiam vitae nunc et risus varius placerat sed eu arcu. Sed vel tellus magna. In tempor vel nibh non congue. Praesent auctor ullamcorper metus.</p>
+        <div class="wireframe-box">An image goes here.</div>
+    </div>
+    <aside>
+        <div class="wireframe-box double">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda consectetur laudantium molestias necessitatibus, nobis, omnis optio quae, quasi quis quo quod repudiandae temporibus voluptates voluptatum. Dicta distinctio doloribus eius eum fugit illum laborum minus non placeat qui quisquam, tenetur voluptates voluptatibus? Deleniti libero magni neque praesentium sed! Accusamus architecto dolores ducimus incidunt iusto modi sit vero. Aliquam, consequatur ipsam laboriosam molestias nam nesciunt nihil placeat recusandae voluptatum! Accusamus aliquid amet assumenda at debitis dicta eos eum fugit libero, molestias necessitatibus nemo nihil nobis placeat porro quam quis, repellendus vero. Alias beatae corporis dolores eius magni minima quaerat suscipit voluptatibus.</div>
+        <div class="wireframe-box double"></div>
+        <div class="wireframe-box double"></div>
+        <div class="wireframe-box"></div>
+        <div class="wireframe-box"></div>
+        <div class="wireframe-box"></div>
+    </aside>
+</section>
+</body>
+</html>

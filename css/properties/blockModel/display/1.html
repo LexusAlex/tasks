@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display:block</title>
+    <style>
+        .block{
+            border: solid 1px black;
+            margin: 5px;
+        }
+        .outer{
+            background-color: #00AA00;
+            width: 50%;
+        }
+        .inner{
+            background-color: #0A246A;
+            width: 80%;/* Ширина относительно родителя то есть 80% от ширины */
+        }
+        .b{
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid red;
+            width: 500px;
+        }
+        .over{
+            height: 100px;
+            width: 100px;
+            border: solid red 1px;
+        }
+        .outer-b{
+            background-color: #00AA00;
+            width: 50%;
+        }
+        .inner-b{
+            background-color: #0A246A;
+            width: 80%;/* Ширина относительно родителя то есть 80% от ширины */
+            margin-left: -5px;
+        }
+        .b-1{
+            border: 1px solid blue;
+        }
+
+        .parent{
+            width:300px;
+        }
+        .red {
+            background-color:red;
+            height:50px;
+            margin-bottom:30px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .blue {
+            background-color:blue;
+            height:50px;
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .redrevert {
+            background-color:red;
+            height:50px;
+            margin-top:30px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .bluerevert {
+            background-color:blue;
+            height:50px;
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .reddif {
+            background-color:red;
+            height:50px;
+            margin-bottom:30px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .bluedif {
+            background-color:blue;
+            height:50px;
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: -20px;
+        }
+        .reddifrev {
+            background-color:red;
+            height:50px;
+            margin-top:30px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .bluedifrev {
+            background-color: blue;
+            height: 50px;
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: -20px;
+        }
+        .redneg {
+            background-color:red;
+            height:50px;
+            margin-bottom: -10px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .blueneg {
+            background-color: blue;
+            height: 50px;
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: -20px;
+        }
+        .redeq {
+            background-color:red;
+            height:50px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .blueeq {
+            background-color: blue;
+            height: 50px;
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Контекст создается боксом вокруг него</h1>
+    <div class="block">div-1</div>
+    <div class="block">div-1</div>
+    <div class="block">div-1</div>
+    Просто текст между блоками, стал неявным блоком
+    <div class="block">div-1</div>
+
+<ol>Что тут важно:
+    <li> margin + border + padding + connent - width = ширина содержащего блока </li>
+    <li> margin + border + padding + connent - height != высота содержащего блока </li>
+    <li>width по умолчанию auto(100%)</li>
+    <li>Содержимое блока, если не помещается в заданные размеры, отображается поверх. что называют переполнением</li>
+</ol>
+
+<h1>Ширина ограничена родителем</h1>
+<div class="outer">outer
+    <div class="inner">inner</div>
+</div>
+
+<h1>Высота зависит от контента (Будет расти при добавлении контента)</h1>
+<div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis minus nobis sint temporibus velit! Alias aliquid assumenda cum est iusto nam, non quaerat quis? Blanditiis consequatur culpa cumque eveniet facilis laboriosam minima nulla officiis quibusdam! Atque aut culpa cumque dolores ducimus et fuga iste, labore magni maiores molestias obcaecati, officiis provident suscipit tempora tempore veritatis. Alias animi asperiores, blanditiis consequuntur dicta dolorem ea eaque earum error eum excepturi id ipsum magni maxime nostrum officia quaerat rem reprehenderit saepe sapiente ullam voluptate voluptatum. Dicta earum eius eligendi expedita fugit illo necessitatibus, nesciunt nisi officia recusandae suscipit ut! Nisi non officiis velit.</div>
+
+<h1>Полностью отображают отображают margin padding border со всех сторон</h1>
+<div class="b">block</div>
+
+<h1>Переполнение блока - когда контента больше чем размеры блока</h1>
+<div class="over">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eum facere minus nihil pariatur porro quia quisquam ratione vitae voluptatum? Amet dicta doloremque nobis officiis possimus repellat sequi? Alias, dicta? </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Центрирование блочного элемента</h1>
+<div style="width: 100px;height: 100px;border: solid 1px red;margin: 0 auto">center</div>
+
+<h1>Выход из родителя</h1>
+<div class="outer-b">outer
+    <div class="inner-b">inner</div>
+</div>
+
+<h1>Схлапывание границ (Положительный margin- будет взят больший из них) </h1>
+<h1>Будет взято 30 px</h1>
+<div class="parent">
+    <div class="red">
+        <p>margin-bottom:30px</p>
+    </div>
+    <div class="blue">
+        <p>margin-top:20px</p>
+    </div>
+</div>
+
+<h1>меняем местами - результат тот же</h1>
+<div class="parent">
+    <div class="bluerevert">
+        <p>margin-top:20px</p>
+    </div>
+    <div class="redrevert">
+        <p>margin-bottom:30px</p>
+    </div>
+</div>
+
+<h1>Схлапывание границ (Разноимнные margin - результат сумма отступов между элементами)</h1>
+<h1>Итог -20 + 30 = 10px - это и будет результатом</h1>
+<div class="parent">
+    <div class="reddif">
+        <p>margin-bottom:30px</p>
+    </div>
+    <div class="bluedif">
+        <p>margin-top:-20px</p>
+    </div>
+</div>
+<h1>Меняем местами резутат тот же самый</h1>
+
+<div class="parent">
+    <div class="bluedifrev">
+        <p>margin-bottom:-20px</p>
+    </div>
+    <div class="reddifrev">
+        <p>margin-top:30px</p>
+    </div>
+</div>
+<h1>Схлопывание margin( Отрициаетльные margin - сумма и перекрытие элемента)</h1>
+<h1>Итог Выберется меньший из них</h1>
+<div class="parent">
+    <div class="redneg">
+        <p>margin-bottom:-10px</p>
+    </div>
+    <div class="blueneg">
+        <p>margin-top:-20px</p>
+    </div>
+</div>
+
+<h1>Схлопывание margin:(равный margin)</h1>
+
+<div class="parent">
+    <div class="redeq">
+        <p>margin-bottom:20px</p>
+    </div>
+    <div class="blueeq">
+        <p>margin-top: 20px</p>
+    </div>
+</div>
+<h1>Правила</h1>
+<ul>
+    <li>-20 -20 = 0</li>
+    <li>20 20 = 20</li>
+    <li>30 20 = 30</li>
+    <li>-20  30 = 10</li>
+    <li>-10 -20 = -10</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display:inline </title>
+    <style>
+        .i1{
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>По умолчанию устанавиливается у элемента этот тип</h1>
+    <h1>Ширина определяется по содержимому</h1>
+    <span class="i1">элемент</span>
+    <span class="i1">элемент</span>
+    <span class="i1">элемент побольше</span>
+
+    <h1>Текст между строчными элементами</h1>
+    <h1>Строчные элементы создали вокруг себя сточный контекст</h1>
+    <span class="i1">элемент</span>
+    текст без эелмента
+    <span class="i1">элемент</span>
+    текст без элемента
+    <span class="i1">элемент побольше</span>
+
+    <h1>Текст может быть перенесен на другую строку, при это считается одним боксом</h1>
+    <span class="i1">элемент</span>
+    <span class="i1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at consectetur corporis cumque eligendi enim esse eveniet hic illo laborum, maxime nobis odio quasi qui ratione similique ut veritatis voluptatem. Adipisci, at consequuntur corporis culpa cumque cupiditate dignissimos dolore dolores eos eveniet excepturi harum hic inventore ipsa labore libero maiores minima natus necessitatibus neque nobis nulla pariatur qui quis repellendus reprehenderit repudiandae soluta tempora veniam voluptatem. A animi aspernatur debitis deserunt enim error esse facilis iste, labore mollitia nemo nihil, numquam obcaecati provident rem reprehenderit sunt, velit veritatis. A animi cupiditate eveniet in ipsa magnam porro sapiente sequi temporibus voluptatum.</span>
+
+    <h1>Не работает ширина и высота(размеры нельзя поставить)</h1>
+    <span class="i1" style="width: 10000px;height: 20%">элемент width 10000px height 20%</span>
+
+    <h1>Не работают margin top и margin bottom</h1>
+    <span class="i1" style="margin-bottom: 100px;margin-top: 50px">элемент побольше</span>
+    <h2>но margin left и margin right работают заданный элементу 2</h2>
+    <span class="i1">элемент</span>
+    <span class="i1" style="margin-right: 10px;margin-left: 30px">элемент</span>
+    <span class="i1">элемент побольше</span>
+
+    <h1>padding не влияет на высоту строки(зададим padding первому элемету, но вся строка его не будет замечать)</h1>
+    <span class="i1" style="padding: 60px 20px">элемент</span>
+    <span class="i1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus illo numquam porro possimus rerum? Amet asperiores consequatur, culpa, cum debitis dicta fugiat numquam omnis quo recusandae soluta ullam. Animi atque, earum eum facere laborum magni mollitia, natus neque non odio praesentium quas quasi, quod repudiandae sit tempore veniam. Accusamus aliquid amet animi architecto asperiores assumenda at autem blanditiis commodi, corporis debitis deserunt ducimus earum esse eum ex excepturi fuga in laborum magni molestiae odio porro possimus quam quas recusandae repellat sunt tempora tempore temporibus, tenetur totam ullam voluptas. Blanditiis illo modi quia. Autem ea facilis fugiat non nostrum veritatis, voluptatibus!</span>
+</body>
+</html>

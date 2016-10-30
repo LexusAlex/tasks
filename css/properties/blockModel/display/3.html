@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display:inline-block</title>
+    <style>
+
+        li {
+            display: inline-block;
+            list-style: none;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Создают вокруг себя блочный контекст</h1>
+    <h1>Это значение display используют, чтобы отобразить в одну строку блочные элементы, в том числе разных размеров.</h1>
+    <h1>При этом работат высота,ширина, но находится в строке, размер как и у строки устанавливается по содержимому</h1>
+
+    <ul style="border:1px solid black; padding:0">
+        <li>Инлайн Блок<br>3 строки<br>высота/ширина явно не заданы</li>
+        <li style="width:100px;height:100px">Инлайн<br>Блок 100x100</li>
+        <li style="width:60px;height:60px">Инлайн<br>Блок 60x60</li>
+        <li style="width:100px;height:60px">Инлайн<br>Блок 100x60</li>
+        <li style="width:60px;height:100px">Инлайн<br>Блок 60x100</li>
+    </ul>
+
+    <h1>padding влияет на высоту строки(как у блочных элементов, но элемент находится в строке как строчный)</h1>
+    <span class="i1" style="border: 1px solid red;display: inline-block;padding: 60px 20px">элемент</span>
+    <span class="i1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus illo numquam porro possimus rerum? Amet asperiores consequatur, culpa, cum debitis dicta fugiat numquam omnis quo recusandae soluta ullam. Animi atque, earum eum facere laborum magni mollitia, natus neque non odio praesentium quas quasi, quod repudiandae sit tempore veniam. Accusamus aliquid amet animi architecto asperiores assumenda at autem blanditiis commodi, corporis debitis deserunt ducimus earum esse eum ex excepturi fuga in laborum magni molestiae odio porro possimus quam quas recusandae repellat sunt tempora tempore temporibus, tenetur totam ullam voluptas. Blanditiis illo modi quia. Autem ea facilis fugiat non nostrum veritatis, voluptatibus!</span>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box-sizing:border-box</title>
+    <style>
+        .elem{
+            width: 100px;
+            height: 100px;
+            background-color: #a6e1ec;
+            padding: 20px;
+            border: 10px solid black;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<h1>Значения width\height задают высоту всего элемента, в данном случае width100px, будет задавать весь элемент</h1>
+<h1>При этом width=40 padding=40 border=20 = 100px то есть просто поменяли расчет и оргиничеили размеры border-box</h1>
+<div class="elem">элемент</div>
+</body>
+</html>

@@ -112,7 +112,11 @@
 <h3>Theory</h3>
 <ul>
     <li><a href="css/01-bootstrap-default/bootstrap.html">bootstrap.html</a></li>
-    <li><a href="css/bem/index.html">BEM</a></li>
+    <li>
+        <ul>
+            <li><a href="css/bem/1.html">bem 1</a></li>
+        </ul>
+    </li>
     <li><a href="css/notes/notesCss.html">Notes for css</a></li>
     <li><ul>
             <li><a href="css/flex/flex1.html">flex-container - flex-direction</a></li>
@@ -128,7 +132,28 @@
             <li><a href="css/flex/flex11.html">flexbox - example 3</a></li>
             <li><a href="css/flex/flex12.html">flexbox - example 4</a></li>
             <li><a href="css/flex/flex13.html">flexbox - example 5</a></li>
+            <li><a href="css/flex/flex14.html">flexbox - example 6</a></li>
         </ul>
+        </ul>
+    </li>
+    <li>property
+        <ul>
+            <li>blockModel
+                <ul>
+                    <li>
+                        <ul><b>display</b>
+                            <li><a href="css/properties/blockModel/display/1.html">block</a></li>
+                            <li><a href="css/properties/blockModel/display/2.html">inline</a></li>
+                            <li><a href="css/properties/blockModel/display/3.html">inline-block</a></li>
+                        </ul>
+                        <ul>
+                            <b>box-sizing</b>
+                            <li><a href="css/properties/blockModel/box-sizing/content-box.html">content-box</a></li>
+                            <li><a href="css/properties/blockModel/box-sizing/border-box.html">border-box</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </li>
 

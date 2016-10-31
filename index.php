@@ -142,9 +142,13 @@
                 <ul>
                     <li>
                         <ul><b>display</b>
-                            <li><a href="css/properties/blockModel/display/1.html">block</a></li>
-                            <li><a href="css/properties/blockModel/display/2.html">inline</a></li>
-                            <li><a href="css/properties/blockModel/display/3.html">inline-block</a></li>
+                            <li><a href="css/properties/blockModel/display/block.html">block</a></li>
+                            <li><a href="css/properties/blockModel/display/inline.html">inline</a></li>
+                            <li><a href="css/properties/blockModel/display/inline-block.html">inline-block</a></li>
+                            <li><a href="css/properties/blockModel/display/none.html">none</a></li>
+                            <li><a href="css/properties/blockModel/display/flex.html">flex or inline-flex</a></li>
+                            <li><a href="css/properties/blockModel/display/list-item.html">list-item</a></li>
+                            <li><a href="css/properties/blockModel/display/table.html">table and etc.</a></li>
                         </ul>
                         <ul>
                             <b>box-sizing</b>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display:flex</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: darkgrey;
+            width: 50%;
+            height: 200px;
+            justify-content: center;
+        }
+        .elem{
+            background-color: #00AA00;
+            margin: 5px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Основная идея flex-блоков, обладать способностью изменять свою ширина/высота (и другое), чтобы наилучшим образом заполнять свободное место (в основном, для поддержки адаптивности на всех видах устройств и размеров экрана).</h1>
+    <h1>См <a href="../../../flex/flex.html">подробнее о flex box</a></h1>
+
+    <div class="container">flex контнейнер</div>
+    <hr>
+    <br>
+    <div class="container">
+        <div class="elem">flex element</div>
+        <div class="elem">flex element</div>
+        <div class="elem">flex element</div>
+    </div>
+
+
+    <img src="../images/flex.png"/>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display:none</title>
+    <style>
+        .elem{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #c4e3f3;
+        }
+    </style>
+</head>
+<body>
+<h1>Полностью удаляет элемент со страницы.</h1>
+<h1>В то время как элемент находится в DOM структуре документа, он удаляется визуально и, в любой другой момент, вы можете изменить это состояние.</h1>
+
+<div class="elem">Нескрытый элемент</div>
+<div class="elem" style="display: none">Скрытый элемент, удалился но в дереве DOM остался</div>
+<div class="elem">Нескрытый элемент</div>
+</body>
+</html>

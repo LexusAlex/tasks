@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Width and Height</title>
+    <style>
+        .elem1{
+            background-color: #00AA00;
+        }
+        .elem2{
+            width: 80%;
+            height: 80%;
+            background-color: #a6e1ec;
+        }
+        .parent1{background-color: red;height: 200px;width:1000px}
+        .parent2{background-color: yellow;width: 50%}
+        .parent3{background-color: #00AA00;width: 80%}
+    </style>
+</head>
+<body>
+    <h1>Размеры элемента являются динамическими либо можно установить конктетные значения</h1>
+    <h1>Приминяется К блочным элементам, ячейкам таблицы, заменяемым элементам</h1>
+    <h1>Значение по умолчанию: auto</h1>
+
+    <div class="elem1">Элемент с размерами auto</div>
+    <div class="elem2">Элемент с width 80% от body</div>
+    <hr>
+
+    <h1>Родительский элемент -% берется от родителя</h1>
+    <div class="parent1">auto
+        <div class="parent2">50%
+            <div class="parent3">80%</div>
+        </div>
+    </div>
+</body>
+</html>

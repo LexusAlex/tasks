@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border</title>
+    <style>
+        .b{
+            border-style: solid;
+            background-color: #a6e1ec;
+        }
+        table {
+            border-width: 3px;
+            background-color: #52E396;
+        }
+        tr, td {
+            padding: 2px;
+        }
+
+        /* border-style example classes */
+        .b1 {border-style:none;}
+        .b2 {border-style:hidden;}
+        .b3 {border-style:dotted;}
+        .b4 {border-style:dashed;}
+        .b5 {border-style:solid;}
+        .b6 {border-style:double;}
+        .b7 {border-style:groove;}
+        .b8 {border-style:ridge;}
+        .b9 {border-style:inset;}
+        .b10 {border-style:outset;}
+
+    </style>
+</head>
+<body>
+<h1>Рамка для элемента</h1>
+<h1>Все возможные значения</h1>
+<h1>border: border-width || border-style || border-color</h1>
+<h1>border-color - цвет рамки</h1>
+<h1>border-width - ширина рамки</h1>
+<h1>border-style - стиль рамки</h1>
+
+<img src="../images/border1.png" height="116" width="280"/>
+<hr>
+<h1>Все свойства border</h1>
+<img src="../images/border.png" height="235" width="872"/>
+
+<h1>Установим border-style: solid - остальные свойства есть по умолчанию</h1>
+<div class="b">border</div>
+<h1>Другие стили рамки</h1>
+<table>
+    <tr>
+        <td class="b1">none</td>
+        <td class="b2">hidden</td>
+        <td class="b3">dotted</td>
+        <td class="b4">dashed</td>
+    </tr>
+    <tr>
+        <td class="b5">solid</td>
+        <td class="b6">double</td>
+        <td class="b7">groove</td>
+        <td class="b8">ridge</td>
+    </tr>
+    <tr>
+        <td class="b9">inset</td>
+        <td class="b10">outset</td>
+    </tr>
+</table>
+
+<h1>Другие примеры использования</h1>
+
+<div style="border: 20px double darkblue;height: 100px">border double</div>
+<div style="border: 20px outset forestgreen;height: 100px">border outset</div>
+<div style="border: 20px ridge gold;height: 100px">border ridge</div>
+<div style="border: 20px dotted blanchedalmond;height: 100px">border dotted</div>
+<div style="border-bottom: 20px double darkmagenta;height: 100px">border-bottom double</div>
+</body>
+</html>

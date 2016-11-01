@@ -136,7 +136,7 @@
         </ul>
         </ul>
     </li>
-    <li>property
+    <li>properties
         <ul>
             <li>blockModel
                 <ul>
@@ -154,6 +154,54 @@
                             <b>box-sizing</b>
                             <li><a href="css/properties/blockModel/box-sizing/content-box.html">content-box</a></li>
                             <li><a href="css/properties/blockModel/box-sizing/border-box.html">border-box</a></li>
+                        </ul>
+                        <ul>
+                            <b>width and height(px,em,%)</b>
+                            <li><a href="css/properties/blockModel/width-height/width-height.html">width and height</a></li>
+                            <li><a href="css/properties/blockModel/width-height/min-width-max-width.html">min-width and max-width</a></li>
+                            <li><a href="css/properties/blockModel/width-height/min-height-max-height.html">min-height and max-height</a></li>
+                        </ul>
+                        <ul>
+                            <b>overflow(overflow-x(horizont-width),overflow-y(vertical-height))</b>
+                            <li><a href="css/properties/blockModel/overflow/visible.html">visible(visual always)</a></li>
+                            <li><a href="css/properties/blockModel/overflow/hidden.html">hidden(hide always)</a></li>
+                            <li><a href="css/properties/blockModel/overflow/auto.html">auto(scroll auto)</a></li>
+                            <li><a href="css/properties/blockModel/overflow/scroll.html">scroll(scroll always)</a></li>
+                        </ul>
+                        <ul>
+                            <b>padding(px,%)</b>
+                            <li><a href="css/properties/blockModel/padding/padding.html">padding</a></li>
+                            <li>padding-top</li>
+                            <li>padding-right</li>
+                            <li>padding-bottom</li>
+                            <li>padding-left</li>
+                            <li>padding : 100px - all sides</li>
+                            <li>padding : 100px 100px - top and bottom, left and right</li>
+                            <li>padding : 100px 100px 100px - top, left and right, bottom</li>
+                            <li>padding : 100px 100px 100px 100px - top, right, bottom, left</li>
+                        </ul>
+                        <ul>
+                            <b>border(style width color)</b>
+                            <li><a href="css/properties/blockModel/border/border.html">border</a></li>
+                            <li>border-color</li>
+                            <li>border-style</li>
+                            <li>border-width</li>
+                            <li>border-top</li>
+                            <li>border-top-color</li>
+                            <li>border-top-style</li>
+                            <li>border-top-width</li>
+                            <li>border-bottom</li>
+                            <li>border-bottom-color</li>
+                            <li>border-bottom-style</li>
+                            <li>border-bottom-width</li>
+                            <li>border-left</li>
+                            <li>border-left-color</li>
+                            <li>border-left-style</li>
+                            <li>border-left-width</li>
+                            <li>border-right</li>
+                            <li>border-right-color</li>
+                            <li>border-right-style</li>
+                            <li>border-right-width</li>
                         </ul>
                     </li>
                 </ul>

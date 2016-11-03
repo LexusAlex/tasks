@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Margin</title>
+    <style>
+        .block{
+            background-color: #a6e1ec;
+            border: solid;
+        }
+        .m1{
+            margin: 0 20px;
+        }
+        .m2{
+            margin: 0 0 15px 0
+        }
+        .m3{
+            margin: 40px 0 0 0;
+        }
+        .m4{
+            margin: 0 0 40px 0
+        }
+        .m5{
+            margin: 15px 0 0 0;
+        }
+        .m6{
+            margin: 15px 0 15px 0;
+        }
+
+        .m7{
+            margin:  0 0 30px 0;
+        }
+        .m8{
+            margin: -20px 0 0 0;
+        }
+
+        .m9{
+            margin:  0 0 -20px 0;
+        }
+        .m10{
+            margin: 30px 0 0 0;
+        }
+
+        .m11{
+            margin:  0 0 -10px 0;
+        }
+        .m12{
+            margin: -25px 0 0 0;
+        }
+
+        .m13{
+            margin:  0 0 -25px 0;
+        }
+        .m14{
+            margin: -10px 0 0 0;
+        }
+        .m15{
+            margin: -10px 0 -10px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Внешний отступ у элемента</h1>
+<h1>Свойство взаимодействует с другими элементами</h1>
+<h1>Горизонтальные margin - у сточных элементов работает только в право и лево и они складываются</h1>
+<span class="block m1">s1</span>
+20px+20px=40px
+<span class="block m1">s2</span>
+
+<h1>Вертикальные margin</h1>
+<hr>
+15 и 40 = 40
+<div class="block m2">margin-bottom 15px</div>
+
+<div class="block m3">margin-top 40px</div>
+
+<hr>
+40 и 15 = 40
+<div class="block m4">margin-bottom 40px</div>
+
+<div class="block m5">margin-top 15px</div>
+
+<hr>
+15 и 15 = 15
+<div class="block m6">margin-bottom 15px</div>
+
+<div class="block m6">margin-top 15px</div>
+
+<hr>
+15 и 15 = 15
+<div class="block m6">margin-bottom 40px</div>
+
+<div class="block m6">margin-top 15px</div>
+
+<hr>
+30 + (-20) = 10
+<div class="block m7">margin-bottom 30px</div>
+
+<div class="block m8">margin-top -20px</div>
+<hr>
+
+(-20) + 30 = 10
+<div class="block m9">margin-bottom -20px</div>
+
+<div class="block m10">margin-top 30px</div>
+<hr>
+-10  и - 25 = -25 будет взят меньший из них
+<div class="block m11">margin-bottom -10px</div>
+
+<div class="block m12">margin-top -25px</div>
+<hr>
+-25  и - 10 = -25 будет взят меньший из них
+<div class="block m13">margin-bottom -25px</div>
+
+<div class="block m14">margin-top -10px</div>
+
+<hr>
+-10  и - 10 = -10
+<div class="block m15">margin-bottom -10px</div>
+
+<div class="block m15">margin-top -10px</div>
+
+<h1>Схлопывание не срабатывает</h1>
+<pre>
+для элементов, у которых на стороне схлопывания задано свойство padding.
+для элементов, у которых на стороне схлопывания задана граница;
+на элементах с абсолютным позиционированием, т. е. таких, у которых position установлено как absolute;
+на плавающих элементах (для них свойство float задано как left или right);
+для строчных элементов;
+для html
+</pre>
+</body>
+</html>

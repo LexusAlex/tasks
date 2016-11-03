@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border radius</title>
+    <style>
+        .radius{
+            width: 300px;
+            height: 100px;
+            background-color: #00AFEC;
+            border-radius: 20%;
+        }
+        .radiusborder{
+            width: 300px;
+            height: 100px;
+            border: solid;
+            border-radius: 10%;
+        }
+        .radiusem{
+            border: groove 1em red;
+            border-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>Cкругление уголков рамки или фона</h1>
+
+<h1>Скругления фона 20%</h1>
+<div class="radius"></div>
+<h1>Скругления рамки 10%</h1>
+<div class="radiusborder"></div>
+
+
+<img src="../images/border-radius.png" height="473" width="592"/>
+
+<div class="radiusem">radius in em</div>
+<h1>Можно задавать элиптический уголок задав значения через /</h1>
+</body>
+</html>

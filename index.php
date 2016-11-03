@@ -118,6 +118,7 @@
         </ul>
     </li>
     <li><a href="css/notes/notesCss.html">Notes for css</a></li>
+    <li><a href="css/css-guide/organization.html">Organization css rules</a></li>
     <li><ul>
             <li><a href="css/flex/flex1.html">flex-container - flex-direction</a></li>
             <li><a href="css/flex/flex2.html">flex-container - justify-content</a></li>
@@ -202,6 +203,31 @@
                             <li>border-right-color</li>
                             <li>border-right-style</li>
                             <li>border-right-width</li>
+                        </ul>
+                        <ul>
+                            <b>border-image</b>
+                            <li><a href="css/properties/blockModel/border-image/border-image.html">border-image</a></li>
+                            <li>border-image-source</li>
+                            <li>border-image-slice</li>
+                            <li>border-image-width</li>
+                            <li>border-image-outset</li>
+                            <li>border-image-repeat</li>
+                        </ul>
+                        <ul>
+                            <b>border-radius(px,%)</b>
+                            <li><a href="css/properties/blockModel/border-radius/border-radius.html">border-radius</a></li>
+                            <li>border-radius:20px - all sides</li>
+                            <li>border-radius:20px 20px - top left and bottom right, top right and bottom left</li>
+                            <li>border-radius:20px 20px 20px - top left, top right and bottom left, bottom right</li>
+                            <li>border-radius:20px 20px 20px 20px - top left, top right, bottom left, bottom right</li>
+                            <li>border-top-left-radius: 0</li>
+                            <li>border-top-right-radius: 0</li>
+                            <li>border-bottom-right-radius: 0</li>
+                            <li>border-bottom-left-radius: 0</li>
+                        </ul>
+                        <ul>
+                            <b>margin(px,%,negative value)</b>
+                            <li><a href="css/properties/blockModel/margin/margin.html">margin</a></li>
                         </ul>
                     </li>
                 </ul>

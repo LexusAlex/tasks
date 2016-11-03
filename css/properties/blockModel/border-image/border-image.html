@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border-image</title>
+    <style>
+        .dialog {
+            font: 1em/1.5 sans-serif;
+            color: #fff;
+            width: 50%;
+            min-height: 160px;
+            min-width: 220px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #1b2f4a;
+            background-clip: padding-box;
+            border: 6px double #860;
+            border-image-source: url(http://usabili.ru/news_imgs/151/border7.png);
+            border-image-slice: 120 100 140 fill;
+            border-image-repeat: repeat stretch;
+            border-image-width: 120px 100px 140px; /* можно просто auto, эффект будет тот же */
+            border-image-outset: 36px 30px 58px 28px;
+            /*
+            или сокращенно:
+            border-image: url(http://usabili.ru/news_imgs/151/border7.png) 120 100 140 fill / auto / 36px 30px 58px 28px repeat stretch
+            */
+            border-radius: 44px;
+        }
+        a { color: #ff6; }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Картинка border-image-source, абсолютно любой тип изображения</li>
+        <li><strong>border-image-source</strong></li>
+        <li>url - пусть к графическому файлу</li>
+        <li><strong>border-image-slice</strong></li>
+        <li>делим изображние на 9 частей, далее указать размеры частей изображения в px или % </li>
+        <img src="../images/border-image.png" height="154" width="179"/>
+        <li>10 - толщина на каждой стороне рисунка</li>
+        <li>10 10 - верх и низ, право и лево</li>
+        <li>10 10 10 - верх, право и лево,низ</li>
+        <li>10 10 10 10 - верх, право,низ, лево</li>
+        <li>Толщина рамки</li>
+        <li>stretch - Растягивает рисунок границы до размеров элемента</li>
+        <li>repeat - Повторяет рисунок границы.</li>
+        <li>round - Повторяет рисунок и масштабирует его так, чтобы на стороне элемента оказалось целое число изображений.</li>
+        <li><strong>border-image-width</strong> - итоговая толщина рамки</li>
+        <li><strong>border-image-outset</strong> вынос рамки за пределы блока</li>
+    </ol>
+    <pre>
+        border-image: <‘border-image-source’> ||
+                       <‘border-image-slice’>
+                      [ / <‘border-image-width’> | / <‘border-image-width’>? / <‘border-image-outset’> ]? || <‘border-image-repeat’>
+        т.е.
+        1.Что за картинка
+        2.Как ее резать
+        3.Какой толщины делать рамку
+        4.Насколько выдвигать края
+        5.Как натягивать плитки
+        <a href="http://css-live.ru/articles-css/understanding-border-image.html">статья</a>
+    </pre>
+
+
+
+    <div class="dialog">
+        <p>Пример рисованной рамки для онлайн-игры, для прозрачного фона (<a href="http://usabili.ru/news/2012/04/28/151.html">отсюда</a>).</p>
+        <p>При наведении можно посмотреть, как выглядел бы блок без поддержки border-image</p>
+    </div>
+
+
+</body>
+</html>

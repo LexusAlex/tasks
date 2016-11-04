@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position:absolute</title>
+    <style>
+        body {
+            border: solid;
+        }
+        .main{
+            border: solid red;
+        }
+        .elem {
+            position: absolute;
+            margin: 2px;
+            border: double;
+            background-color: #00AA00;
+            width: 20%;
+            height: 100px;
+        }
+        .elemnopos {
+            margin: 2px;
+            border: double;
+            background-color: #00AA00;
+            width: 20%;
+            height: 100px;
+        }
+        .elem1{
+            left: 10px;
+        }
+        .elem2{
+            right: 10px;
+        }
+        .elem3{
+            top: 100%;
+            left: 50%;
+        }
+        .elem4{
+            bottom: 30px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Элемент исчезает с того места, где он должен быть и позиционируется заново. Остальные элементы, располагаются так, как будто этого элемента никогда не было.</h1>
+    <h1>Координаты top/bottom/left/right для нового местоположения отсчитываются от ближайшего позиционированного родителя, т.е. родителя с позиционированием, отличным от static. Если такого родителя нет – то относительно документа.</h1>
+    <h1>Элемент получет display block</h1>
+    <h1>Важное отличие от relative: так как элемент удаляется со своего обычного места, то элементы под ним сдвигаются, занимая освободившееся пространство</h1>
+    <h1>Ширина зависит от контента</h1>
+    <div class="main">
+        <div class="elemnopos">elem no positioning</div>
+        <div class="elem elem1">left 10px</div>
+        <div class="elem elem2">right 10px</div>
+        <div class="elem elem3">top 100% left 50%</div>
+        <div class="elem elem4">bottom 30px left 200px</div>
+    </div>
+</body>
+</html>

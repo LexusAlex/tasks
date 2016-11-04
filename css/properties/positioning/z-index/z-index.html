@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-index</title>
+    <style>
+        .red, .green, .blue {
+            position: absolute;
+            width: 100px;
+            color: white;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .red {
+            z-index: 4;
+            top: 20px;
+            left: 20px;
+            background: red;
+        }
+
+        .green {
+            z-index: 2;
+            top: 60px;
+            left: 60px;
+            background: green;
+        }
+
+        .blue {
+            z-index: 3;
+            top: 100px;
+            left: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Порядок наложения элементов</h1>
+    <h1>Если z-index не задан то элементы накладывеются друг на друга так как они определеныв html</h1>
+    <h1>z-index учитывается только на явно позиционированных элементах</h1>
+<div>
+    <span class="red">Red</span>
+</div>
+<div>
+    <span class="green">Green</span>
+</div>
+<div>
+    <span class="blue">Blue</span>
+</div>
+
+</body>
+</html>

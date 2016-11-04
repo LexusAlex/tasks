@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position:relative</title>
+    <style>
+        body {
+            border: solid;
+        }
+        .main{
+            border: solid red;
+        }
+        .elem {
+            position: relative;
+            margin: 2px;
+            border: double;
+            background-color: #00AA00;
+            width: 20%;
+            height: 100px;
+        }
+        .elem1{
+            left: 30px;
+            top: 30px;
+        }
+        .elem2{
+            right: 30px;
+            top: 30px;
+        }
+        .elem3{
+            left: 30px;
+            bottom: 30px;
+        }
+        .elem4{
+            right: 30px;
+            bottom: 30px;
+        }
+        .elem5{
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Относительное позиционирование сдвигает элемент относительно его обычного положения.</h1>
+    <h1>Тут работает только пары!</h1>
+    <ul>
+        <li>top left</li>
+        <li>top right</li>
+        <li>bottom left</li>
+        <li>bottom right</li>
+    </ul>
+    <h1>% сдвинет элемент на % от ширины родителя</h1>
+    <h1> Отрицительные значения сдвигают элемент в другую сторону, может выйти за пределы браузера</h1>
+    <div class="elem elem5">50% от body</div>
+   <div class="main">
+       <div class="elem elem1">top left</div>
+       <div class="elem elem2">top right</div>
+       <div class="elem elem3">bottom left</div>
+       <div class="elem elem4">bottom right</div>
+   </div>
+
+</body>
+</html>

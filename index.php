@@ -139,6 +139,43 @@
     </li>
     <li>properties
         <ul>
+            <li>
+                positioning
+                <ul>
+                    <li>
+                        <ul>
+                            <b>position</b>
+                            <li><a href="css/properties/positioning/position/static.html">static(no position)</a></li>
+                            <li><a href="css/properties/positioning/position/relative.html">relative(to current location)</a></li>
+                            <li><a href="css/properties/positioning/position/absolute.html">absolute(new location)</a>
+                                <a href="css/properties/positioning/position/absolute2.html">absolute2</a>
+                                <a href="css/properties/positioning/position/absolute3.html">absolute3</a>
+                            </li>
+                            <li><a href="css/properties/positioning/position/fixed.html">fixed(the coordinates of the window)</a></li>
+                        </ul>
+                        <ul>
+                            <b>bottom</b>
+                            <li><a href="css/properties/positioning/bottom/bottom.html">bottom</a></li>
+                        </ul>
+                        <ul>
+                            <b>top</b>
+                            <li><a href="css/properties/positioning/top/top.html">top</a></li>
+                        </ul>
+                        <ul>
+                            <b>left</b>
+                            <li><a href="css/properties/positioning/left/left.html">left</a></li>
+                        </ul>
+                        <ul>
+                            <b>right</b>
+                            <li><a href="css/properties/positioning/right/right.html">right</a></li>
+                        </ul>
+                        <ul>
+                            <b>z-index</b>
+                            <li><a href="css/properties/positioning/z-index/z-index.html">z-index</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
             <li>blockModel
                 <ul>
                     <li>
@@ -228,6 +265,24 @@
                         <ul>
                             <b>margin(px,%,negative value)</b>
                             <li><a href="css/properties/blockModel/margin/margin.html">margin</a></li>
+                            <li>margin-top</li>
+                            <li>margin-right</li>
+                            <li>margin-left</li>
+                            <li>margin-bottom</li>
+                            <li>margin : 100px - all sides</li>
+                            <li>margin : 100px 100px - top and bottom, left and right</li>
+                            <li>margin : 100px 100px 100px - top, left and right, bottom</li>
+                            <li>margin : 100px 100px 100px 100px - top, right, bottom, left</li>
+                        </ul>
+                        <ul>
+                            <b>float(left,right)</b>
+                            <li><a href="css/properties/blockModel/float/float.html">float</a></li>
+                            <li><a href="css/properties/blockModel/float/float2.html">float2</a></li>
+                            <li><a href="css/properties/blockModel/float/float3.html">float3</a></li>
+                            <li><a href="css/properties/blockModel/float/float4.html">float4</a></li>
+                            <li>clear:left</li>
+                            <li>clear:right</li>
+                            <li>clear:both</li>
                         </ul>
                     </li>
                 </ul>

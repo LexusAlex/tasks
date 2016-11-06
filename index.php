@@ -119,6 +119,7 @@
     </li>
     <li><a href="css/notes/notesCss.html">Notes for css</a></li>
     <li><a href="css/css-guide/organization.html">Organization css rules</a></li>
+    <li><a href="css/css-guide/fonts.html">Web fonts</a></li>
     <li><ul>
             <li><a href="css/flex/flex1.html">flex-container - flex-direction</a></li>
             <li><a href="css/flex/flex2.html">flex-container - justify-content</a></li>
@@ -138,6 +139,7 @@
         </ul>
     </li>
     <li>properties
+
         <ul>
             <li>
                 positioning
@@ -283,6 +285,45 @@
                             <li>clear:left</li>
                             <li>clear:right</li>
                             <li>clear:both</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>typography
+                <ul>
+                    <li>
+                        <ul>
+                            <b>font-family(familyes)</b>
+                            <li><a href="css/properties/typography/font-family/font-family.html">font-family</a></li>
+                        </ul>
+                        <ul>
+                            <b>font-style(mark style)</b>
+                            <li><a href="css/properties/typography/font-style/font-style.html">font-style</a></li>
+                        </ul>
+                        <ul>
+                            <b>font-variant(lowercase letters)</b>
+                            <li><a href="css/properties/typography/font-variant/font-variant.html">font-variant</a></li>
+                        </ul>
+                        <ul>
+                            <b>font-weight(weight)</b>
+                            <li><a href="css/properties/typography/font-weight/font-weight.html">font-weight</a></li>
+                        </ul>
+                        <ul>
+                            <b>font-size(size)</b>
+                            <li><a href="css/properties/typography/font-size/font-size.html">font-size</a></li>
+                        </ul>
+                        <ul>
+                            <b>font-stretch()</b>
+                            <li><a href="css/properties/typography/font-stretch/font-stretch.html">font-stretch</a></li>
+                        </ul>
+                        <ul>
+                            <b>line-height</b>
+                            <li><a href="css/properties/typography/line-height/line-height.html">line-height</a></li>
+                        </ul>
+                        <ul>
+                            <b>font</b>
+                            <li><a href="css/properties/typography/font/font.html">font</a></li>
+                            <li>[font-style(normal)||font-variant(normal)||font-weight(normal)||font-stretch(normal)] font-size(medium) [/line-height(normal)] font-family(depands on user agent)</li>
                         </ul>
                     </li>
                 </ul>

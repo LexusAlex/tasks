@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word-break</title>
+    <style>
+        .b{
+            border: solid 1px;
+            padding: 2px;
+            width: 500px;
+        }
+        .n{
+            word-break: normal;
+        }
+        .b-a{
+            word-break: break-all;
+        }
+        .k-a{
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body>
+    <h1>!!! Не интелектуальное</h1>
+    <h1>Свойство word-break указывает, как делать перенос строк внутри слов, которые не помещаются по ширине в заданную область.</h1>
+    <h2>normal - Не разрешаем переносить слова</h2>
+    <div class="b n">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur consectetur cumque debitis eaque earum fuga! Assumenda at atque corporis cumque dolor, dolorum ducimus eaque earum eius enim est excepturi expedita illo incidunt ipsa ipsam iste labore maxime molestiae mollitia non odio omnis praesentium quam, quasi quibusdam quod recusandae reiciendis sint sit ut veniam, veritatis voluptates. A ab accusamus adipisci aliquam aliquid amet animi architecto asperiores aut blanditiis commodi cumque eius eveniet, excepturi expedita explicabo harum impedit ipsam iure nam natus officia omnis optio pariatur, quaerat quas quia quidem quo ratione reprehenderit rerum suscipit tempore tenetur ut velit veniam vitae.</div>
+    <h2>break-all - Переносить всегда</h2>
+    <div class="b b-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur consectetur cumque debitis eaque earum fuga! Assumenda at atque corporis cumque dolor, dolorum ducimus eaque earum eius enim est excepturi expedita illo incidunt ipsa ipsam iste labore maxime molestiae mollitia non odio omnis praesentium quam, quasi quibusdam quod recusandae reiciendis sint sit ut veniam, veritatis voluptates. A ab accusamus adipisci aliquam aliquid amet animi architecto asperiores aut blanditiis commodi cumque eius eveniet, excepturi expedita explicabo harum impedit ipsam iure nam natus officia omnis optio pariatur, quaerat quas quia quidem quo ratione reprehenderit rerum suscipit tempore tenetur ut velit veniam vitae.</div>
+    <h2>keep-all - Не разрешаем переносить слова</h2>
+    <div class="b k-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur consectetur cumque debitis eaque earum fuga! Assumenda at atque corporis cumque dolor, dolorum ducimus eaque earum eius enim est excepturi expedita illo incidunt ipsa ipsam iste labore maxime molestiae mollitia non odio omnis praesentium quam, quasi quibusdam quod recusandae reiciendis sint sit ut veniam, veritatis voluptates. A ab accusamus adipisci aliquam aliquid amet animi architecto asperiores aut blanditiis commodi cumque eius eveniet, excepturi expedita explicabo harum impedit ipsam iure nam natus officia omnis optio pariatur, quaerat quas quia quidem quo ratione reprehenderit rerum suscipit tempore tenetur ut velit veniam vitae.</div>
+</body>
+</html>

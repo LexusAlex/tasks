@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>White-space</title>
+    <style>
+        .b{
+            width: 500px;
+            border: solid 2px red;
+        }
+        .n{
+            white-space: normal;
+        }
+        .n-w{
+            white-space: nowrap;
+        }
+        .p{
+            white-space: pre;
+        }
+        .p-l{
+            white-space: pre-line;
+        }
+        .p-w{
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Как отображать пробелы между словами, имитирует тег pre</h1>
+
+    <h1>Значения</h1>
+    <img src="../images/white-space.png" height="287" width="860"/>
+    <h1>normal - Переносы строк ставятся автоматически, пробелы не учитываются</h1>
+    <div class="b">
+        <div class="n">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores doloribus placeat quidem voluptatibus? A accusantium, alias at blanditiis consectetur corporis debitis delectus dignissimos eligendi est exercitationem iure maxime molestiae mollitia nemo neque nihil nulla odit officiis, placeat porro quae quasi quia quibusdam quisquam quod recusandae repellendus unde ut, voluptatibus!</div>
+    </div>
+    <h1>nowrap - Пробелы не учитываются, Переносы строк не учитывается, текст отображется одной строкой</h1>
+    <div class="b">
+        <div class="n-w">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores doloribus placeat quidem voluptatibus? A accusantium, alias at blanditiis consectetur corporis debitis delectus dignissimos eligendi est exercitationem iure maxime molestiae mollitia nemo neque nihil nulla odit officiis, placeat porro quae quasi quia quibusdam quisquam quod recusandae repellendus unde ut, voluptatibus!</div>
+    </div>
+    <h1>pre - Учитывается все что в html, но текст не переносится, отображется так как указан в html</h1>
+    <div class="b">
+        <div class="p">
+            Lorem ipsum dolor sit amet,
+            consectetur          adipisicing elit.
+            Accusantium asperiores doloribus
+            placeat quidem voluptatibus?
+            A accusantium, alias at
+            blanditiis consectetur
+            corporis      debitis delectus dignissimos
+            eligendi est exercitationem
+            iure maxime molestiae mollitia     nemo neque
+            nihil nulla odit officiis, placeat porro quae quasi quia quibusdam quisquam quod recusandae repellendus unde ut, voluptatibus!</div>
+    </div>
+    <h1>pre-line - Учитываются пробелы и переносы</h1>
+    <div class="b">
+        <div class="p-l">
+            Lorem ipsum dolor sit amet,
+            consectetur          adipisicing elit.
+            Accusantium asperiores doloribus
+            placeat quidem voluptatibus?
+            A accusantium, alias at
+            blanditiis consectetur
+            corporis      debitis delectus dignissimos
+            eligendi est exercitationem
+            iure maxime molestiae mollitia     nemo neque
+            nihil nulla odit officiis, placeat porro quae quasi quia quibusdam quisquam quod recusandae repellendus unde ut, voluptatibus!</div>
+    </div>
+    <h1>pre-wrap</h1>
+    <div class="b">
+        <div class="p-w">
+            Lorem ipsum dolor sit amet,
+            consectetur          adipisicing elit.
+            Accusantium asperiores doloribus
+            placeat quidem voluptatibus?
+            A accusantium, alias at
+            blanditiis consectetur
+            corporis      debitis delectus dignissimos
+            eligendi est exercitationem
+            iure maxime molestiae mollitia     nemo neque
+            nihil nulla odit officiis, placeat porro quae quasi quia quibusdam quisquam quod recusandae repellendus unde ut, voluptatibus!</div>
+    </div>
+</body>
+</html>

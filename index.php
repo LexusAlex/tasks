@@ -325,6 +325,50 @@
                             <li><a href="css/properties/typography/font/font.html">font</a></li>
                             <li>[font-style(normal)||font-variant(normal)||font-weight(normal)||font-stretch(normal)] font-size(medium) [/line-height(normal)] font-family(depands on user agent)</li>
                         </ul>
+                        <ul>
+                            <b>text-transform</b>
+                            <li><a href="/css/properties/typography/text-transform/text-transform.html">text-transform</a></li>
+                        </ul>
+                        <ul>
+                            <b>text-decoration(execution of the text)</b>
+                            <li><a href="css/properties/typography/text-decoration/text-decoration.html">text-decoration</a></li>
+                            <li>text-decoration: text-decoration-line || text-decoration-style || text-decoration-color</li>
+                            <li><a href="css/properties/typography/text-decoration/text-decoration-line/text-decoation-line.html">text-decoration-line</a></li>
+                            <li><a href="css/properties/typography/text-decoration/text-decoration-style/text-decoration-style.html">text-decoration-style</a></li>
+                            <li><a href="css/properties/typography/text-decoration/text-decoration-color/text-deoration-color.html">text-decoration-color</a></li>
+                        </ul>
+                        <ul>
+                            <b>text-indent</b>
+                            <li><a href="css/properties/typography/text-indent/text-indent.html">text-indent</a></li>
+                        </ul>
+                        <ul>
+                            <b>text-shadow</b>
+                            <li><a href="css/properties/typography/text-shadow/text-shadow.html">text-shadow</a></li>
+                        </ul>
+                        <ul>
+                            <b>text-align</b>
+                            <li><a href="css/properties/typography/text-align/text-align.html">text-align</a></li>
+                        </ul>
+                        <ul>
+                            <b>letter-spacing(px,em)</b>
+                            <li><a href="css/properties/typography/letter-spacing/letter-spacing.html">letter-spacing</a></li>
+                        </ul>
+                        <ul>
+                            <b>word-spacing(px,em)</b>
+                            <li><a href="css/properties/typography/word-spacing/word-spacing.html">word-spacing</a></li>
+                        </ul>
+                        <ul>
+                            <b>word-break</b>
+                            <li><a href="css/properties/typography/word-break/word-break.html">word-break</a></li>
+                        </ul>
+                        <ul>
+                            <b>word-wrap</b>
+                            <li><a href="css/properties/typography/word-wrap/word-wrap.html">word-wrap</a></li>
+                        </ul>
+                        <ul>
+                            <b>white-space</b>
+                            <li><a href="css/properties/typography/white-space/white-space.html">white-space</a></li>
+                        </ul>
                     </li>
                 </ul>
             </li>

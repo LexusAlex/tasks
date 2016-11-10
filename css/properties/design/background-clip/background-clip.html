@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background-clip</title>
+    <style>
+        .e1{
+            border: dotted 30px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-origin: padding-box;
+            background-clip: border-box;
+            height: 250px;
+        }
+        .e2{
+            border: dotted 30px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-repeat: no-repeat;
+            background-clip: padding-box;
+            height: 250px;
+        }
+        .e3{
+            border: dotted 30px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-repeat: no-repeat;
+            background-clip: content-box;
+            height: 250px;
+        }
+        .e4{
+            border: dotted 30px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-repeat: no-repeat;
+            background-clip: text;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+<h1>Определяет, как цвет фона или фоновая картинка должна выводиться под границами. Эффект заметен при прозрачных или пунктирных границах.</h1>
+<h1>border-box Фон выводится под границами.- По умолчанию</h1>
+<p class="e1">content</p>
+<h1>padding-box Фон отображается внутри границ.</h1>
+<p class="e2">content</p>
+<h1>content-box Фон отображается только внутри контента.</h1>
+<p class="e3">content</p>
+<h1>text Фон отображается только внутри текста (поддерживается не везде)</h1>
+<p class="e4">content</p>
+</body>
+</html>

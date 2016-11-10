@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background-origin</title>
+    <style>
+        .e1{
+            border: dashed 10px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-origin: padding-box;
+            height: 250px;
+        }
+        .e2{
+            border: dashed 10px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-origin: border-box;
+            height: 250px;
+        }
+        .e3{
+            border: dashed 10px;
+            margin: 5px;
+            padding: 20px;
+            background-image: url("../images/blockModel.png");
+            background-color: yellow;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-origin: content-box;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Определяет область позиционирования фонового рисунка. То есть где располагать фоновый рисунок</h1>
+    <h1>Это свойство не применяется, когда значение background-attachment задано как fixed.</h1>
+    <h1>padding-box Граница padding Фон позиционируется относительно края элемента с учетом толщины границы.</h1>
+    <p class="e1">content</p>
+    <h1>border-box Граница border Фон позиционируется относительно границы, при этом линия границы может перекрывать изображение.</h1>
+    <p class="e2">content</p>
+    <h1>content-box Граница content Фон позиционируется относительно содержимого элемента.</h1>
+    <p class="e3">content</p>
+</body>
+</html>

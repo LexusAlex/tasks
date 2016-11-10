@@ -372,6 +372,73 @@
                     </li>
                 </ul>
             </li>
+            <li>design</li>
+                <ul>
+                    <li>
+                        <ul>
+                            <b>color</b>
+                            <li><a href="css/properties/design/color/color.html">color</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-color</b>
+                            <li><a href="css/properties/design/background-color/background-color.html">background-color</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-image</b>
+                            <li><a href="css/properties/design/background-image/backgrоund-image.html">background-image</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-size</b>
+                            <li><a href="css/properties/design/background-size/auto.html">auto</a></li>
+                            <li><a href="css/properties/design/background-size/cover.html">cover</a></li>
+                            <li><a href="css/properties/design/background-size/contain.html">contain</a></li>
+                            <li><a href="css/properties/design/background-size/background-size.html">background-size % px</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-repeat</b>
+                            <li><a href="css/properties/design/background-repeat/repeat.html">repeat</a></li>
+                            <li><a href="css/properties/design/background-repeat/no-repeat.html">no-repeat</a></li>
+                            <li><a href="css/properties/design/background-repeat/repeat-x.html">repeat-x</a></li>
+                            <li><a href="css/properties/design/background-repeat/repeat-y.html">repeat-y</a></li>
+                            <li><a href="css/properties/design/background-repeat/space.html">space</a></li>
+                            <li><a href="css/properties/design/background-repeat/round.html">round</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-position</b>
+                            <li><a href="css/properties/design/background-position/background-position.html">background-position</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-attachment</b>
+                            <li><a href="css/properties/design/background-attachment/scroll.html">scroll</a></li>
+                            <li><a href="css/properties/design/background-attachment/fixed.html">fixed</a></li>
+                            <li><a href="css/properties/design/background-attachment/local.html">local(fix)</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-origin</b>
+                            <li><a href="css/properties/design/background-origin/background-origin.html">background-origin</a></li>
+                        </ul>
+                        <ul>
+                            <b>background-clip</b>
+                            <li><a href="css/properties/design/background-clip/background-clip.html">background-clip</a></li>
+                        </ul>
+                        <ul>
+                            <b>background</b>
+                            <li>
+                                <pre>
+                                background-color: transparent - color background
+                                background-image: none - image background
+                                background-size: auto auto - size image
+                                background-repeat: repeat - repeat images
+                                background-position: 0% 0%  - position image
+                                background-attachment: scroll - attach image
+                                background-origin: padding-box - region positioned figure
+                                background-clip: border-box - for the borders
+                                </pre>
+                            </li>
+                            <li><a href="css/properties/design/background/background.html">background</a></li>
+                        </ul>
+                    </li>
+                </ul>
         </ul>
     </li>
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background-size:contain</title>
+    <style>
+        .p1 {
+            background-image: url("../images/bg3.jpeg");
+            background-size: cover;
+            height: 250px;
+        }
+        .p2 {
+            background-image: url("../images/bg3.jpeg");
+            background-size: contain;
+            height: 250px;
+        }
+        .p3 {
+            background-image: url("../images/bg3.jpeg");
+            background-size: auto;
+            height: 250px;
+        }
+        .p4 {
+            background-image: url("../images/blockModel.png");
+            background-size: cover;
+            height: 250px;
+        }
+        .p5 {
+            background-image: url("../images/blockModel.png");
+            background-size: contain;
+            height: 250px;
+        }
+        .p6 {
+            background-image: url("../images/blockModel.png");
+            background-size: auto;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+<h1>Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.</h1>
+<h1>cover</h1>
+<p class="p1"></p>
+<h1>contain</h1>
+<p class="p2"></p>
+<h1>no cover</h1>
+<p class="p3"></p>
+
+<h1>cover</h1>
+<p class="p4"></p>
+<h1>contain</h1>
+<p class="p5"></p>
+<h1>no cover</h1>
+<p class="p6"></p>
+</body>
+</html>

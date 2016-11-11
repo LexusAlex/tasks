@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sizes in css</title>
+</head>
+<body>
+    <ol>
+        <li><strong>em</strong> - размер шрифта текущего элемента 1em = 16px по умолчанию</li>
+        <li><strong>ex</strong> - Высота символа x <span style="font-size: 1ex">Размер 1ex</span> 1ex = 9px по умолчанию</li>
+        <li><strong>ch</strong> - Ширина символа 0 текущего элемента <span style="font-size: 1ch">Размер 1ch</span> 1ch = 10px по умолчанию</li>
+        <li><strong>rem</strong> - Размер шрифта корнвого элемента</li>
+    </ol>
+    <hr>
+    <div> em зависит от размера шрифта родителя элемента и меняется вместе с ним, а rem привязан к корневому элементу, т. е. размеру шрифта заданного для элемента html.</div>
+    <ol>
+        <li><strong>vw</strong> - 1% от ширины области просмотра</li>
+        <li><strong>vh</strong> - 1% от высоты области просмотра</li>
+        <li><strong>vmin наименьшее из (vw, vh)</strong> - 1% от меньшего значения из ширины и высоты области просмотра</li>
+        <li><strong>vmax наибольшее из (vw, vh)</strong> - Определяется, что больше, значение ширины или высоты области просмотра и от него вычисляется 1%</li>
+    </ol>
+    <div style="background-color: #4cffa1;width: 50vw">Текст Блок 50 vw от ширины области просмотра</div>
+    <div style="background-color: #ff8839;width: 300px;height: 50vh">Текст Блок 50 vw от высоты области просмотра</div>
+    <hr>
+    <ol>
+        <li><strong>px</strong> - пиксель - Абсолютная и окончательная единица измерения</li>
+        <li><strong>in</strong> - дюйм <span style="font-size: 1in">1 Дюйм</span> 1in= 96px</li>
+        <li><strong>cm</strong> - сантиметр <span style="font-size: 1cm">1 Сантиметр</span>  1cm (см) = 37px</li>
+        <li><strong>mm</strong> - миллиметр <span style="font-size: 1mm">1 Миллиметр</span>  1mm (мм) = 3.7px</li>
+        <li><strong>pt</strong> - пункт <span style="font-size: 1pt">1 Пункт</span> 1pt (типографский пункт) = 4/3 px = 1,3px</li>
+        <li><strong>pc</strong> - пика <span style="font-size: 1pc">1 Пика</span> 1pc (типографская пика) = 16px</li>
+    </ol>
+</body>
+</html>

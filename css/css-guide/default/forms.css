@@ -1,0 +1,12 @@
+input, select, option, optgroup, button, textarea, keygen {
+    text-indent: initial;
+}
+
+input:matches([type=radio i], [type=checkbox i], [type=reset i], [type=button i],
+  [type=submit i], [type=search i]), select, button {
+    box-sizing: border-box;
+}
+
+input:not([type=image i]), textarea { box-sizing: border-box; }
+
+textarea { white-space: pre-wrap; }

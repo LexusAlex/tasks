@@ -122,10 +122,12 @@
     <li><a href="css/css-guide/fonts.html">Web fonts</a></li>
     <li><a href="css/css-guide/sizes.html">Sizes</a></li>
     <li><a href="css/css-guide/color.html">Color</a></li>
+    <li><a href="css/css-guide/highlight.html">Highlight</a></li>
     <li><a href="css/css-guide/grids/grid-float.html">Grid float</a></li>
     <li><a href="css/css-guide/grids/grid-flex.html">Grid flex 1</a></li>
     <li><a href="css/css-guide/grids/grid-flex2.html">Grid flex 2</a></li>
     <li><a href="css/css-guide/grids/grid-flex3.html">Grid flex 3</a></li>
+    <li><a href="css/css-guide/defaultStyles.html">Default styles</a></li>
     <li><ul>
             <li><a href="css/flex/flex1.html">flex-container - flex-direction</a></li>
             <li><a href="css/flex/flex2.html">flex-container - justify-content</a></li>

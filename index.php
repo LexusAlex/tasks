@@ -39,13 +39,23 @@
         <a href="php/oop/oop.php">OOP</a>
         <ul>
             <li><a href="php/oop/oop1.php">oop - class new</a></li>
-            <li><a href="php/oop/oop2.php">oop - public private protected</a></li>
-            <li><a href="php/oop/oop3.php">oop - construct destruct</a></li>
+            <li><a href="php/oop/oop2.php">oop - public private protected this</a></li>
+            <li><a href="php/oop/oop3.php">oop - construct destruct parent::</a></li>
             <li><a href="php/oop/oop4.php">oop - inheritance</a></li>
-            <li><a href="php/oop/oop5.php">oop - static</a></li>
+            <li><a href="php/oop/oop5.php">oop - static self:: static::</a></li>
             <li><a href="php/oop/oop6.php">oop - constants</a></li>
             <li><a href="php/oop/oop7.php">oop - abstract classes</a></li>
             <li><a href="php/oop/oop8.php">oop - interfaces</a></li>
+            <li><a href="php/oop/oop9.php">oop - traits</a></li>
+            <li><a href="php/oop/oop10.php">oop - exceptions</a></li>
+            <li><a href="php/oop/oop11.php">oop - final class and method</a></li>
+            <li><a href="php/oop/oop12.php">oop - __get() and __set()</a></li>
+            <li><a href="php/oop/oop13.php">oop - __isset() and __unset()</a></li>
+            <li><a href="php/oop/oop14.php">oop - __call() and __callStatic()</a></li>
+            <li><a href="php/oop/oop15.php">oop - __clone()</a></li>
+            <li><a href="php/oop/oop16.php">oop - __toString()</a></li>
+            <li><a href="php/oop/oop17.php">oop - __sleep() and wakeup()</a></li>
+            <li><a href="php/oop/oop18.php">oop - functions for working classes and objects</a></li>
         </ul>
     </li>
     <li><a href="php/session/session.php">Session</a></li>

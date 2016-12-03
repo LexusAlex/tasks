@@ -51,3 +51,32 @@ echo $o1->StatValue(); // или так из нутри класса
 
 // из дочернего класса обращение как parent
 echo Bar::fooStat();
+
+// Позднее статическое связывание
+// static относиться к вызывающему а не к содержащему классу
+class Obj
+{
+     public static function create(){
+         return new static(); // можно как создать, так  и вызвать статический метод
+     }
+
+     public static function myStat(){
+         return __METHOD__;
+     }
+     public function valStat()
+     {
+         return static::myStat();
+     }
+}
+
+class New1 extends Obj
+{
+
+}
+class New2 extends Obj
+{
+
+}
+var_dump(New1::create());
+var_dump(New2::create());
+var_dump(New1::valStat());
